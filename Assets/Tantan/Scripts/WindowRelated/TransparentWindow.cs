@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TransparentWindow : MonoBehaviour
 {
@@ -53,8 +55,33 @@ public class TransparentWindow : MonoBehaviour
     void Update() 
     {
         Debug.Log(Physics2D.OverlapPoint(GetWorldMouse()));
-        SetClickThrough(Physics2D.OverlapPoint(GetWorldMouse(),gameObjectMask) == null);
+        SetClickThrough(!IsUIHit || !IsWorldHit);
     }
+
+    bool IsWorldHit
+    { 
+        get => Physics2D.OverlapPoint(GetWorldMouse(),gameObjectMask) != null;
+    }
+
+    bool IsUIHit
+    {
+        get
+        {
+            if (EventSystem.current == null)
+                return false;
+
+            var data = new PointerEventData(EventSystem.current)
+            {
+                position = Input.mousePosition
+            };
+
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(data, results);
+
+            return results.Count > 0;
+        }
+    }
+
 
     Vector3 GetWorldMouse()
     {
