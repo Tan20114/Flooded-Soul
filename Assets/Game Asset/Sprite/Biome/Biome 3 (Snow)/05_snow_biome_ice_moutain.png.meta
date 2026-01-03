@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: b70a69a611371204ab4ab769230ef571
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1392704074478289912
+    second: 05_snow_biome_ice_moutain_0
+  - first:
+      213: -3886085479321493376
+    second: 05_snow_biome_ice_moutain_1
+  - first:
+      213: 835122081877701396
+    second: 05_snow_biome_ice_moutain_2
+  - first:
+      213: 6391309166357130884
+    second: 05_snow_biome_ice_moutain_3
+  - first:
+      213: -2336758461437902605
+    second: 05_snow_biome_ice_moutain_4
+  - first:
+      213: 7485397976719553456
+    second: 05_snow_biome_ice_moutain_5
+  - first:
+      213: -3066732748798384953
+    second: 05_snow_biome_ice_moutain_6
+  - first:
+      213: -5472072314752939981
+    second: 05_snow_biome_ice_moutain_7
+  - first:
+      213: 5081214733923153422
+    second: 05_snow_biome_ice_moutain_8
+  - first:
+      213: 1552015098721200120
+    second: 05_snow_biome_ice_moutain_9
+  - first:
+      213: -196163173526221866
+    second: 05_snow_biome_ice_moutain_10
+  - first:
+      213: -8332389480862873782
+    second: 05_snow_biome_ice_moutain_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 71
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c7b7be50f1cace0800000000000000
+      internalID: -1392704074478289912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 71
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0802d3e88d9d11ac0800000000000000
+      internalID: -3886085479321493376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 63
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413b76adb13f69b00800000000000000
+      internalID: 835122081877701396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 71
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e2a6ef2dd72b850800000000000000
+      internalID: 6391309166357130884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 65
+        width: 96
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f00b1c5f8a229fd0800000000000000
+      internalID: -2336758461437902605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_5
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 61
+        width: 240
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3fbccecc971e760800000000000000
+      internalID: 7485397976719553456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_6
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 71
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4a0de20d6c075d0800000000000000
+      internalID: -3066732748798384953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_7
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 65
+        width: 96
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338c6e5d83b4f04b0800000000000000
+      internalID: -5472072314752939981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_8
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 71
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0678fa01e9148640800000000000000
+      internalID: 5081214733923153422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_9
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 63
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7e155628dd98510800000000000000
+      internalID: 1552015098721200120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_10
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 71
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbc4fb02a6174df0800000000000000
+      internalID: -196163173526221866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_snow_biome_ice_moutain_11
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 65
+        width: 116
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4787fef9e76d5c80800000000000000
+      internalID: -8332389480862873782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      05_snow_biome_ice_moutain_0: -1392704074478289912
+      05_snow_biome_ice_moutain_1: -3886085479321493376
+      05_snow_biome_ice_moutain_10: -196163173526221866
+      05_snow_biome_ice_moutain_11: -8332389480862873782
+      05_snow_biome_ice_moutain_2: 835122081877701396
+      05_snow_biome_ice_moutain_3: 6391309166357130884
+      05_snow_biome_ice_moutain_4: -2336758461437902605
+      05_snow_biome_ice_moutain_5: 7485397976719553456
+      05_snow_biome_ice_moutain_6: -3066732748798384953
+      05_snow_biome_ice_moutain_7: -5472072314752939981
+      05_snow_biome_ice_moutain_8: 5081214733923153422
+      05_snow_biome_ice_moutain_9: 1552015098721200120
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
