@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631901107f863934f8732c2817f873bc, type: 3}
+  m_Name: Ocean
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeContainer
+  layer1:
+  - {fileID: 21300000, guid: be66fffc55cf2ab4e8e804f962b24634, type: 3}
+  - {fileID: 21300000, guid: 457631451a859b04d8c9320645882c7e, type: 3}
+  - {fileID: 21300000, guid: ba0e2637a9f2f4f4bbfb4bc7a25962bf, type: 3}
+  - {fileID: 21300000, guid: f2fe4f39c234e4e4383e425e4397387f, type: 3}
+  layer2:
+  - {fileID: 21300000, guid: 20ea0d45655fdf447b71c0017a6ee2c8, type: 3}
+  layer3:
+  - {fileID: 21300000, guid: 2e381f66dc3d35746a8d1a099f7cb5f2, type: 3}
+  - {fileID: 21300000, guid: 8d8f4c78542c24a4caa8077dac9f6aa7, type: 3}
+  - {fileID: 21300000, guid: 836d9116a71d8554cbcfdfa009ee7792, type: 3}
+  - {fileID: 21300000, guid: 1a4be6f7e440baf47907a4174dbd145d, type: 3}
+  - {fileID: 21300000, guid: 31692fc7de150fb469f8eaddb54bfbf9, type: 3}
+  layer4:
+  - {fileID: 21300000, guid: 7029a9f97841a5842a04c8fab82e7f4b, type: 3}
+  - {fileID: 21300000, guid: bc3877399670a0b498a988f224d4b7ae, type: 3}
+  layer5:
+  - {fileID: 21300000, guid: 001befcb3013aa54796ffc7ddbaad9d9, type: 3}
+  - {fileID: 21300000, guid: 9adb13f7a39270b4ca9ba646b96ed00e, type: 3}
+  - {fileID: 21300000, guid: 2312fbc261a356043b0389935deb70c4, type: 3}
+  layerSky: {fileID: 21300000, guid: 97d60e9dd7ef1db4db3c9e4cea053d4e, type: 3}
+  layerWave: {fileID: 21300000, guid: 5352bf730eaeff54ea974cc199269c88, type: 3}
+  underWater: {fileID: 21300000, guid: caa13a45800052949879157bc4d1aa72, type: 3}
