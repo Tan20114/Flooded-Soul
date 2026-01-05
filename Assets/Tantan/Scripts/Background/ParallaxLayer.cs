@@ -1,6 +1,6 @@
 using UnityEngine;
 
-enum LayerType
+public enum LayerType
 {
     Sky,
     Layer1,
@@ -14,25 +14,33 @@ enum LayerType
 
 public class ParallaxLayer : MonoBehaviour
 {
-    ParallaxManager pm => FindAnyObjectByType<ParallaxManager>();
-    Rigidbody2D rb => GetComponent<Rigidbody2D>();
-    SpriteRenderer sr => GetComponent<SpriteRenderer>();
+    ParallaxManager pm;
+    Rigidbody2D rb;
+    SpriteRenderer sr;
 
     [Header("Properties")]
     [SerializeField] LayerType layerType;
     [SerializeField] float parallaxFactor = 0.5f;
     float speed => pm.Speed * parallaxFactor;
 
+    private void Awake()
+    {
+        pm = FindAnyObjectByType<ParallaxManager>();
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb.linearVelocity = new Vector2(-speed, 0);
+        RandomBiomeLayer(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x <= -pm.RegenPoint.position.x/2 + .5f)
+        if (transform.position.x <= -pm.RegenPoint.position.x/2)
         {
             transform.position = new Vector2(pm.RegenPoint.position.x, transform.position.y);
             RandomBiomeLayer();
@@ -51,7 +59,7 @@ public class ParallaxLayer : MonoBehaviour
             LayerType.Layer5 => pm.CurrentBiome.layer5[Random.Range(0, pm.CurrentBiome.layer5.Length)],
             LayerType.Wave => pm.CurrentBiome.layerWave,
             LayerType.UnderWater => pm.CurrentBiome.underWater,
-            _ => sr.sprite
+            _ => null
         };
     }
 }

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631901107f863934f8732c2817f873bc, type: 3}
+  m_Name: Forest
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeContainer
+  layer1:
+  - {fileID: 21300000, guid: 6335094ba4ea7434cac4bfaf676e6c87, type: 3}
+  - {fileID: 21300000, guid: 96ea7272ff75228438173dc94ac8a476, type: 3}
+  - {fileID: 21300000, guid: b8ee25c9eb9a745449721c2f05d00656, type: 3}
+  - {fileID: 21300000, guid: cc433b5ef88a8cd4e8211eb25e489591, type: 3}
+  - {fileID: 21300000, guid: e714a2f04788f3747849db0c4be9932b, type: 3}
+  - {fileID: 21300000, guid: e935fad8efdd1d54d89fbc92e4eb0e6c, type: 3}
+  - {fileID: 21300000, guid: 564dc9780c279bc43abfd8ae70b2e194, type: 3}
+  layer2:
+  - {fileID: 21300000, guid: 243c4b5bcc6005e4ba25c71ffdc13ed0, type: 3}
+  - {fileID: 21300000, guid: 7d57d2ffbac851f4fb391e57dcb23c71, type: 3}
+  - {fileID: 21300000, guid: f8de58e5e07dfde47a19e4ba4d3bf0ad, type: 3}
+  - {fileID: 21300000, guid: e4e5109b4934043459c91d0825c07282, type: 3}
+  - {fileID: 21300000, guid: d8844e9b67cced846ac2840000f89734, type: 3}
+  - {fileID: 21300000, guid: 3b40bb3f3df8b1347acdd61cf970de69, type: 3}
+  - {fileID: 21300000, guid: 08ad579e519100f4a9f44a5d2d113872, type: 3}
+  - {fileID: 21300000, guid: 801235b4c5b2a144a9f6135058d11f81, type: 3}
+  layer3:
+  - {fileID: 21300000, guid: 4c7a915d5f2b329479ed8daf4681f882, type: 3}
+  - {fileID: 21300000, guid: 6cc17b5404f00de40a75944737e34e5f, type: 3}
+  - {fileID: 21300000, guid: 34aa2c7fa95a18948b3c5c769437f2f6, type: 3}
+  - {fileID: 21300000, guid: 743e905d4e1c8c54ca2f340b25576c86, type: 3}
+  - {fileID: 21300000, guid: 1483123649e5c594a9f0f77b6a880ad9, type: 3}
+  layer4:
+  - {fileID: 21300000, guid: f2c827b00cf6c2b4f837412ea5d0a73d, type: 3}
+  - {fileID: 21300000, guid: c60865c35fe6e0746ba716ee45420647, type: 3}
+  - {fileID: 21300000, guid: 7aa86d5edcaf9f941abd463c3157827f, type: 3}
+  - {fileID: 21300000, guid: 60e5c567b094de046b4d172ec8c98647, type: 3}
+  layer5:
+  - {fileID: 21300000, guid: 914c6344284757f45a1933d419a8b120, type: 3}
+  - {fileID: 21300000, guid: 65328963fabfe80469f79fc1b344dc29, type: 3}
+  - {fileID: 21300000, guid: 3f48876dcc64afd478483fb50d101d76, type: 3}
+  - {fileID: 21300000, guid: 87356ee5ad3346649bd8d09c52830086, type: 3}
+  - {fileID: 21300000, guid: 0b70236a16c5a3446804620d132c47df, type: 3}
+  - {fileID: 21300000, guid: 6b09b659d799e8840a514d75d14691fd, type: 3}
+  layerSky: {fileID: 21300000, guid: 0734d139c8fd42948a330e4a83b91b19, type: 3}
+  layerWave: {fileID: 21300000, guid: ab854a4854f80564295f35bd06b5cccb, type: 3}
+  underWater: {fileID: 21300000, guid: 02a3c644540dd4e408e07b1868ed787b, type: 3}

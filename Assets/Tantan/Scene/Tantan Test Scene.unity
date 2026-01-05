@@ -324,6 +324,7 @@ Transform:
   - {fileID: 2100950608}
   - {fileID: 2108354271}
   - {fileID: 778266232}
+  - {fileID: 515229660}
   - {fileID: 509145465}
   - {fileID: 271713313}
   - {fileID: 2141558755}
@@ -363,8 +364,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515229659}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -35.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -375,7 +376,7 @@ Transform:
   - {fileID: 665637182}
   - {fileID: 1648405329}
   - {fileID: 1875671720}
-  m_Father: {fileID: 1616979113}
+  m_Father: {fileID: 299270543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &538212726
 PrefabInstance:
@@ -490,6 +491,10 @@ PrefabInstance:
       propertyPath: parallaxFactor
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1835627246196559695, guid: c043c8b35b2115747bf604cae67db0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2773620869193980894, guid: 0734d139c8fd42948a330e4a83b91b19, type: 3}
     - target: {fileID: 2362182696726300566, guid: c043c8b35b2115747bf604cae67db0d3, type: 3}
       propertyPath: m_Name
       value: 06_Sky
@@ -1267,7 +1272,6 @@ Transform:
   m_Children:
   - {fileID: 991973749}
   - {fileID: 299270543}
-  - {fileID: 515229660}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1616979114
@@ -1284,7 +1288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxManager
   regenPoint: {fileID: 202285446}
   biomeList:
-  - {fileID: 11400000, guid: e5af5cee97fcfef4aba2d8824ae3fe19, type: 2}
+  - {fileID: 0}
   speed: 2
 --- !u!4 &1648405329 stripped
 Transform:
@@ -1370,6 +1374,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 299270543}
     m_Modifications:
+    - target: {fileID: 3855905563361439406, guid: e2b95aa1245a1144097ff5945b408a2a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855905563361439406, guid: e2b95aa1245a1144097ff5945b408a2a, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6038310485192953993, guid: e2b95aa1245a1144097ff5945b408a2a, type: 3}
       propertyPath: parallaxFactor
       value: 0.2

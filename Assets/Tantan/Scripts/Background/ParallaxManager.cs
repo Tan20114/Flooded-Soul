@@ -15,15 +15,8 @@ public class ParallaxManager : MonoBehaviour
     [SerializeField] float speed = 1.0f;
     public float Speed { get => speed; }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         currentBiome = biomeList[0];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
