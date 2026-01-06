@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631901107f863934f8732c2817f873bc, type: 3}
+  m_Name: Ice
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeContainer
+  layer1:
+  - {fileID: 21300000, guid: af21eb7757381f04b97dd6d2aa29ce81, type: 3}
+  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  layer2:
+  - {fileID: 21300000, guid: 4195789fb69ea0e4faf3a88f34138ebe, type: 3}
+  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  layer3:
+  - {fileID: 21300000, guid: 4f72394c04f0ae14a80ceb42000af7a1, type: 3}
+  - {fileID: 21300000, guid: a3f54d21cda431343b77836b9fbada4e, type: 3}
+  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  layer4:
+  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  layer5:
+  - {fileID: 21300000, guid: c3891da19c443014688d0ad7178b7246, type: 3}
+  - {fileID: 21300000, guid: ae357046bb2900f41a4a0d564bec0185, type: 3}
+  - {fileID: 21300000, guid: 820aaea4c71cadf449a82c12b973923f, type: 3}
+  - {fileID: 21300000, guid: b70a69a611371204ab4ab769230ef571, type: 3}
+  layerSky: {fileID: 21300000, guid: 5f826718495b7c849ad2b4a6d71a9d26, type: 3}
+  layerWave: {fileID: 21300000, guid: 367c50a2e1b759347b64448104403a66, type: 3}
+  underWater: {fileID: 21300000, guid: 52e9755674fc82f4ea997a4a8868062a, type: 3}

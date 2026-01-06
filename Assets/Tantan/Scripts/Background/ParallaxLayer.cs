@@ -40,7 +40,7 @@ public class ParallaxLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x <= -pm.RegenPoint.position.x/2)
+        if (transform.position.x <= -pm.RegenPoint.position.x)
         {
             transform.position = new Vector2(pm.RegenPoint.position.x, transform.position.y);
             RandomBiomeLayer();
