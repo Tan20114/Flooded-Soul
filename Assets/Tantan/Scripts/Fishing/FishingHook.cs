@@ -1,27 +1,34 @@
 using UnityEngine;
 
-public class Fish : MonoBehaviour, IBoundArea
+public class FishingHook : MonoBehaviour, IBoundArea
 {
     [Header("References")]
     Rigidbody2D rb => GetComponent<Rigidbody2D>();
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
-    [SerializeField] SpriteRenderer boundingArea; 
+    [SerializeField] SpriteRenderer boundingArea;
 
     [Header("Parameter")]
-    [SerializeField] float swimSpeed = 1f;
-    float swimDir = -1f;
-    bool isSwimmingRight = false;
+    [SerializeField] float followSpeed = 5.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        FollowMouse();
         MoveRestriction(boundingArea);
+    }
+
+    void FollowMouse()
+    {
+        Vector2 distance = transform.position - HelperFunction.GetWorldMouse();
+        Vector2 dir = distance.normalized;
+
+        rb.linearVelocity = -dir * followSpeed;
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -33,24 +40,8 @@ public class Fish : MonoBehaviour, IBoundArea
         float halfHookHeight = sr.bounds.size.y / 2;
 
         Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, boundingArea.transform.position.x - halfScreenWidth + halfHookWidth, boundingArea.transform.position.x + halfScreenWidth - halfHookWidth);
         pos.y = Mathf.Clamp(pos.y, boundingArea.transform.position.y - halfScreenHeight + halfHookHeight, boundingArea.transform.position.y + halfScreenHeight - halfHookHeight);
-
-        #region Horizontal Movement Restriction (Fish Only)
-        if (pos.x <= boundingArea.transform.position.x - halfScreenWidth + halfHookWidth / 2)
-        {
-            swimDir = 1;
-            isSwimmingRight = true;
-        }
-        else if (pos.x >= boundingArea.transform.position.x + halfScreenWidth - halfHookWidth / 2)
-        {
-            swimDir = -1;
-            isSwimmingRight = false;
-        }
-
-        rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
-        sr.flipX = isSwimmingRight;
-        #endregion
-
         transform.position = pos;
     }
 }

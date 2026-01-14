@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 998ea2010c3163a4799700b16874e8d9
+guid: 7c328cb3ecce90345852d5e0157db4e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7303959572282288896
-    second: legend_jollyFish_snow_0
+      213: -7595818045191560981
+    second: rare_Seaturtle_ocean_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: legend_jollyFish_snow_0
+      name: rare_Seaturtle_ocean_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 104
-        height: 52
+        width: 70
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00b23bf6880ec5560800000000000000
-      internalID: 7303959572282288896
+      spriteID: be0ead57bbb369690800000000000000
+      internalID: -7595818045191560981
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      legend_jollyFish_snow_0: 7303959572282288896
+      rare_Seaturtle_ocean_0: -7595818045191560981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

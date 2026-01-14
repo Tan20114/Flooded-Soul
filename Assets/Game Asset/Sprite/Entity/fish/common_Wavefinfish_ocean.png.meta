@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1ad2fa1699884d745b8e00ece5d70f38
+guid: 86131d95f17853340b1eda2e09004098
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7241780461388064193
-    second: rare_red Jelllyfish_forest_0
+      213: 1548629777568519581
+    second: common_Wavefinfish_ocean_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rare_red Jelllyfish_forest_0
+      name: common_Wavefinfish_ocean_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 56
+        width: 74
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3a9999f907008b90800000000000000
-      internalID: -7241780461388064193
+      spriteID: d955094e396dd7510800000000000000
+      internalID: 1548629777568519581
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rare_red Jelllyfish_forest_0: -7241780461388064193
+      common_Wavefinfish_ocean_0: 1548629777568519581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

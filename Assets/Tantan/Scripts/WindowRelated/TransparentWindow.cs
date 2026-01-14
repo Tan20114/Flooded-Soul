@@ -129,13 +129,12 @@ public class TransparentWindow : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Physics2D.OverlapPoint(GetWorldMouse()));
         SetClickThrough(!(IsUIHit || IsWorldHit));
     }
 
     bool IsWorldHit
     {
-        get => Physics2D.OverlapPoint(GetWorldMouse(), gameObjectMask) != null;
+        get => Physics2D.OverlapPoint(HelperFunction.GetWorldMouse(), gameObjectMask) != null;
     }
 
     bool IsUIHit
