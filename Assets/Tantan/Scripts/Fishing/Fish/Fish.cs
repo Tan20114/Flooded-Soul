@@ -1,14 +1,23 @@
 using UnityEngine;
 
+public enum FishType
+{
+    Common,
+    Uncommon,
+    Rare,
+    Legendary
+}
+
 public class Fish : MonoBehaviour, IBoundArea
 {
     [Header("References")]
     Rigidbody2D rb => GetComponent<Rigidbody2D>();
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
-    [SerializeField] SpriteRenderer boundingArea; 
+    SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>(); 
 
     [Header("Parameter")]
     [SerializeField] float swimSpeed = 1f;
+    public FishType fishType = FishType.Common;
     float swimDir = -1f;
     bool isSwimmingRight = false;
 
@@ -52,5 +61,11 @@ public class Fish : MonoBehaviour, IBoundArea
         #endregion
 
         transform.position = pos;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider2D>().size);
     }
 }

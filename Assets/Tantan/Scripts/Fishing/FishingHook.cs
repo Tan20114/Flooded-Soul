@@ -6,6 +6,7 @@ public class FishingHook : MonoBehaviour, IBoundArea
     Rigidbody2D rb => GetComponent<Rigidbody2D>();
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     [SerializeField] SpriteRenderer boundingArea;
+    [SerializeField] LayerMask fishLayer;
 
     [Header("Parameter")]
     [SerializeField] float followSpeed = 5.0f;
@@ -43,5 +44,19 @@ public class FishingHook : MonoBehaviour, IBoundArea
         pos.x = Mathf.Clamp(pos.x, boundingArea.transform.position.x - halfScreenWidth + halfHookWidth, boundingArea.transform.position.x + halfScreenWidth - halfHookWidth);
         pos.y = Mathf.Clamp(pos.y, boundingArea.transform.position.y - halfScreenHeight + halfHookHeight, boundingArea.transform.position.y + halfScreenHeight - halfHookHeight);
         transform.position = pos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Fish"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, sr.bounds.size);
     }
 }

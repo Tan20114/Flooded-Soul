@@ -444,10 +444,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2442197329903504895, guid: 01d54fa5b9182944992c342763c10064, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1445577470216131692, guid: 6be8c37cf4604444292df7efabc71648, type: 3}
     - target: {fileID: 3567175379160523887, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: m_Name
       value: ParallaxManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5557249902739490311, guid: 01d54fa5b9182944992c342763c10064, type: 3}
+      propertyPath: 'biomeList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e5af5cee97fcfef4aba2d8824ae3fe19, type: 2}
+    - target: {fileID: 5557249902739490311, guid: 01d54fa5b9182944992c342763c10064, type: 3}
+      propertyPath: 'biomeList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a7dad035a26c5804e8893b6205719c40, type: 2}
+    - target: {fileID: 5557249902739490311, guid: 01d54fa5b9182944992c342763c10064, type: 3}
+      propertyPath: 'biomeList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c9005c4f4c84f63468c357a2c1215984, type: 2}
     - target: {fileID: 5935846058622851328, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
