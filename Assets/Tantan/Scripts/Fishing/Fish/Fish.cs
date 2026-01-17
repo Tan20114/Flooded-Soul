@@ -13,17 +13,19 @@ public class Fish : MonoBehaviour, IBoundArea
     [Header("References")]
     Rigidbody2D rb => GetComponent<Rigidbody2D>();
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
-    SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>(); 
+    SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
+    FishingManager fm => FindAnyObjectByType<FishingManager>();
 
     [Header("Parameter")]
-    [SerializeField] float swimSpeed = 1f;
     public FishType fishType = FishType.Common;
-    float swimDir = -1f;
     bool isSwimmingRight = false;
+    [SerializeField] float swimSpeed = 1f;
+    float swimDir = -1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        RandomDirection();
         rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
     }
 
@@ -31,6 +33,7 @@ public class Fish : MonoBehaviour, IBoundArea
     void Update()
     {
         MoveRestriction(boundingArea);
+        MinigameRestriction();
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -38,19 +41,19 @@ public class Fish : MonoBehaviour, IBoundArea
         float halfScreenWidth = boundingArea.bounds.size.x / 2;
         float halfScreenHeight = boundingArea.bounds.size.y / 2;
 
-        float halfHookWidth = sr.bounds.size.x / 2;
-        float halfHookHeight = sr.bounds.size.y / 2;
+        float halfFishWidth = sr.bounds.size.x / 2;
+        float halfFishHeight = sr.bounds.size.y / 2;
 
         Vector3 pos = transform.position;
-        pos.y = Mathf.Clamp(pos.y, boundingArea.transform.position.y - halfScreenHeight + halfHookHeight, boundingArea.transform.position.y + halfScreenHeight - halfHookHeight);
+        pos.y = Mathf.Clamp(pos.y, boundingArea.transform.position.y - halfScreenHeight + halfFishHeight, boundingArea.transform.position.y + halfScreenHeight - halfFishHeight);
 
         #region Horizontal Movement Restriction (Fish Only)
-        if (pos.x <= boundingArea.transform.position.x - halfScreenWidth + halfHookWidth / 2)
+        if (pos.x <= boundingArea.transform.position.x - halfScreenWidth + halfFishWidth / 2)
         {
             swimDir = 1;
             isSwimmingRight = true;
         }
-        else if (pos.x >= boundingArea.transform.position.x + halfScreenWidth - halfHookWidth / 2)
+        else if (pos.x >= boundingArea.transform.position.x + halfScreenWidth - halfFishWidth / 2)
         {
             swimDir = -1;
             isSwimmingRight = false;
@@ -61,6 +64,34 @@ public class Fish : MonoBehaviour, IBoundArea
         #endregion
 
         transform.position = pos;
+    }
+
+    void MinigameRestriction()
+    {
+        if (!fm.isMinigame) return;
+        if (this != fm.TargetFish) return;
+        SpriteRenderer minigameArea = fm.MinigameArea.GetComponent<SpriteRenderer>();
+
+        float halfAreaWidth = minigameArea.bounds.size.x / 2;
+        float halfAreaHeight = minigameArea.bounds.size.y / 2;
+
+        float halfFishWidth = sr.bounds.size.x / 2;
+        float halfFishHeight = sr.bounds.size.y / 2;
+
+        if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth)
+        {
+            Debug.Log("Fish escaped!");
+        }
+        else if (transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
+        {
+            Debug.Log("Fish escaped!");
+        }
+    }
+
+    void RandomDirection()
+    {
+        swimDir = Random.Range(-1f, 1f) < 0.5f ? -1f : 1f;
+        isSwimmingRight = swimDir > 0 ? true : false;
     }
 
     private void OnDrawGizmos()

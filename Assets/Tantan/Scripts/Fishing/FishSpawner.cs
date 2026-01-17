@@ -8,12 +8,12 @@ public class FishSpawner : MonoBehaviour
     SpriteRenderer fishBound => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
     FishPossibilities possibilities => GetComponent<FishPossibilities>();
     [SerializeField] Transform[] spawnPoints;
-    
+
     [Header("Fish Pool")]
-    [SerializeField] LeanGameObjectPool commonFishPool;
-    [SerializeField] LeanGameObjectPool uncommonFishPool;
-    [SerializeField] LeanGameObjectPool rareFishPool;
-    [SerializeField] LeanGameObjectPool legendaryFishPool;
+    public LeanGameObjectPool commonFishPool;
+    public LeanGameObjectPool uncommonFishPool;
+    public LeanGameObjectPool rareFishPool;
+    public LeanGameObjectPool legendaryFishPool;
 
     [Header("Fish Spawn Area")]
     [SerializeField] float initialYRatio = 0.2f;
@@ -26,43 +26,32 @@ public class FishSpawner : MonoBehaviour
     [Header("Properties")]
     [SerializeField] int maxFishCount = 8;
 
-    int commonFishCount = 0;
-    int uncommonFishCount = 0;
-    int rareFishCount = 0;
-    int legendaryFishCount = 0;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         RandomFishPossibilities();
+
+        InitialSpawnFish(commonFishPool, FishType.Common);
+        InitialSpawnFish(uncommonFishPool, FishType.Uncommon);
+        InitialSpawnFish(rareFishPool, FishType.Rare);
+        InitialSpawnFish(legendaryFishPool, FishType.Legendary);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (commonFishCount < commonFishPool.Capacity)
-        {
-            commonFishPool.Spawn(new Vector2(RandomSpawnpoint().position.x,CalculateYPos(FishType.Common)),Quaternion.identity,commonFishPool.transform);
-            commonFishCount++;
-        }
-        if (uncommonFishCount < uncommonFishPool.Capacity)
-        {
-            uncommonFishPool.Spawn(new Vector2(RandomSpawnpoint().position.x, CalculateYPos(FishType.Uncommon)), Quaternion.identity, uncommonFishPool.transform);
-            uncommonFishCount++;
-        }
-        if (rareFishCount < rareFishPool.Capacity)
-        {
-            rareFishPool.Spawn(new Vector2(RandomSpawnpoint().position.x, CalculateYPos(FishType.Rare)), Quaternion.identity, rareFishPool.transform);
-            rareFishCount++;
-        }
-        if (legendaryFishCount < legendaryFishPool.Capacity)
-        {
-            legendaryFishPool.Spawn(new Vector2(RandomSpawnpoint().position.x, CalculateYPos(FishType.Legendary)), Quaternion.identity, legendaryFishPool.transform);
-            legendaryFishCount++;
-        }
     }
 
-    Transform RandomSpawnpoint() => spawnPoints[Random.Range(0, spawnPoints.Length)];
+    public void RespawnFish(LeanGameObjectPool pool,FishType type) => pool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(type)), Quaternion.identity, pool.transform);
+
+    void InitialSpawnFish(LeanGameObjectPool pool, FishType type)
+    {
+        for (int i = 0; i < pool.Capacity; i++)
+            pool.Spawn(new Vector2(RandomXPos(), CalculateYPos(type)), Quaternion.identity, pool.transform);
+    }
+    float RandomSpawnPoint() => spawnPoints[Random.Range(0,2)].position.x;
+
+    float RandomXPos() => Random.Range(-fishBound.bounds.size.x/2,fishBound.bounds.size.x/2);
 
     float CalculateYPos(FishType type)
     {

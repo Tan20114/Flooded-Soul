@@ -17,16 +17,16 @@ MonoBehaviour:
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0.3584906, a: 1}
     textAlignment: 4
-    fontStyle: 3
+    fontStyle: 1
   - keyChar: 2
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0.49056602, a: 1}
-    textAlignment: 5
+    textAlignment: 4
     fontStyle: 1
   - keyChar: 3
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0.67295593, a: 1}
-    textAlignment: 3
+    textAlignment: 4
     fontStyle: 1
   - keyChar: 4
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -37,24 +37,24 @@ MonoBehaviour:
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 1, a: 1}
     textAlignment: 4
-    fontStyle: 0
+    fontStyle: 1
   - keyChar: Common
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0.6289307, g: 0.6289307, b: 0.6289307, a: 1}
     textAlignment: 4
-    fontStyle: 0
+    fontStyle: 1
   - keyChar: Uncommon
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0.1960784, g: 0.8039216, b: 0.1960784, a: 1}
     textAlignment: 4
-    fontStyle: 0
+    fontStyle: 1
   - keyChar: Rare
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0.254902, g: 0.4117647, b: 0.882353, a: 1}
     textAlignment: 4
-    fontStyle: 0
+    fontStyle: 1
   - keyChar: Legendary
     textColor: {r: 0, g: 0, b: 0, a: 1}
     backgroundColor: {r: 1, g: 0.8431373, b: 0, a: 1}
     textAlignment: 4
-    fontStyle: 0
+    fontStyle: 1

@@ -1,3 +1,4 @@
+using Lean.Pool;
 using UnityEngine;
 
 public class FishingHook : MonoBehaviour, IBoundArea
@@ -7,20 +8,19 @@ public class FishingHook : MonoBehaviour, IBoundArea
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     [SerializeField] SpriteRenderer boundingArea;
     [SerializeField] LayerMask fishLayer;
+    FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
+    FishingManager fm => FindAnyObjectByType<FishingManager>();
 
     [Header("Parameter")]
     [SerializeField] float followSpeed = 5.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        FollowMouse();
+        if (fm.isMinigame)
+            FollowFish();
+        else
+            FollowMouse();
         MoveRestriction(boundingArea);
     }
 
@@ -29,7 +29,16 @@ public class FishingHook : MonoBehaviour, IBoundArea
         Vector2 distance = transform.position - HelperFunction.GetWorldMouse();
         Vector2 dir = distance.normalized;
 
-        rb.linearVelocity = -dir * followSpeed;
+        if(distance.magnitude < 0.1f)
+            rb.linearVelocity = Vector2.zero;
+        else
+            rb.linearVelocity = -dir * followSpeed;
+    }
+
+    void FollowFish()
+    {
+        rb.linearVelocity = Vector2.zero;
+        transform.position = fm.TargetFish.transform.position;
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -46,11 +55,17 @@ public class FishingHook : MonoBehaviour, IBoundArea
         transform.position = pos;
     }
 
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (fm.isMinigame) return;
+
         if(collision.gameObject.layer == LayerMask.NameToLayer("Fish"))
         {
-            Destroy(collision.gameObject);
+            FishType type = collision.GetComponent<Fish>().fishType;
+
+            fm.StartMinigame(collision.GetComponent<Fish>());
         }
     }
 
