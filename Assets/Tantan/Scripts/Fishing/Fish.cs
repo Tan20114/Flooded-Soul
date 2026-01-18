@@ -1,3 +1,4 @@
+using Lean.Pool;
 using UnityEngine;
 
 public enum FishType
@@ -15,11 +16,14 @@ public class Fish : MonoBehaviour, IBoundArea
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
     FishingManager fm => FindAnyObjectByType<FishingManager>();
+    FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
 
     [Header("Parameter")]
     public FishType fishType = FishType.Common;
     bool isSwimmingRight = false;
     [SerializeField] float swimSpeed = 1f;
+    [SerializeField] int fishPoint = 1;
+    public int FishPoint { get; }
     float swimDir = -1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -71,6 +75,7 @@ public class Fish : MonoBehaviour, IBoundArea
         if (!fm.isMinigame) return;
         if (this != fm.TargetFish) return;
         SpriteRenderer minigameArea = fm.MinigameArea.GetComponent<SpriteRenderer>();
+        LeanGameObjectPool pool = HelperFunction.GetFishPool(this);
 
         float halfAreaWidth = minigameArea.bounds.size.x / 2;
         float halfAreaHeight = minigameArea.bounds.size.y / 2;
@@ -78,13 +83,12 @@ public class Fish : MonoBehaviour, IBoundArea
         float halfFishWidth = sr.bounds.size.x / 2;
         float halfFishHeight = sr.bounds.size.y / 2;
 
-        if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth)
+        if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
         {
-            Debug.Log("Fish escaped!");
-        }
-        else if (transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
-        {
-            Debug.Log("Fish escaped!");
+            pool.Despawn(this.gameObject);
+            spawner.RespawnFish(pool, fishType);
+
+            fm.EndMinigame(false);
         }
     }
 

@@ -1,7 +1,12 @@
+using Lean.Pool;
 using UnityEngine;
 
 public class FishingManager : MonoBehaviour
 {
+    #region Variables
+    [Header("References")]
+    FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
+
     [Header("Status")]
     public bool isMinigame = false;
 
@@ -18,19 +23,9 @@ public class FishingManager : MonoBehaviour
         get => minigameArea;
         private set => minigameArea = value;
     }
+    #endregion
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    #region Minigame
     public void StartMinigame(Fish target)
     {
         isMinigame = true;
@@ -39,10 +34,31 @@ public class FishingManager : MonoBehaviour
         minigameArea = Instantiate(minigameAreaPrefab, targetFish.transform.position, Quaternion.identity);
     }
 
+    public void EndMinigame(bool isSuccess)
+    {
+        if (isSuccess)
+        {
+            LeanGameObjectPool pool = HelperFunction.GetFishPool(targetFish);
+
+            pool.Despawn(targetFish.gameObject);
+            spawner.RespawnFish(pool,targetFish.fishType);
+
+            // ADD SCORE LOGIC HERE
+        }
+        isMinigame = false;
+        targetFish = null;
+        if (minigameArea != null)
+            Destroy(minigameArea);
+
+    }
+    #endregion
+
+    #region Debugging
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.orange;
         if (isMinigame && targetFish != null)
             Gizmos.DrawWireCube(minigameArea.transform.position, minigameAreaPrefab.GetComponent<SpriteRenderer>().bounds.size);
     }
+    #endregion
 }

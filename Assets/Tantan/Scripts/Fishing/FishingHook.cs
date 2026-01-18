@@ -8,7 +8,6 @@ public class FishingHook : MonoBehaviour, IBoundArea
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     [SerializeField] SpriteRenderer boundingArea;
     [SerializeField] LayerMask fishLayer;
-    FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
     FishingManager fm => FindAnyObjectByType<FishingManager>();
 
     [Header("Parameter")]
