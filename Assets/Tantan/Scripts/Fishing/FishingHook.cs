@@ -8,15 +8,19 @@ public class FishingHook : MonoBehaviour, IBoundArea
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     [SerializeField] SpriteRenderer boundingArea;
     [SerializeField] LayerMask fishLayer;
-    FishingManager fm => FindAnyObjectByType<FishingManager>();
 
     [Header("Parameter")]
     [SerializeField] float followSpeed = 5.0f;
+    [SerializeField] float dragUpForce = 5;
+    public float DragUpForce
+    {
+        get => dragUpForce;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (fm.isMinigame)
+        if (FishingManager.Instance.isMinigame)
             FollowFish();
         else
             FollowMouse();
@@ -37,7 +41,7 @@ public class FishingHook : MonoBehaviour, IBoundArea
     void FollowFish()
     {
         rb.linearVelocity = Vector2.zero;
-        transform.position = fm.TargetFish.transform.position;
+        transform.position = FishingManager.Instance.TargetFish.transform.position;
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -58,13 +62,13 @@ public class FishingHook : MonoBehaviour, IBoundArea
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (fm.isMinigame) return;
+        if (FishingManager.Instance.isMinigame) return;
 
         if(collision.gameObject.layer == LayerMask.NameToLayer("Fish"))
         {
             FishType type = collision.GetComponent<Fish>().fishType;
 
-            fm.StartMinigame(collision.GetComponent<Fish>());
+            FishingManager.Instance.StartMinigame(collision.GetComponent<Fish>());
         }
     }
 

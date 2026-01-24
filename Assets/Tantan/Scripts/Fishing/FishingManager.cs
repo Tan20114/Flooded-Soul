@@ -1,7 +1,7 @@
 using Lean.Pool;
 using UnityEngine;
 
-public class FishingManager : MonoBehaviour
+public class FishingManager : Singleton<FishingManager>
 {
     #region Variables
     [Header("References")]
@@ -12,7 +12,8 @@ public class FishingManager : MonoBehaviour
 
     [Header("Objects")]
     [SerializeField] GameObject minigameAreaPrefab;
-    Fish targetFish;
+    public Transform fishCatchLine;
+    [SerializeField] Fish targetFish;
     public Fish TargetFish
     {
         get => targetFish;
@@ -36,20 +37,21 @@ public class FishingManager : MonoBehaviour
 
     public void EndMinigame(bool isSuccess)
     {
-        if (isSuccess)
+        if (!isSuccess)
         {
             LeanGameObjectPool pool = HelperFunction.GetFishPool(targetFish);
 
             pool.Despawn(targetFish.gameObject);
             spawner.RespawnFish(pool,targetFish.fishType);
 
-            // ADD SCORE LOGIC HERE
+            GameManager.Instance.fishPoints += targetFish.FishPoint;
         }
+
         isMinigame = false;
         targetFish = null;
+
         if (minigameArea != null)
             Destroy(minigameArea);
-
     }
     #endregion
 

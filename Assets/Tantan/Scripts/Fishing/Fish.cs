@@ -1,4 +1,5 @@
 using Lean.Pool;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum FishType
@@ -15,14 +16,16 @@ public class Fish : MonoBehaviour, IBoundArea
     Rigidbody2D rb => GetComponent<Rigidbody2D>();
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
-    FishingManager fm => FindAnyObjectByType<FishingManager>();
     FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
+    FishingHook hook => FindAnyObjectByType<FishingHook>();
 
     [Header("Parameter")]
     public FishType fishType = FishType.Common;
     bool isSwimmingRight = false;
     [SerializeField] float swimSpeed = 1f;
     [SerializeField] int fishPoint = 1;
+    [SerializeField] bool isClicked = false;
+    [SerializeField] float resistanceForce = 1f;
     public int FishPoint { get; }
     float swimDir = -1f;
 
@@ -38,6 +41,24 @@ public class Fish : MonoBehaviour, IBoundArea
     {
         MoveRestriction(boundingArea);
         MinigameRestriction();
+    }
+
+    private void FixedUpdate()
+    {
+        // Horizontal Swimming Movement
+        rb.linearVelocity = new Vector2(swimDir * swimSpeed, rb.linearVelocity.y);
+
+        // Vertical Swimming Movement
+        if (!FishingManager.Instance.isMinigame) return;
+        if (this != FishingManager.Instance.TargetFish) return;
+
+        if (isClicked)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x , -(hook.DragUpForce - resistanceForce));
+            HelperFunction.Delay(this, .5f , () => isClicked = false);
+        }
+        else
+            rb.linearVelocity = rb.linearVelocity = new Vector2(rb.linearVelocity.x, -swimSpeed / 2);
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -62,19 +83,18 @@ public class Fish : MonoBehaviour, IBoundArea
             swimDir = -1;
             isSwimmingRight = false;
         }
-
-        rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
-        sr.flipX = isSwimmingRight;
         #endregion
 
         transform.position = pos;
+        sr.flipX = isSwimmingRight;
     }
 
     void MinigameRestriction()
     {
-        if (!fm.isMinigame) return;
-        if (this != fm.TargetFish) return;
-        SpriteRenderer minigameArea = fm.MinigameArea.GetComponent<SpriteRenderer>();
+        if (!FishingManager.Instance.isMinigame) return;
+        if (this != FishingManager.Instance.TargetFish) return;
+
+        SpriteRenderer minigameArea = FishingManager.Instance.MinigameArea.GetComponent<SpriteRenderer>();
         LeanGameObjectPool pool = HelperFunction.GetFishPool(this);
 
         float halfAreaWidth = minigameArea.bounds.size.x / 2;
@@ -83,12 +103,37 @@ public class Fish : MonoBehaviour, IBoundArea
         float halfFishWidth = sr.bounds.size.x / 2;
         float halfFishHeight = sr.bounds.size.y / 2;
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mouseWorldPos = HelperFunction.GetWorldMouse();
+            Collider2D fish = Physics2D.OverlapCircle(mouseWorldPos,.2f, LayerMask.GetMask("Fish"));
+
+            if (fish && fish.gameObject == FishingManager.Instance.TargetFish.gameObject)
+            {
+                Debug.Log(fish.gameObject.name);
+                if (isClicked) return;
+
+                swimDir *= Random.Range(0, 100) > 80 ? 1 : -1;
+                isSwimmingRight = swimDir > 0 ? true : false;
+
+                isClicked = true;
+            }
+        }
+
         if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
         {
             pool.Despawn(this.gameObject);
             spawner.RespawnFish(pool, fishType);
 
-            fm.EndMinigame(false);
+            FishingManager.Instance.EndMinigame(false);
+        }
+
+        if (transform.position.y > FishingManager.Instance.fishCatchLine.position.y)
+        {
+            pool.Despawn(this.gameObject);
+            spawner.RespawnFish(pool, fishType);
+
+            FishingManager.Instance.EndMinigame(true);
         }
     }
 
@@ -102,5 +147,7 @@ public class Fish : MonoBehaviour, IBoundArea
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider2D>().size);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(HelperFunction.GetWorldMouse(), .2f);
     }
 }

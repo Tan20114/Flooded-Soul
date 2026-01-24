@@ -105,8 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8808337310e71e043a3131de29e91687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish
-  swimSpeed: 1
   fishType: 0
+  swimSpeed: 1
+  fishPoint: 1
+  isClicked: 0
+  resistanceForce: 1
 --- !u!50 &1749337271034894527
 Rigidbody2D:
   serializedVersion: 5
@@ -122,7 +125,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

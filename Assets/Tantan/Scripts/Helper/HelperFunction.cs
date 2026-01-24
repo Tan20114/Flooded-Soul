@@ -1,4 +1,6 @@
 using Lean.Pool;
+using System;
+using System.Collections;
 using UnityEngine;
 
 public abstract class HelperFunction : MonoBehaviour
@@ -21,5 +23,16 @@ public abstract class HelperFunction : MonoBehaviour
             FishType.Legendary => FindAnyObjectByType<FishSpawner>().legendaryFishPool,
             _ => null,
         };
+    }
+
+    static IEnumerator TimeDelay(float time ,Action action)
+    {
+        yield return new WaitForSeconds(time);
+        action?.Invoke();
+    }
+
+    public static void Delay(MonoBehaviour runner,float time,Action action)
+    {
+        runner.StartCoroutine(TimeDelay(time,action));
     }
 }

@@ -37,11 +37,6 @@ public class FishSpawner : MonoBehaviour
         InitialSpawnFish(legendaryFishPool, FishType.Legendary);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void RespawnFish(LeanGameObjectPool pool,FishType type) => pool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(type)), Quaternion.identity, pool.transform);
 
     void InitialSpawnFish(LeanGameObjectPool pool, FishType type)
@@ -132,6 +127,6 @@ public class FishSpawner : MonoBehaviour
         float centerY = (minY + maxY) * 0.5f;
 
         Gizmos.color = color;
-        Gizmos.DrawWireCube(new Vector3(fishBound.bounds.center.x, centerY, 0f),new Vector3(fishBound.bounds.size.x, height, 0f));
+        Gizmos.DrawWireCube(new Vector3(fishBound.bounds.center.x, centerY , 0f),new Vector3(fishBound.bounds.size.x, height, 0f));
     }
 }
