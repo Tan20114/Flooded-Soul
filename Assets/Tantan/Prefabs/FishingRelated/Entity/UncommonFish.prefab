@@ -106,8 +106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish
   fishType: 1
-  swimSpeed: 2
+  swimSpeed: 1.5
   fishPoint: 2
+  isClicked: 0
+  resistanceForce: 1.5
+  fishVisionRange: 4
 --- !u!50 &1749337271034894527
 Rigidbody2D:
   serializedVersion: 5

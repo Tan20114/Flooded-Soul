@@ -110,6 +110,7 @@ MonoBehaviour:
   fishPoint: 1
   isClicked: 0
   resistanceForce: 1
+  fishVisionRange: 4
 --- !u!50 &1749337271034894527
 Rigidbody2D:
   serializedVersion: 5

@@ -26,6 +26,7 @@ public class Fish : MonoBehaviour, IBoundArea
     [SerializeField] int fishPoint = 1;
     [SerializeField] bool isClicked = false;
     [SerializeField] float resistanceForce = 1f;
+    [SerializeField] float fishVisionRange = 2f;
     public int FishPoint { get; }
     float swimDir = -1f;
 
@@ -46,18 +47,13 @@ public class Fish : MonoBehaviour, IBoundArea
     private void FixedUpdate()
     {
         // Horizontal Swimming Movement
-        rb.linearVelocity = new Vector2(swimDir * swimSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(swimDir * (HookInFishVision ? swimSpeed * 1.5f : swimSpeed) , rb.linearVelocity.y);
 
         // Vertical Swimming Movement
         if (!FishingManager.Instance.isMinigame) return;
         if (this != FishingManager.Instance.TargetFish) return;
 
-        if (isClicked)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x , -(hook.DragUpForce - resistanceForce));
-            HelperFunction.Delay(this, .5f , () => isClicked = false);
-        }
-        else
+        if (!isClicked)
             rb.linearVelocity = rb.linearVelocity = new Vector2(rb.linearVelocity.x, -swimSpeed / 2);
     }
 
@@ -113,10 +109,13 @@ public class Fish : MonoBehaviour, IBoundArea
                 Debug.Log(fish.gameObject.name);
                 if (isClicked) return;
 
+                isClicked = true;
+
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
+                HelperFunction.Delay(this, .5f, () => isClicked = false);
+
                 swimDir *= Random.Range(0, 100) > 80 ? 1 : -1;
                 isSwimmingRight = swimDir > 0 ? true : false;
-
-                isClicked = true;
             }
         }
 
@@ -125,6 +124,8 @@ public class Fish : MonoBehaviour, IBoundArea
             pool.Despawn(this.gameObject);
             spawner.RespawnFish(pool, fishType);
 
+            isClicked = false;
+
             FishingManager.Instance.EndMinigame(false);
         }
 
@@ -132,6 +133,8 @@ public class Fish : MonoBehaviour, IBoundArea
         {
             pool.Despawn(this.gameObject);
             spawner.RespawnFish(pool, fishType);
+
+            isClicked = false;
 
             FishingManager.Instance.EndMinigame(true);
         }
@@ -143,11 +146,15 @@ public class Fish : MonoBehaviour, IBoundArea
         isSwimmingRight = swimDir > 0 ? true : false;
     }
 
+    bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange),transform.position.y), LayerMask.GetMask("Hook"));
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider2D>().size);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(HelperFunction.GetWorldMouse(), .2f);
+        Gizmos.color = Color.orange;
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange),transform.position.y));
     }
 }
