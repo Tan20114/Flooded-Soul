@@ -23,6 +23,7 @@ public class Fish : MonoBehaviour, IBoundArea
     public FishType fishType = FishType.Common;
     bool isSwimmingRight = false;
     [SerializeField] float swimSpeed = 1f;
+    float ogSpeed = 0;
     [SerializeField] int fishPoint = 1;
     [SerializeField] bool isClicked = false;
     [SerializeField] float resistanceForce = 1f;
@@ -33,6 +34,7 @@ public class Fish : MonoBehaviour, IBoundArea
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ogSpeed = swimSpeed;
         RandomDirection();
         rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
     }
@@ -111,6 +113,8 @@ public class Fish : MonoBehaviour, IBoundArea
 
                 isClicked = true;
 
+                swimSpeed /= 1.25f;
+
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
 
@@ -125,6 +129,7 @@ public class Fish : MonoBehaviour, IBoundArea
             spawner.RespawnFish(pool, fishType);
 
             isClicked = false;
+            swimSpeed = ogSpeed;
 
             FishingManager.Instance.EndMinigame(false);
         }
@@ -135,6 +140,7 @@ public class Fish : MonoBehaviour, IBoundArea
             spawner.RespawnFish(pool, fishType);
 
             isClicked = false;
+            swimSpeed = ogSpeed;
 
             FishingManager.Instance.EndMinigame(true);
         }
