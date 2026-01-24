@@ -10,6 +10,40 @@ public enum FishType
     Legendary
 }
 
+public enum CommonFishType
+{
+    None,
+    SacabambaspisFish,
+    WavefinFish,
+    MudFish,
+    IcefinFish,
+    HydrasacleFish
+}
+
+public enum UncommonFishType
+{
+    None,
+    DogFish,
+    FrostPetalFish,
+    GoofSlimeFish
+}
+
+public enum RareFishType
+{
+    None,
+    Seaturtle,
+    ClingFish,
+    RedJellyfish
+}
+
+public enum LegendaryFishType
+{
+    None,
+    PlabFish,
+    JollyFish,
+    KelpboneFish
+}
+
 public class Fish : MonoBehaviour, IBoundArea
 {
     [Header("References")]
@@ -21,13 +55,17 @@ public class Fish : MonoBehaviour, IBoundArea
 
     [Header("Parameter")]
     public FishType fishType = FishType.Common;
+    public CommonFishType commonFishType = CommonFishType.None;
+    public UncommonFishType uncommonFishType = UncommonFishType.None;
+    public RareFishType rareFishType = RareFishType.None;
+    public LegendaryFishType legendaryFishType = LegendaryFishType.None;
     bool isSwimmingRight = false;
-    [SerializeField] float swimSpeed = 1f;
+    public float swimSpeed = 1f;
     float ogSpeed = 0;
-    [SerializeField] int fishPoint = 1;
-    [SerializeField] bool isClicked = false;
-    [SerializeField] float resistanceForce = 1f;
-    [SerializeField] float fishVisionRange = 2f;
+    public int fishPoint = 1;
+    bool isClicked = false;
+    public float resistanceForce = 1f;
+    public float fishVisionRange = 2f;
     public int FishPoint { get; }
     float swimDir = -1f;
 
