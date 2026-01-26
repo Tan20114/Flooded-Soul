@@ -40,6 +40,8 @@ public class ParallaxLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OnBiomeChange();
+
         if (transform.position.x <= -pm.RegenPoint.position.x)
         {
             transform.position = new Vector2(pm.RegenPoint.position.x, transform.position.y);
@@ -61,5 +63,11 @@ public class ParallaxLayer : MonoBehaviour
             LayerType.UnderWater => pm.CurrentBiome.underWater,
             _ => null
         };
+    }
+
+    void OnBiomeChange()
+    {
+        if (pm.isBiomeChange)
+            RandomBiomeLayer();
     }
 }
