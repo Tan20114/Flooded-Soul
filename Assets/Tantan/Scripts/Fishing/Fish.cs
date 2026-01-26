@@ -1,5 +1,4 @@
 using Lean.Pool;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum FishType
@@ -52,6 +51,7 @@ public class Fish : MonoBehaviour, IBoundArea
     SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
     FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
     FishingHook hook => FindAnyObjectByType<FishingHook>();
+    CollectionManager collection => FindAnyObjectByType<CollectionManager>();
 
     [Header("Parameter")]
     public FishType fishType = FishType.Common;
@@ -87,7 +87,7 @@ public class Fish : MonoBehaviour, IBoundArea
     private void FixedUpdate()
     {
         // Horizontal Swimming Movement
-        rb.linearVelocity = new Vector2(swimDir * (HookInFishVision ? swimSpeed * 1.5f : swimSpeed) , rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(swimDir * (HookInFishVision ? swimSpeed * 1.5f : swimSpeed), rb.linearVelocity.y);
 
         // Vertical Swimming Movement
         if (!FishingManager.Instance.isMinigame) return;
@@ -139,10 +139,11 @@ public class Fish : MonoBehaviour, IBoundArea
         float halfFishWidth = sr.bounds.size.x / 2;
         float halfFishHeight = sr.bounds.size.y / 2;
 
+        #region Fish Clicked
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mouseWorldPos = HelperFunction.GetWorldMouse();
-            Collider2D fish = Physics2D.OverlapCircle(mouseWorldPos,.2f, LayerMask.GetMask("Fish"));
+            Collider2D fish = Physics2D.OverlapCircle(mouseWorldPos, .2f, LayerMask.GetMask("Fish"));
 
             if (fish && fish.gameObject == FishingManager.Instance.TargetFish.gameObject)
             {
@@ -160,7 +161,9 @@ public class Fish : MonoBehaviour, IBoundArea
                 isSwimmingRight = swimDir > 0 ? true : false;
             }
         }
+        #endregion
 
+        #region Catch Fail Condition
         if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
         {
             pool.Despawn(this.gameObject);
@@ -171,7 +174,9 @@ public class Fish : MonoBehaviour, IBoundArea
 
             FishingManager.Instance.EndMinigame(false);
         }
+        #endregion
 
+        #region Catch Success Condition
         if (transform.position.y > FishingManager.Instance.fishCatchLine.position.y)
         {
             pool.Despawn(this.gameObject);
@@ -180,8 +185,10 @@ public class Fish : MonoBehaviour, IBoundArea
             isClicked = false;
             swimSpeed = ogSpeed;
 
+            FishCategorizedCollection();
             FishingManager.Instance.EndMinigame(true);
         }
+        #endregion
     }
 
     void RandomDirection()
@@ -190,7 +197,34 @@ public class Fish : MonoBehaviour, IBoundArea
         isSwimmingRight = swimDir > 0 ? true : false;
     }
 
-    bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange),transform.position.y), LayerMask.GetMask("Hook"));
+    void FishCategorizedCollection()
+    {
+        switch (fishType)
+        {
+            case FishType.Common:
+                {
+                    collection.AddFishToCollection(commonFishType);
+                    break;
+                }
+            case FishType.Uncommon:
+                {
+                    collection.AddFishToCollection(uncommonFishType);
+                    break;
+                }
+            case FishType.Rare:
+                {
+                    collection.AddFishToCollection(rareFishType);
+                    break;
+                }
+            case FishType.Legendary:
+                {
+                    collection.AddFishToCollection(legendaryFishType);
+                    break;
+                }
+        }
+    }
+
+    bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y), LayerMask.GetMask("Hook"));
 
     private void OnDrawGizmos()
     {
@@ -199,6 +233,6 @@ public class Fish : MonoBehaviour, IBoundArea
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(HelperFunction.GetWorldMouse(), .2f);
         Gizmos.color = Color.orange;
-        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange),transform.position.y));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y));
     }
 }
