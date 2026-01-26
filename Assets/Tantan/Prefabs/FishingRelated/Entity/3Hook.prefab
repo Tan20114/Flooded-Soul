@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2469236920843482154}
   - component: {fileID: 4335120497738621011}
   - component: {fileID: 5697976177511443464}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: 3Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1073741824
   followSpeed: 2
+  dragUpForce: 5
 --- !u!50 &4335120497738621011
 Rigidbody2D:
   serializedVersion: 5
