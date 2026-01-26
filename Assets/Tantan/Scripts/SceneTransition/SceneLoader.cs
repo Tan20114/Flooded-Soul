@@ -7,8 +7,6 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] Animator transAnimator;
     [SerializeField] float animTime = 1f;
 
-    [SerializeField] GameObject image;
-
     public IEnumerator LoadScene(int index)
     {
         transAnimator.SetTrigger("SceneOut");
@@ -22,4 +20,7 @@ public class SceneLoader : MonoBehaviour
         yield return new WaitForSecondsRealtime(animTime);
         Application.Quit();
     }
+
+    public void ChangeScene(int index) => StartCoroutine(LoadScene(index));
+    public void Exit() => StartCoroutine(ExitGame());
 }
