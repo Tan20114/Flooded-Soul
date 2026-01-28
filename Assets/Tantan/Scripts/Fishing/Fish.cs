@@ -189,7 +189,7 @@ public class Fish : MonoBehaviour, IBoundArea
 
             hook.ResetHookPosition();
 
-            FishCategorizedCollection();
+            collection.FishCategorizedCollection(this);
             FishingManager.Instance.EndMinigame(true);
         }
         #endregion
@@ -199,33 +199,6 @@ public class Fish : MonoBehaviour, IBoundArea
     {
         swimDir = Random.Range(-1f, 1f) < 0.5f ? -1f : 1f;
         isSwimmingRight = swimDir > 0 ? true : false;
-    }
-
-    void FishCategorizedCollection()
-    {
-        switch (fishType)
-        {
-            case FishType.Common:
-                {
-                    collection.AddFishToCollection(commonFishType);
-                    break;
-                }
-            case FishType.Uncommon:
-                {
-                    collection.AddFishToCollection(uncommonFishType);
-                    break;
-                }
-            case FishType.Rare:
-                {
-                    collection.AddFishToCollection(rareFishType);
-                    break;
-                }
-            case FishType.Legendary:
-                {
-                    collection.AddFishToCollection(legendaryFishType);
-                    break;
-                }
-        }
     }
 
     bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y), LayerMask.GetMask("Hook"));
