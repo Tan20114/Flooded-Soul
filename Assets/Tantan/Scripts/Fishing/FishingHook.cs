@@ -61,7 +61,7 @@ public class FishingHook : MonoBehaviour, IBoundArea
         transform.position = pos;
     }
 
-    void ResetHookPosition() => transform.position = startPos;
+    public void ResetHookPosition() => transform.position = startPos;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

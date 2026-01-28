@@ -172,6 +172,8 @@ public class Fish : MonoBehaviour, IBoundArea
             isClicked = false;
             swimSpeed = ogSpeed;
 
+            hook.ResetHookPosition();
+
             FishingManager.Instance.EndMinigame(false);
         }
         #endregion
@@ -184,6 +186,8 @@ public class Fish : MonoBehaviour, IBoundArea
 
             isClicked = false;
             swimSpeed = ogSpeed;
+
+            hook.ResetHookPosition();
 
             FishCategorizedCollection();
             FishingManager.Instance.EndMinigame(true);
