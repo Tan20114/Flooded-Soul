@@ -10,11 +10,14 @@ public class FishingHook : MonoBehaviour, IBoundArea
     [SerializeField] LayerMask fishLayer;
 
     [Header("Parameter")]
+    [SerializeField] Vector2 startPos;
     [SerializeField] float followSpeed = 5.0f;
     [SerializeField] float dragUpForce = 5;
-    public float DragUpForce
+    public float DragUpForce => dragUpForce;
+
+    void Start()
     {
-        get => dragUpForce;
+        startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -58,7 +61,7 @@ public class FishingHook : MonoBehaviour, IBoundArea
         transform.position = pos;
     }
 
-
+    public void ResetHookPosition() => transform.position = startPos;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
