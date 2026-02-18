@@ -6,6 +6,7 @@ public class FishingHook : MonoBehaviour, IBoundArea
     [Header("References")]
     Rigidbody2D rb => GetComponent<Rigidbody2D>();
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
+    [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer boundingArea;
     [SerializeField] LayerMask fishLayer;
 
@@ -18,6 +19,8 @@ public class FishingHook : MonoBehaviour, IBoundArea
     void Start()
     {
         startPos = transform.position;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -80,4 +83,6 @@ public class FishingHook : MonoBehaviour, IBoundArea
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, sr.bounds.size);
     }
+
+    public void HookUpAnim() => animator.SetTrigger("HookUpTrigger");
 }

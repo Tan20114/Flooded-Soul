@@ -152,6 +152,8 @@ public class Fish : MonoBehaviour, IBoundArea
 
                 isClicked = true;
 
+                hook.HookUpAnim();
+
                 swimSpeed /= 1.25f;
 
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
