@@ -1,8 +1,17 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+
+public enum BiomeType
+{
+    Ocean = 2,
+    Forest = 1,
+    Ice = 0
+}
 
 public class ParallaxManager : MonoBehaviour
 {
+    public static event Action<BiomeContainer> OnBiomeChanged;
+
     [Header("Reference")]
     [SerializeField] Transform regenPoint;
     public Transform RegenPoint { get => regenPoint; }
@@ -10,7 +19,8 @@ public class ParallaxManager : MonoBehaviour
 
     [Header("Properties")]
     BiomeContainer currentBiome;
-    public BiomeContainer CurrentBiome { get => currentBiome; }
+    public BiomeContainer CurrentBiomeAsset { get => currentBiome; }
+    public BiomeType CurrentBiome { get => (BiomeType)currentBiomeIndex; }
     [SerializeField]int currentBiomeIndex = 0;
     int CurrentBiomeIndex
     {
@@ -28,10 +38,7 @@ public class ParallaxManager : MonoBehaviour
     public float Speed { get => speed; }
     [HideInInspector] public bool isBiomeChange = false;
 
-    void Awake()
-    {
-        currentBiome = biomeList[CurrentBiomeIndex];
-    }
+    void Awake() => currentBiome = biomeList[CurrentBiomeIndex];
 
     private void Update()
     {
@@ -40,23 +47,21 @@ public class ParallaxManager : MonoBehaviour
 
     void ChangeBiome()
     {
-
         if (Input.GetKeyDown(KeyCode.O))
         {
             CurrentBiomeIndex--;
-            isBiomeChange = true;
+            ApplyBiome();
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
             CurrentBiomeIndex++;
-            isBiomeChange = true;
+            ApplyBiome();
         }
+    }
 
-        if(isBiomeChange)
-        {
-            isBiomeChange = false;
-            Debug.Log("BiomeChange");
-            currentBiome = biomeList[CurrentBiomeIndex];
-        }
+    void ApplyBiome()
+    {
+        currentBiome = biomeList[CurrentBiomeIndex];
+        OnBiomeChanged?.Invoke(currentBiome);
     }
 }
