@@ -37,6 +37,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &352610529249971309
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -82,7 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 1745802733261202971, guid: 1633610e8dd08974ca7869a1fd7036b2, type: 3}
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -5666737283194589149, guid: 49e718833fe08b5418279bf2c7f51a44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,7 +93,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2469236920843482154
 MonoBehaviour:
@@ -105,10 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e74d0cd7ebcfb443b8fff65b17c2c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingHook
+  animator: {fileID: 0}
   boundingArea: {fileID: 0}
   fishLayer:
     serializedVersion: 2
     m_Bits: 1073741824
+  startPos: {x: 0, y: 0}
   followSpeed: 2
   dragUpForce: 5
 --- !u!50 &4335120497738621011
@@ -176,7 +179,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.48}
+    oldSize: {x: 0.38, y: 0.62}
     newSize: {x: 0.26, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

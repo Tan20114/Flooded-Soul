@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: b3941ff7d40acf740b4d081e5db93d6c
+guid: 4c30e39e0dbb74144ad72ef01a9fb5f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6727962995433823203
-    second: hookspriteaniamtion_0
+      213: -7292396899618189281
+    second: fish13_animate-Sheet_0
+  - first:
+      213: 1234923306282974128
+    second: fish13_animate-Sheet_1
+  - first:
+      213: -2843703616724030367
+    second: fish13_animate-Sheet_2
+  - first:
+      213: 4566547140458566576
+    second: fish13_animate-Sheet_3
+  - first:
+      213: 9039256173788772882
+    second: fish13_animate-Sheet_4
+  - first:
+      213: -550671487364287883
+    second: fish13_animate-Sheet_5
+  - first:
+      213: 1506927410474701871
+    second: fish13_animate-Sheet_6
+  - first:
+      213: 3826762487309501874
+    second: fish13_animate-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,35 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hookspriteaniamtion_0
+      name: legend_animated_jollyFish_snow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d14a13b4d4971a2a0800000000000000
-      internalID: -6727962995433823203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hookspriteaniamtion_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 50
+        width: 106
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d1a83ae9e7e7ad4dbf614d1b0002f7c
-      internalID: -929146763
+      spriteID: a27b545e5c494a6479da0a3b782503d7
+      internalID: -1747913925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hookspriteaniamtion_2
+      name: legend_animated_jollyFish_snow_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 106
         y: 0
-        width: 24
-        height: 50
+        width: 106
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25d586f0b9c5e304a964bdf8c6b61e60
-      internalID: 1808444759
+      spriteID: d7da867a510bc46469782cb368273981
+      internalID: -1987593020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hookspriteaniamtion_3
+      name: legend_animated_jollyFish_snow_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 212
         y: 0
-        width: 24
-        height: 50
+        width: 106
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a87083e1297c0b840abca2ad668ee77f
-      internalID: -873891242
+      spriteID: 152306032bd6056409514cbae4756c8d
+      internalID: -1739017703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hookspriteaniamtion_4
+      name: legend_animated_jollyFish_snow_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 318
         y: 0
-        width: 24
-        height: 50
+        width: 106
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +241,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e84d5597255ed8e46b3fec891a458fe6
-      internalID: -639808869
+      spriteID: f83a5a8edb067f644978b217a4d7a9a0
+      internalID: 1190894080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hookspriteaniamtion_5
+      name: legend_animated_jollyFish_snow_4
       rect:
         serializedVersion: 2
-        x: 120
+        x: 424
         y: 0
-        width: 24
-        height: 50
+        width: 106
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 229a73ad8e13e824a9a1fbb172499ad7
-      internalID: 1959538135
+      spriteID: a4deb765eb97c5c47882f007b0b7549c
+      internalID: -380338236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hookspriteaniamtion_6
+      name: legend_animated_jollyFish_snow_5
       rect:
         serializedVersion: 2
-        x: 144
+        x: 530
         y: 0
-        width: 24
-        height: 50
+        width: 106
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,8 +285,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efdd0fd16035181459a0f08ababb1652
-      internalID: 323567194
+      spriteID: af22391dbed24c448b9f1988244e55ed
+      internalID: -668661669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legend_animated_jollyFish_snow_6
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 0
+        width: 106
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c78594afd294b84aba9147dd4c8df06
+      internalID: 183304925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legend_animated_jollyFish_snow_7
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 0
+        width: 106
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3203aef905aaa48ae8f4801e1c3e37
+      internalID: -1733819192
       vertices: []
       indices: 
       edges: []
@@ -296,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b4bdf1c4fcf44c44caf8660a4a7cf6f9
+    spriteID: 2802ec1430899f04298627f65e3ae798
     internalID: 0
     vertices: []
     indices: 
@@ -306,15 +349,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":1.0},"gridSpriteSize":{"x":24.0,"y":50.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":106.0,"y":60.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      hookspriteaniamtion_0: -6727962995433823203
-      hookspriteaniamtion_1: -929146763
-      hookspriteaniamtion_2: 1808444759
-      hookspriteaniamtion_3: -873891242
-      hookspriteaniamtion_4: -639808869
-      hookspriteaniamtion_5: 1959538135
-      hookspriteaniamtion_6: 323567194
+      legend_animated_jollyFish_snow_0: -1747913925
+      legend_animated_jollyFish_snow_1: -1987593020
+      legend_animated_jollyFish_snow_2: -1739017703
+      legend_animated_jollyFish_snow_3: 1190894080
+      legend_animated_jollyFish_snow_4: -380338236
+      legend_animated_jollyFish_snow_5: -668661669
+      legend_animated_jollyFish_snow_6: 183304925
+      legend_animated_jollyFish_snow_7: -1733819192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

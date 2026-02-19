@@ -42,7 +42,7 @@ public class FishingManager : Singleton<FishingManager>
             LeanGameObjectPool pool = HelperFunction.GetFishPool(targetFish);
 
             pool.Despawn(targetFish.gameObject);
-            spawner.RespawnFish(pool,targetFish.fishType);
+            spawner.RespawnFish(targetFish.fishType);
 
             GameManager.Instance.fishPoints += targetFish.FishPoint;
         }

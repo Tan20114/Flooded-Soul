@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: 1633610e8dd08974ca7869a1fd7036b2
+guid: ce5612e602fc26545931414785963dd9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1745802733261202971
-    second: fishing_hook_0
+      213: -7263726983665609029
+    second: fish1_animate-Sheet_0
+  - first:
+      213: -8747461556226156593
+    second: fish1_animate-Sheet_1
+  - first:
+      213: -14983738434381569
+    second: fish1_animate-Sheet_2
+  - first:
+      213: 4889521183727036960
+    second: fish1_animate-Sheet_3
+  - first:
+      213: 820431902787580191
+    second: fish1_animate-Sheet_4
+  - first:
+      213: -2666624567006785471
+    second: fish1_animate-Sheet_5
+  - first:
+      213: 6831926266104445260
+    second: fish1_animate-Sheet_6
+  - first:
+      213: 2384121254871748991
+    second: fish1_animate-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,7 +131,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +144,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fishing_hook_0
+      name: fish1_animate-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 48
+        width: 72
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,74 +175,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b16a0f316565a3810800000000000000
-      internalID: 1745802733261202971
+      spriteID: bb611311bce023b90800000000000000
+      internalID: -7263726983665609029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing_hook_1
+      name: fish1_animate-Sheet_1
       rect:
         serializedVersion: 2
-        x: 26
+        x: 72
         y: 0
-        width: 26
-        height: 48
+        width: 72
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8eb36093f18345a44b848c5432b6adc3
-      internalID: -293235728
+      spriteID: fc711c68f06ca9680800000000000000
+      internalID: -8747461556226156593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing_hook_2
+      name: fish1_animate-Sheet_2
       rect:
         serializedVersion: 2
-        x: 52
+        x: 144
         y: 0
-        width: 26
-        height: 48
+        width: 72
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e862f9b1056983140ab1713919284a84
-      internalID: 1299512231
+      spriteID: ff816398e54cacff0800000000000000
+      internalID: -14983738434381569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing_hook_3
+      name: fish1_animate-Sheet_3
       rect:
         serializedVersion: 2
-        x: 78
+        x: 216
         y: 0
-        width: 26
-        height: 48
+        width: 72
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2bd62c18e00cd12489257f1973d81a24
-      internalID: -1857216885
+      spriteID: 02a2ccd5c911bd340800000000000000
+      internalID: 4889521183727036960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish1_animate-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 72
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f113d000872c26b00800000000000000
+      internalID: 820431902787580191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish1_animate-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 72
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1401b3ea51f3efad0800000000000000
+      internalID: -2666624567006785471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish1_animate-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 72
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49f0deedb0efce50800000000000000
+      internalID: 6831926266104445260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish1_animate-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 72
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71d61256a9161120800000000000000
+      internalID: 2384121254871748991
       vertices: []
       indices: 
       edges: []
@@ -230,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 947af629cd8b19e408a06f6e050a24b7
+    spriteID: ec9ab481b0a31884c83ee64c33a150dd
     internalID: 0
     vertices: []
     indices: 
@@ -240,12 +349,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":26.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":72.0,"y":42.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      fishing_hook_0: 1745802733261202971
-      fishing_hook_1: -293235728
-      fishing_hook_2: 1299512231
-      fishing_hook_3: -1857216885
+      fish1_animate-Sheet_0: -7263726983665609029
+      fish1_animate-Sheet_1: -8747461556226156593
+      fish1_animate-Sheet_2: -14983738434381569
+      fish1_animate-Sheet_3: 4889521183727036960
+      fish1_animate-Sheet_4: 820431902787580191
+      fish1_animate-Sheet_5: -2666624567006785471
+      fish1_animate-Sheet_6: 6831926266104445260
+      fish1_animate-Sheet_7: 2384121254871748991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

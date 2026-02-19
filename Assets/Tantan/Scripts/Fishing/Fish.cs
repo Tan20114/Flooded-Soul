@@ -54,6 +54,7 @@ public class Fish : MonoBehaviour, IBoundArea
     CollectionManager collection => FindAnyObjectByType<CollectionManager>();
 
     [Header("Parameter")]
+    [SerializeField] int id;
     public FishType fishType = FishType.Common;
     public CommonFishType commonFishType = CommonFishType.None;
     public UncommonFishType uncommonFishType = UncommonFishType.None;
@@ -61,6 +62,7 @@ public class Fish : MonoBehaviour, IBoundArea
     public LegendaryFishType legendaryFishType = LegendaryFishType.None;
     bool isSwimmingRight = false;
     public float swimSpeed = 1f;
+    public float speedDownRatio = .75f;
     float ogSpeed = 0;
     public int fishPoint = 1;
     bool isClicked = false;
@@ -154,7 +156,7 @@ public class Fish : MonoBehaviour, IBoundArea
 
                 hook.HookUpAnim();
 
-                swimSpeed /= 1.25f;
+                swimSpeed *= .75f;
 
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
@@ -168,8 +170,11 @@ public class Fish : MonoBehaviour, IBoundArea
         #region Catch Fail Condition
         if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
         {
-            pool.Despawn(this.gameObject);
-            spawner.RespawnFish(pool, fishType);
+            pool.Capacity--;
+            spawner.RandomAddCapacity();
+
+            pool.Despawn(gameObject);
+            spawner.RespawnFish(fishType);
 
             isClicked = false;
             swimSpeed = ogSpeed;
@@ -183,8 +188,11 @@ public class Fish : MonoBehaviour, IBoundArea
         #region Catch Success Condition
         if (transform.position.y > FishingManager.Instance.fishCatchLine.position.y)
         {
-            pool.Despawn(this.gameObject);
-            spawner.RespawnFish(pool, fishType);
+            pool.Capacity--;
+            spawner.RandomAddCapacity();
+
+            pool.Despawn(gameObject);
+            spawner.RespawnFish(fishType);
 
             isClicked = false;
             swimSpeed = ogSpeed;

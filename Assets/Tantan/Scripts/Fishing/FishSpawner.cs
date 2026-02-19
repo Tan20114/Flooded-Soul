@@ -37,7 +37,17 @@ public class FishSpawner : MonoBehaviour
         InitialSpawnFish(legendaryFishPool, FishType.Legendary);
     }
 
-    public void RespawnFish(LeanGameObjectPool pool,FishType type) => pool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(type)), Quaternion.identity, pool.transform);
+    public void RespawnFish(FishType type) 
+    {
+        if (commonFishPool.Spawned < commonFishPool.Capacity)
+            commonFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Common)), Quaternion.identity, commonFishPool.transform);
+        if (uncommonFishPool.Spawned < uncommonFishPool.Capacity)
+            uncommonFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Uncommon)), Quaternion.identity, uncommonFishPool.transform);
+        if (rareFishPool.Spawned < rareFishPool.Capacity)
+            rareFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Rare)), Quaternion.identity, rareFishPool.transform);
+        if (legendaryFishPool.Spawned < legendaryFishPool.Capacity)
+            legendaryFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Legendary)), Quaternion.identity, legendaryFishPool.transform);
+    } 
 
     void InitialSpawnFish(LeanGameObjectPool pool, FishType type)
     {
@@ -58,13 +68,13 @@ public class FishSpawner : MonoBehaviour
         switch (type)
         {
             case FishType.Common:
-                fishYRange = Random.Range(allYRange * -initialYRatio, allYRange * -commonYRatio);
+                fishYRange = Random.Range(allYRange * -initialYRatio, allYRange * -legendaryYRatio);
                 break;
             case FishType.Uncommon:
-                fishYRange = Random.Range(allYRange * -commonYRatio, allYRange * -uncommonYRatio);
+                fishYRange = Random.Range(allYRange * -commonYRatio, allYRange * -legendaryYRatio);
                 break;
             case FishType.Rare:
-                fishYRange = Random.Range(allYRange * -uncommonYRatio, allYRange * -rareYRatio);
+                fishYRange = Random.Range(allYRange * -uncommonYRatio, allYRange * -legendaryYRatio);
                 break;
             case FishType.Legendary:
                 fishYRange = Random.Range(allYRange * -rareYRatio, allYRange * -legendaryYRatio);
@@ -102,6 +112,25 @@ public class FishSpawner : MonoBehaviour
         uncommonFishPool.Capacity = uncommonFishCapacity;
         rareFishPool.Capacity = rareFishCapacity;
         legendaryFishPool.Capacity = legendaryFishCapacity;
+    }
+
+    public void RandomAddCapacity()
+    {
+        int currentFishCount = commonFishPool.Capacity + uncommonFishPool.Capacity + rareFishPool.Capacity + legendaryFishPool.Capacity;
+
+        for (int i = currentFishCount; i < maxFishCount; i++)
+        {
+            int ranVal = Random.Range(0, 100);
+
+            if (ranVal < possibilities.CommonMax)
+                commonFishPool.Capacity++;
+            else if (ranVal < possibilities.UncommonMax)
+                uncommonFishPool.Capacity++;
+            else if (ranVal < possibilities.RareMax)
+                rareFishPool.Capacity++;
+            else
+                legendaryFishPool.Capacity++;
+        }
     }
 
     private void OnDrawGizmos()

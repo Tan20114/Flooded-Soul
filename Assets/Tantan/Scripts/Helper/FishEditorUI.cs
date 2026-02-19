@@ -28,6 +28,7 @@ public class FishEditorUI : Editor
         EditorGUILayout.Separator();
         EditorGUILayout.LabelField("Fish Properties", EditorStyles.boldLabel);
         fish.swimSpeed = EditorGUILayout.FloatField("Swim Speed", fish.swimSpeed);
+        fish.speedDownRatio = EditorGUILayout.FloatField("Speed Down Ratio", fish.speedDownRatio);
         fish.fishPoint = EditorGUILayout.IntField("Fish Point", fish.fishPoint);
         fish.resistanceForce = EditorGUILayout.FloatField("Resistance Force", fish.resistanceForce);
         fish.fishVisionRange = EditorGUILayout.FloatField("Fish Vision Range", fish.fishVisionRange);
