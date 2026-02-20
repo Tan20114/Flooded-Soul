@@ -3,9 +3,9 @@ using UnityEngine;
 
 public enum BiomeType
 {
-    Ocean = 2,
-    Forest = 1,
-    Ice = 0
+    Ocean = 0,
+    Forest = 2,
+    Ice = 1
 }
 
 public class ParallaxManager : MonoBehaviour
@@ -20,18 +20,11 @@ public class ParallaxManager : MonoBehaviour
     [Header("Properties")]
     BiomeContainer currentBiome;
     public BiomeContainer CurrentBiomeAsset { get => currentBiome; }
-    public BiomeType CurrentBiome { get => (BiomeType)currentBiomeIndex; }
     [SerializeField]int currentBiomeIndex = 0;
-    int CurrentBiomeIndex
+    public int CurrentBiomeIndex
     {
-        get 
-        {
-            return currentBiomeIndex;
-        }
-        set
-        {
-            currentBiomeIndex = Mathf.Clamp(value,0,2);
-        }
+        get => currentBiomeIndex;
+        set => currentBiomeIndex = Mathf.Clamp(value,0,2);
     }
     [Range(0,5)]
     [SerializeField] float speed = 1.0f;
@@ -40,10 +33,9 @@ public class ParallaxManager : MonoBehaviour
 
     void Awake() => currentBiome = biomeList[CurrentBiomeIndex];
 
-    private void Update()
-    {
-        ChangeBiome();
-    }
+    private void Start() => SetBiome();
+
+    private void Update() => ChangeBiome();
 
     void ChangeBiome()
     {
@@ -62,6 +54,9 @@ public class ParallaxManager : MonoBehaviour
     void ApplyBiome()
     {
         currentBiome = biomeList[CurrentBiomeIndex];
+        SetBiome();
         OnBiomeChanged?.Invoke(currentBiome);
     }
+
+    void SetBiome() => GameManager.Instance.CurrentBiome = (BiomeType)currentBiomeIndex;
 }
