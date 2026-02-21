@@ -927,6 +927,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3469176540665295908, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3652782115211125760, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
       propertyPath: m_Layer
       value: 29
@@ -947,6 +951,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4479128989441575904, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 4566799889310053205, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
       propertyPath: preload
       value: 5
@@ -963,6 +971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1FishingManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8025244050137888393, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 6739525476511245190, guid: 8712e93c11e89ca49b493679920bc8fe, type: 3}
     - target: {fileID: 8025244050137888393, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
       propertyPath: preload
       value: 10
@@ -1003,6 +1015,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2263180130830077752, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5760066645224790403}
     - targetCorrespondingSourceObject: {fileID: 3652782115211125760, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5760066645224790401}
@@ -1034,6 +1049,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &5760066645224790402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2263180130830077752, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
+  m_PrefabInstance: {fileID: 5760066645224790399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5760066645224790403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760066645224790402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee05a6c55ac007c4daad9ffe0cd038b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishingBG
+  biomeAsset:
+  - {fileID: 11400000, guid: e5af5cee97fcfef4aba2d8824ae3fe19, type: 2}
+  - {fileID: 11400000, guid: a7dad035a26c5804e8893b6205719c40, type: 2}
+  - {fileID: 11400000, guid: c9005c4f4c84f63468c357a2c1215984, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

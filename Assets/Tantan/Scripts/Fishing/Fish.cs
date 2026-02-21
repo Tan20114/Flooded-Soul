@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum FishType
 {
-    Common = 0,
-    Uncommon = 5,
-    Rare = 8,
-    Legendary = 11
+    Common,
+    Uncommon,
+    Rare,
+    Legendary
 }
 
 public enum CommonFishType
@@ -54,7 +54,6 @@ public class Fish : MonoBehaviour, IBoundArea
     FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
     FishingHook hook => FindAnyObjectByType<FishingHook>();
     CollectionManager collection => FindAnyObjectByType<CollectionManager>();
-    ParallaxManager parallaxManager => FindAnyObjectByType<ParallaxManager>();
 
     [Header("Parameter")]
     [SerializeField] int id;
@@ -65,8 +64,8 @@ public class Fish : MonoBehaviour, IBoundArea
     public LegendaryFishType legendaryFishType = LegendaryFishType.None;
     bool isSwimmingRight = false;
     public float swimSpeed = 1f;
+    float currentSpeed = 0;
     public float speedDownRatio = .75f;
-    float ogSpeed = 0;
     public int fishPoint = 1;
     bool isClicked = false;
     public float resistanceForce = 1f;
@@ -77,7 +76,7 @@ public class Fish : MonoBehaviour, IBoundArea
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ogSpeed = swimSpeed;
+        currentSpeed = swimSpeed;
         RandomFish();
         RandomDirection();
         rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
@@ -93,14 +92,14 @@ public class Fish : MonoBehaviour, IBoundArea
     private void FixedUpdate()
     {
         // Horizontal Swimming Movement
-        rb.linearVelocity = new Vector2(swimDir * (HookInFishVision ? swimSpeed * 1.5f : swimSpeed), rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(swimDir * (HookInFishVision ? currentSpeed * 1.5f : currentSpeed), rb.linearVelocity.y);
 
         // Vertical Swimming Movement
         if (!FishingManager.Instance.isMinigame) return;
         if (this != FishingManager.Instance.TargetFish) return;
 
         if (!isClicked)
-            rb.linearVelocity = rb.linearVelocity = new Vector2(rb.linearVelocity.x, -swimSpeed / 2);
+            rb.linearVelocity = rb.linearVelocity = new Vector2(rb.linearVelocity.x, -currentSpeed / 2);
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -160,7 +159,7 @@ public class Fish : MonoBehaviour, IBoundArea
 
                 hook.HookUpAnim();
 
-                swimSpeed *= .75f;
+                currentSpeed *= .75f;
 
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
@@ -181,7 +180,7 @@ public class Fish : MonoBehaviour, IBoundArea
             spawner.RespawnFish(fishType);
 
             isClicked = false;
-            swimSpeed = ogSpeed;
+            currentSpeed = swimSpeed;
 
             hook.ResetHookPosition();
 
@@ -199,7 +198,7 @@ public class Fish : MonoBehaviour, IBoundArea
             spawner.RespawnFish(fishType);
 
             isClicked = false;
-            swimSpeed = ogSpeed;
+            currentSpeed = swimSpeed;
 
             hook.ResetHookPosition();
 
@@ -223,15 +222,15 @@ public class Fish : MonoBehaviour, IBoundArea
                 List<int> commonPity = new List<int>() { 1, 2 };
                 commonPity.Add(GameManager.Instance.CurrentBiome switch
                 {
-                    BiomeType.Ice => (int)UncommonFishType.FrostPetalFish,
-                    BiomeType.Ocean => (int)UncommonFishType.DogFish,
-                    BiomeType.Forest => (int)UncommonFishType.GoofSlimeFish,
+                    BiomeType.Ice => (int)CommonFishType.IcefinFish,
+                    BiomeType.Ocean => (int)CommonFishType.WavefinFish,
+                    BiomeType.Forest => (int)CommonFishType.HydrasacleFish,
                     _ => (int)uncommonFishType
                 });
 
                 commonFishType = (CommonFishType)commonPity[Random.Range(0,3)];
 
-                id = (int)fishType + (int)commonFishType;
+                id = GetFishTypeID(fishType) + (int)commonFishType;
                 break;
             case FishType.Uncommon:
                 uncommonFishType = GameManager.Instance.CurrentBiome switch
@@ -239,10 +238,10 @@ public class Fish : MonoBehaviour, IBoundArea
                     BiomeType.Ice => UncommonFishType.FrostPetalFish,
                     BiomeType.Ocean => UncommonFishType.DogFish,
                     BiomeType.Forest => UncommonFishType.GoofSlimeFish,
-                    _ => uncommonFishType
+                    _ => UncommonFishType.DogFish
                 };
 
-                id = (int)fishType + (int)uncommonFishType;
+                id = GetFishTypeID(fishType) + (int)uncommonFishType;
                 break;
             case FishType.Rare:
                 rareFishType = GameManager.Instance.CurrentBiome switch
@@ -250,10 +249,10 @@ public class Fish : MonoBehaviour, IBoundArea
                     BiomeType.Ocean => RareFishType.Seaturtle,
                     BiomeType.Ice => RareFishType.ClingFish,
                     BiomeType.Forest => RareFishType.RedJellyfish,
-                    _ => rareFishType
+                    _ => RareFishType.Seaturtle
                 };
 
-                id = (int)fishType + (int)rareFishType;
+                id = GetFishTypeID(fishType) + (int)rareFishType;
                 break;
             case FishType.Legendary:
                 legendaryFishType = GameManager.Instance.CurrentBiome switch
@@ -261,14 +260,35 @@ public class Fish : MonoBehaviour, IBoundArea
                     BiomeType.Ocean => LegendaryFishType.PlabFish,
                     BiomeType.Ice => LegendaryFishType.JollyFish,
                     BiomeType.Forest => LegendaryFishType.KelpboneFish,
-                    _ => legendaryFishType
+                    _ => LegendaryFishType.PlabFish
                 };
 
-                id = (int)fishType + (int)legendaryFishType;
+                id = GetFishTypeID(fishType) + (int)legendaryFishType;
                 break;
         }
 
+        Debug.Log(id);
         animator.SetInteger("ID", id);
+    }
+
+    int GetFishTypeID(FishType type)
+    {
+        int id = type switch
+        {
+            FishType.Common => 0,
+            FishType.Uncommon => 5,
+            FishType.Rare => 8,
+            FishType.Legendary => 11,
+            _ => 0
+        };
+
+        Debug.Log(id);
+        return id;
+    }
+
+    public void ResetFish()
+    {
+        RandomFish();
     }
 
     bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y), LayerMask.GetMask("Hook"));

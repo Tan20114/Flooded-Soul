@@ -40,13 +40,25 @@ public class FishSpawner : MonoBehaviour
     public void RespawnFish(FishType type) 
     {
         if (commonFishPool.Spawned < commonFishPool.Capacity)
-            commonFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Common)), Quaternion.identity, commonFishPool.transform);
+        {
+            GameObject fish = commonFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Common)), Quaternion.identity, commonFishPool.transform);
+            fish.GetComponent<Fish>().ResetFish();
+        }
         if (uncommonFishPool.Spawned < uncommonFishPool.Capacity)
-            uncommonFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Uncommon)), Quaternion.identity, uncommonFishPool.transform);
+        {
+            GameObject fish = uncommonFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Uncommon)), Quaternion.identity, uncommonFishPool.transform);
+            fish.GetComponent<Fish>().ResetFish();
+        }
         if (rareFishPool.Spawned < rareFishPool.Capacity)
-            rareFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Rare)), Quaternion.identity, rareFishPool.transform);
+        {
+            GameObject fish = rareFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Rare)), Quaternion.identity, rareFishPool.transform);
+            fish.GetComponent<Fish>().ResetFish();
+        }
         if (legendaryFishPool.Spawned < legendaryFishPool.Capacity)
-            legendaryFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Legendary)), Quaternion.identity, legendaryFishPool.transform);
+        {
+            GameObject fish = legendaryFishPool.Spawn(new Vector2(RandomSpawnPoint(), CalculateYPos(FishType.Legendary)), Quaternion.identity, legendaryFishPool.transform);
+            fish.GetComponent<Fish>().ResetFish();
+        }
     } 
 
     void InitialSpawnFish(LeanGameObjectPool pool, FishType type)
