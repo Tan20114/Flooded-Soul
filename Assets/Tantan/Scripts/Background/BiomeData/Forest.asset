@@ -36,17 +36,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 743e905d4e1c8c54ca2f340b25576c86, type: 3}
   - {fileID: 21300000, guid: 1483123649e5c594a9f0f77b6a880ad9, type: 3}
   layer4:
-  - {fileID: 21300000, guid: f2c827b00cf6c2b4f837412ea5d0a73d, type: 3}
   - {fileID: 21300000, guid: c60865c35fe6e0746ba716ee45420647, type: 3}
   - {fileID: 21300000, guid: 7aa86d5edcaf9f941abd463c3157827f, type: 3}
   - {fileID: 21300000, guid: 60e5c567b094de046b4d172ec8c98647, type: 3}
-  layer5:
-  - {fileID: 21300000, guid: 914c6344284757f45a1933d419a8b120, type: 3}
-  - {fileID: 21300000, guid: 65328963fabfe80469f79fc1b344dc29, type: 3}
-  - {fileID: 21300000, guid: 3f48876dcc64afd478483fb50d101d76, type: 3}
   - {fileID: 21300000, guid: 87356ee5ad3346649bd8d09c52830086, type: 3}
   - {fileID: 21300000, guid: 0b70236a16c5a3446804620d132c47df, type: 3}
   - {fileID: 21300000, guid: 6b09b659d799e8840a514d75d14691fd, type: 3}
+  layer5:
+  - {fileID: 21300000, guid: f2c827b00cf6c2b4f837412ea5d0a73d, type: 3}
+  - {fileID: 21300000, guid: 914c6344284757f45a1933d419a8b120, type: 3}
+  - {fileID: 21300000, guid: 65328963fabfe80469f79fc1b344dc29, type: 3}
+  - {fileID: 21300000, guid: 3f48876dcc64afd478483fb50d101d76, type: 3}
   layerSky: {fileID: 21300000, guid: 0734d139c8fd42948a330e4a83b91b19, type: 3}
   layerWave: {fileID: 21300000, guid: ab854a4854f80564295f35bd06b5cccb, type: 3}
   underWater: {fileID: 21300000, guid: 02a3c644540dd4e408e07b1868ed787b, type: 3}
+  shop: {fileID: 1969792186218432847, guid: 8e91f6defccc01a45afcb22bd155dee1, type: 3}

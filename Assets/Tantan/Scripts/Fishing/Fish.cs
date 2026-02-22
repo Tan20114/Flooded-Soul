@@ -228,6 +228,8 @@ public class Fish : MonoBehaviour, IBoundArea
                     _ => (int)uncommonFishType
                 });
 
+                Debug.Log((CommonFishType)commonPity[2]);
+
                 commonFishType = (CommonFishType)commonPity[Random.Range(0,3)];
 
                 id = GetFishTypeID(fishType) + (int)commonFishType;
@@ -267,7 +269,6 @@ public class Fish : MonoBehaviour, IBoundArea
                 break;
         }
 
-        Debug.Log(id);
         animator.SetInteger("ID", id);
     }
 
@@ -289,6 +290,8 @@ public class Fish : MonoBehaviour, IBoundArea
     public void ResetFish()
     {
         RandomFish();
+        currentSpeed = 0;
+        HelperFunction.Delay(this, 3f, () => currentSpeed = swimSpeed);
     }
 
     bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y), LayerMask.GetMask("Hook"));

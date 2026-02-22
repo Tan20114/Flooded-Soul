@@ -9,18 +9,22 @@ public enum LayerType
     Layer4,
     Layer5,
     Wave,
-    UnderWater
+    UnderWater,
+    Shop
 }
 
 public class ParallaxLayer : MonoBehaviour
 {
-    ParallaxManager pm;
+    BoatController player => FindAnyObjectByType<BoatController>();
+
+    protected ParallaxManager pm;
     Rigidbody2D rb;
-    SpriteRenderer sr;
+    protected SpriteRenderer sr;
 
     [Header("Properties")]
     [SerializeField] LayerType layerType;
     [SerializeField] float parallaxFactor = 0.5f;
+    float smooth = 2f;
     float speed => pm.Speed * parallaxFactor;
 
     private void Awake()
@@ -30,7 +34,6 @@ public class ParallaxLayer : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         RandomBiomeLayer(); 
@@ -43,9 +46,10 @@ public class ParallaxLayer : MonoBehaviour
 
     void HandleBiomeChange(BiomeContainer biome) => RandomBiomeLayer();
 
-    // Update is called once per frame
     void Update()
     {
+        MovementControl();
+
         if (transform.position.x <= -pm.RegenPoint.position.x)
         {
             transform.position = new Vector2(pm.RegenPoint.position.x, transform.position.y);
@@ -53,7 +57,23 @@ public class ParallaxLayer : MonoBehaviour
         }
     }
 
-    void RandomBiomeLayer()
+    void MovementControl()
+    {
+        float targetSpeed;
+
+        if (layerType == LayerType.Sky)
+            targetSpeed = player.state == BoatState.Moving ? -speed : -speed * .2f;
+        else if ((GameManager.Instance.CurrentBiome == BiomeType.Ocean || GameManager.Instance.CurrentBiome == BiomeType.Forest) && layerType == LayerType.Layer5)
+            targetSpeed = player.state == BoatState.Moving ? -speed : -speed * .3f;
+        else
+            targetSpeed = player.state == BoatState.Moving ? -speed : 0f;
+
+        float newX = Mathf.Lerp(rb.linearVelocity.x, targetSpeed, Time.deltaTime * smooth);
+
+        rb.linearVelocity = new Vector2(newX, 0f);
+    }
+
+    protected virtual void RandomBiomeLayer()
     {
         sr.sprite = layerType switch
         {

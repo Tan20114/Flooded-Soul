@@ -4,8 +4,8 @@ using UnityEngine;
 public enum BiomeType
 {
     Ocean = 0,
-    Forest = 2,
-    Ice = 1
+    Ice = 1,
+    Forest = 2
 }
 
 public class ParallaxManager : MonoBehaviour
@@ -31,9 +31,23 @@ public class ParallaxManager : MonoBehaviour
     public float Speed { get => speed; }
     [HideInInspector] public bool isBiomeChange = false;
 
-    void Awake() => currentBiome = biomeList[CurrentBiomeIndex];
+    private void Awake()
+    {
+        switch (GameManager.Instance.CurrentBiome)
+        {
+            case BiomeType.Ocean:
+                CurrentBiomeIndex = 0;
+                break;
+            case BiomeType.Ice:
+                CurrentBiomeIndex = 1;
+                break;
+            case BiomeType.Forest:
+                CurrentBiomeIndex = 2;
+                break;
+        }
 
-    private void Start() => SetBiome();
+        currentBiome = biomeList[CurrentBiomeIndex];
+    }
 
     private void Update() => ChangeBiome();
 
