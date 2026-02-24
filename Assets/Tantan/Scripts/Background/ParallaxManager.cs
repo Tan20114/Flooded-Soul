@@ -31,22 +31,10 @@ public class ParallaxManager : MonoBehaviour
     public float Speed { get => speed; }
     [HideInInspector] public bool isBiomeChange = false;
 
-    private void Awake()
+    private void Start()
     {
-        switch (GameManager.Instance.CurrentBiome)
-        {
-            case BiomeType.Ocean:
-                CurrentBiomeIndex = 0;
-                break;
-            case BiomeType.Ice:
-                CurrentBiomeIndex = 1;
-                break;
-            case BiomeType.Forest:
-                CurrentBiomeIndex = 2;
-                break;
-        }
-
-        currentBiome = biomeList[CurrentBiomeIndex];
+        currentBiomeIndex = (int)GlobalManager.Instance.CurrentBiome;
+        currentBiome = biomeList[CurrentBiomeIndex];  
     }
 
     private void Update() => ChangeBiome();
@@ -72,5 +60,5 @@ public class ParallaxManager : MonoBehaviour
         OnBiomeChanged?.Invoke(currentBiome);
     }
 
-    void SetBiome() => GameManager.Instance.CurrentBiome = (BiomeType)currentBiomeIndex;
+    void SetBiome() => GlobalManager.Instance.CurrentBiome = (BiomeType)currentBiomeIndex;
 }

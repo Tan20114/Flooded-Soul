@@ -6,6 +6,8 @@ public class FishingManager : Singleton<FishingManager>
     #region Variables
     [Header("References")]
     FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
+    CollectionManager collection => FindAnyObjectByType<CollectionManager>();
+    FishingHook hook => FindAnyObjectByType<FishingHook>();
 
     [Header("Status")]
     public bool isMinigame = false;
@@ -37,15 +39,24 @@ public class FishingManager : Singleton<FishingManager>
 
     public void EndMinigame(bool isSuccess)
     {
-        if (!isSuccess)
+        if (targetFish == null) return;
+
+        LeanGameObjectPool pool = HelperFunction.GetFishPool(targetFish);
+
+        if (isSuccess)
         {
-            LeanGameObjectPool pool = HelperFunction.GetFishPool(targetFish);
-
-            pool.Despawn(targetFish.gameObject);
-            spawner.RespawnFish(targetFish.fishType);
-
-            GameManager.Instance.fishPoints += targetFish.FishPoint;
+            Debug.Log("FishPoint value: " + targetFish.FishPoint);
+            GlobalManager.Instance.fishPoints += targetFish.FishPoint;
+            collection.FishCategorizedCollection(targetFish);
         }
+
+        pool.Capacity--;
+        spawner.RandomAddCapacity();
+
+        pool.Despawn(targetFish.gameObject);
+        spawner.RespawnFish(targetFish.fishType);
+
+        hook.ResetHookPosition();
 
         isMinigame = false;
         targetFish = null;

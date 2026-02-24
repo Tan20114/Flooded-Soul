@@ -53,7 +53,6 @@ public class Fish : MonoBehaviour, IBoundArea
     SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
     FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
     FishingHook hook => FindAnyObjectByType<FishingHook>();
-    CollectionManager collection => FindAnyObjectByType<CollectionManager>();
 
     [Header("Parameter")]
     [SerializeField] int id;
@@ -70,7 +69,7 @@ public class Fish : MonoBehaviour, IBoundArea
     bool isClicked = false;
     public float resistanceForce = 1f;
     public float fishVisionRange = 2f;
-    public int FishPoint { get; }
+    public int FishPoint { get => fishPoint; }
     float swimDir = -1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -170,41 +169,27 @@ public class Fish : MonoBehaviour, IBoundArea
         }
         #endregion
 
-        #region Catch Fail Condition
-        if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
+        #region Fishing Condition
+        #region Catch Success Condition
+        if (transform.position.y > FishingManager.Instance.fishCatchLine.position.y)
         {
-            pool.Capacity--;
-            spawner.RandomAddCapacity();
-
-            pool.Despawn(gameObject);
-            spawner.RespawnFish(fishType);
-
+            Debug.Log("Success");
             isClicked = false;
             currentSpeed = swimSpeed;
 
-            hook.ResetHookPosition();
+            FishingManager.Instance.EndMinigame(true);
+        }
+        #endregion
+        #region Catch Fail Condition
+        else if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
+        {
+            Debug.Log("Fail");
+            isClicked = false;
+            currentSpeed = swimSpeed;
 
             FishingManager.Instance.EndMinigame(false);
         }
         #endregion
-
-        #region Catch Success Condition
-        if (transform.position.y > FishingManager.Instance.fishCatchLine.position.y)
-        {
-            pool.Capacity--;
-            spawner.RandomAddCapacity();
-
-            pool.Despawn(gameObject);
-            spawner.RespawnFish(fishType);
-
-            isClicked = false;
-            currentSpeed = swimSpeed;
-
-            hook.ResetHookPosition();
-
-            collection.FishCategorizedCollection(this);
-            FishingManager.Instance.EndMinigame(true);
-        }
         #endregion
     }
 
@@ -220,7 +205,7 @@ public class Fish : MonoBehaviour, IBoundArea
         {
             case FishType.Common:
                 List<int> commonPity = new List<int>() { 1, 2 };
-                commonPity.Add(GameManager.Instance.CurrentBiome switch
+                commonPity.Add(GlobalManager.Instance.CurrentBiome switch
                 {
                     BiomeType.Ice => (int)CommonFishType.IcefinFish,
                     BiomeType.Ocean => (int)CommonFishType.WavefinFish,
@@ -228,14 +213,12 @@ public class Fish : MonoBehaviour, IBoundArea
                     _ => (int)uncommonFishType
                 });
 
-                Debug.Log((CommonFishType)commonPity[2]);
-
                 commonFishType = (CommonFishType)commonPity[Random.Range(0,3)];
 
                 id = GetFishTypeID(fishType) + (int)commonFishType;
                 break;
             case FishType.Uncommon:
-                uncommonFishType = GameManager.Instance.CurrentBiome switch
+                uncommonFishType = GlobalManager.Instance.CurrentBiome switch
                 {
                     BiomeType.Ice => UncommonFishType.FrostPetalFish,
                     BiomeType.Ocean => UncommonFishType.DogFish,
@@ -246,7 +229,7 @@ public class Fish : MonoBehaviour, IBoundArea
                 id = GetFishTypeID(fishType) + (int)uncommonFishType;
                 break;
             case FishType.Rare:
-                rareFishType = GameManager.Instance.CurrentBiome switch
+                rareFishType = GlobalManager.Instance.CurrentBiome switch
                 {
                     BiomeType.Ocean => RareFishType.Seaturtle,
                     BiomeType.Ice => RareFishType.ClingFish,
@@ -257,7 +240,7 @@ public class Fish : MonoBehaviour, IBoundArea
                 id = GetFishTypeID(fishType) + (int)rareFishType;
                 break;
             case FishType.Legendary:
-                legendaryFishType = GameManager.Instance.CurrentBiome switch
+                legendaryFishType = GlobalManager.Instance.CurrentBiome switch
                 {
                     BiomeType.Ocean => LegendaryFishType.PlabFish,
                     BiomeType.Ice => LegendaryFishType.JollyFish,
@@ -283,7 +266,6 @@ public class Fish : MonoBehaviour, IBoundArea
             _ => 0
         };
 
-        Debug.Log(id);
         return id;
     }
 

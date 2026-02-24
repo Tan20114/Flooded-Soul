@@ -6,5 +6,5 @@ public class FishingBG : MonoBehaviour
 
     [SerializeField] BiomeContainer[] biomeAsset; 
 
-    void Start() => sr.sprite = biomeAsset[(int)GameManager.Instance.CurrentBiome].underWater;
+    void Start() => sr.sprite = biomeAsset[(int)GlobalManager.Instance.CurrentBiome].underWater;
 }

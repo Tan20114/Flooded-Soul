@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tantan/Scene/TantanTestScene2.unity
     guid: a38bf473f24578f4a89ea7c51b7f6946
+  - enabled: 1
+    path: Assets/Tantan/Scene/Shop.unity
+    guid: 159564096123de340bbe637bf8b59fe9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

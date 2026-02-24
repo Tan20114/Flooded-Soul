@@ -13,25 +13,17 @@ public class BoatController : MonoBehaviour
     [SerializeField] LayerMask shopMask;
     [SerializeField] Vector2 colliderSize;
     [SerializeField] Vector2 colliderOffset;
+    [SerializeField] Vector2 shopColliderSize = Vector2.one;
+    [SerializeField] Vector2 shopColliderOffset = new Vector2(-5.5f,-4f);
     [SerializeField] GameObject[] boatVisual;
     [SerializeField] Animator boatAnimator;
     [SerializeField] Animator[] waveAnimator;
 
     [Header("Parameter")]
     public BoatState state = BoatState.Moving;
-    [SerializeField] int boatLevel = 1;
+    [SerializeField] float boatSpeed = 2f;
     bool shopEntered = false;
-    public int BoatLevel
-    {
-        get => boatLevel;
-        set
-        {
-            if (value == boatLevel) return;
-
-            boatLevel = Mathf.Clamp(value, 1, 3);
-            OnBoatLevelChanged();
-        }
-    }
+    public bool isInShopArea = false;
 
     public void Sail()
     {
@@ -43,31 +35,32 @@ public class BoatController : MonoBehaviour
 
     public void ToggleAutoStop() => GameManager.Instance.autoStop = !GameManager.Instance.autoStop;
 
-    private void Start() => OnBoatLevelChanged();
-
     private void Update()
     {
-        boatAnimator.SetBool("isStop", state == BoatState.Moving? false : true);
-        waveAnimator[boatLevel - 1].SetBool("isStop", state == BoatState.Moving? false : true);
+        StopVisualize();
+        BoatLevelVisualize();
         ShopCollide();
     }
 
     void ShopCollide()
     {
-        if (Physics2D.OverlapBox(colliderOffset,colliderSize, 0, shopMask))
+        isInShopArea = Physics2D.OverlapBox(colliderOffset, colliderSize, 0, shopMask);
+        bool isInShopAutoStop = Physics2D.OverlapBox(shopColliderOffset, shopColliderSize, 0, shopMask);
+
+        if (isInShopAutoStop)
         {
             if (state == BoatState.Moving && GameManager.Instance.autoStop && !shopEntered)
             {
                 Stop();
             }
         }
+        else
+            shopEntered = false;
     }
 
-    private void OnBoatLevelChanged()
+    private void BoatLevelVisualize()
     {
-        waveAnimator[boatLevel - 1].SetInteger("level", boatLevel);
-
-        switch (boatLevel)
+        switch (GlobalManager.Instance.boatLevel)
         {
             case 1:
                 colliderSize = new Vector2(2f, 1f);
@@ -85,18 +78,22 @@ public class BoatController : MonoBehaviour
 
         for (int i = 0; i < boatVisual.Length; i++)
         {
-            boatVisual[i].SetActive(i == boatLevel - 1);
+            boatVisual[i].SetActive(i == GlobalManager.Instance.boatLevel - 1);
         }
     }
 
-    public void UpgradeBoat()
+    void StopVisualize()
     {
-        BoatLevel++;
+        boatAnimator.SetBool("isStop", state == BoatState.Moving ? false : true);
+        boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>().ghostAnimator.SetBool("isStop", state == BoatState.Moving ? false : true);
+        waveAnimator[GlobalManager.Instance.boatLevel - 1].SetBool("isStop", state == BoatState.Moving ? false : true);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.orange;
         Gizmos.DrawWireCube(colliderOffset, colliderSize);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(shopColliderOffset, shopColliderSize);
     }
 }

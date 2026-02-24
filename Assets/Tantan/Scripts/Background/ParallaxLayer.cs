@@ -10,22 +10,22 @@ public enum LayerType
     Layer5,
     Wave,
     UnderWater,
-    Shop
+    shop
 }
 
 public class ParallaxLayer : MonoBehaviour
 {
-    BoatController player => FindAnyObjectByType<BoatController>();
+    protected BoatController player => FindAnyObjectByType<BoatController>();
 
     protected ParallaxManager pm;
-    Rigidbody2D rb;
+    protected Rigidbody2D rb;
     protected SpriteRenderer sr;
 
     [Header("Properties")]
     [SerializeField] LayerType layerType;
     [SerializeField] float parallaxFactor = 0.5f;
     float smooth = 2f;
-    float speed => pm.Speed * parallaxFactor;
+    protected float speed => pm.Speed * parallaxFactor;
 
     private void Awake()
     {
@@ -36,8 +36,11 @@ public class ParallaxLayer : MonoBehaviour
 
     void Start()
     {
-        RandomBiomeLayer(); 
-        rb.linearVelocity = new Vector2(-speed, 0);
+        HelperFunction.Delay(this, .01f, () =>
+        {
+            RandomBiomeLayer();
+            rb.linearVelocity = new Vector2(-speed, 0);
+        });
     }
 
     private void OnEnable() => ParallaxManager.OnBiomeChanged += HandleBiomeChange;
@@ -46,10 +49,15 @@ public class ParallaxLayer : MonoBehaviour
 
     void HandleBiomeChange(BiomeContainer biome) => RandomBiomeLayer();
 
-    void Update()
+    protected virtual void Update()
     {
         MovementControl();
 
+        RegenLayer();
+    }
+
+    protected virtual void RegenLayer()
+    {
         if (transform.position.x <= -pm.RegenPoint.position.x)
         {
             transform.position = new Vector2(pm.RegenPoint.position.x, transform.position.y);
@@ -57,13 +65,13 @@ public class ParallaxLayer : MonoBehaviour
         }
     }
 
-    void MovementControl()
+    protected void MovementControl()
     {
         float targetSpeed;
 
         if (layerType == LayerType.Sky)
             targetSpeed = player.state == BoatState.Moving ? -speed : -speed * .2f;
-        else if ((GameManager.Instance.CurrentBiome == BiomeType.Ocean || GameManager.Instance.CurrentBiome == BiomeType.Forest) && layerType == LayerType.Layer5)
+        else if ((GlobalManager.Instance.CurrentBiome == BiomeType.Ocean || GlobalManager.Instance.CurrentBiome == BiomeType.Forest) && layerType == LayerType.Layer5)
             targetSpeed = player.state == BoatState.Moving ? -speed : -speed * .3f;
         else
             targetSpeed = player.state == BoatState.Moving ? -speed : 0f;

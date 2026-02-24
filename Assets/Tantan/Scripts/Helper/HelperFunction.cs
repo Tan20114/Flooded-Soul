@@ -15,12 +15,14 @@ public abstract class HelperFunction : MonoBehaviour
 
     public static LeanGameObjectPool GetFishPool(Fish fish)
     {
+        FishSpawner fs = FindAnyObjectByType<FishSpawner>();
+
         return fish.fishType switch
         {
-            FishType.Common => FindAnyObjectByType<FishSpawner>().commonFishPool,
-            FishType.Uncommon => FindAnyObjectByType<FishSpawner>().uncommonFishPool,
-            FishType.Rare => FindAnyObjectByType<FishSpawner>().rareFishPool,
-            FishType.Legendary => FindAnyObjectByType<FishSpawner>().legendaryFishPool,
+            FishType.Common => fs.commonFishPool,
+            FishType.Uncommon => fs.uncommonFishPool,
+            FishType.Rare => fs.rareFishPool,
+            FishType.Legendary => fs.legendaryFishPool,
             _ => null,
         };
     }
