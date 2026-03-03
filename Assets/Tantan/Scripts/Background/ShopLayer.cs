@@ -16,8 +16,9 @@ public class ShopLayer : ParallaxLayer
         RegenLayer();
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         RandomBiomeLayer();
     }
 

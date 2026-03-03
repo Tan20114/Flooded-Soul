@@ -70,10 +70,15 @@ public class TransparentWindow : MonoBehaviour
     const uint SWP_FRAMECHANGED = 0x0020;
     #endregion
 
-
-    IntPtr hWnd;
+    #region TopMost Constants
+    const uint SWP_NOMOVE = 0x0002;
+    const uint SWP_NOSIZE = 0x0001;
 
     static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
+    static readonly IntPtr HWND_NOTOPMOST = new IntPtr(-2);
+    #endregion
+
+    IntPtr hWnd;
 
     [SerializeField] LayerMask gameObjectMask;
 
@@ -107,25 +112,24 @@ public class TransparentWindow : MonoBehaviour
 
         SetWindowLong(hWnd, GWL_STYLE, style);
 
-        SetWindowPos(
+         SetWindowPos(
             hWnd,
-            HWND_TOPMOST,
+            IntPtr.Zero,
             (int)workArea.x,
             (int)workArea.y,
             (int)workArea.width,
             (int)workArea.height,
-            SWP_NOACTIVATE | SWP_SHOWWINDOW
-        );
+            SWP_FRAMECHANGED | SWP_SHOWWINDOW);
 
         Margins margins = new Margins { cxLeftWidth = -1 };
         DwmExtendFrameIntoClientArea(hWnd, ref margins);
 
         SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
+        ApplyTopmost();
 #endif
         Application.runInBackground = true;
         yield break;
     }
-
 
     void Update()
     {
@@ -156,20 +160,34 @@ public class TransparentWindow : MonoBehaviour
         }
     }
 
-    Vector3 GetWorldMouse()
-    {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.z = 0f;
-
-        return mouseWorldPos;
-    }
-
     void SetClickThrough(bool canClickThrough)
     {
+        uint exStyle = GetWindowLong(hWnd, GWL_EXSTYLE);
+
         if (canClickThrough)
-            SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
+            exStyle |= WS_EX_TRANSPARENT;   // add flag
         else
-            SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED);
+            exStyle &= ~WS_EX_TRANSPARENT;  // remove flag
+
+        SetWindowLong(hWnd, GWL_EXSTYLE, exStyle);
+    }
+
+    public void ToggleTopmost()
+    {
+        GlobalManager.Instance.isAlwaysOnTop = !GlobalManager.Instance.isAlwaysOnTop;
+
+        ApplyTopmost();
+    }
+
+    void ApplyTopmost()
+    {
+        SetWindowPos(
+            hWnd,
+            GlobalManager.Instance.isAlwaysOnTop
+                ? HWND_TOPMOST
+                : HWND_NOTOPMOST,
+            0, 0, 0, 0,
+            SWP_NOACTIVATE | SWP_NOMOVE | SWP_NOSIZE);
     }
 
     Rect GetWorkArea()

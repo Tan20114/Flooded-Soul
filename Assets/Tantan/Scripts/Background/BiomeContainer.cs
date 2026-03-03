@@ -12,4 +12,5 @@ public class BiomeContainer : ScriptableObject
     public Sprite layerWave;
     public Sprite underWater;
     public Sprite shop;
+    public AudioClip bgm;
 }

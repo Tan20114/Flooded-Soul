@@ -1,4 +1,5 @@
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum BoatState
@@ -10,6 +11,7 @@ public enum BoatState
 public class BoatController : MonoBehaviour
 {
     [Header("References")]
+    [SerializeField] UpgradeData upgradeData;
     [SerializeField] LayerMask shopMask;
     [SerializeField] Vector2 colliderSize;
     [SerializeField] Vector2 colliderOffset;
@@ -18,6 +20,11 @@ public class BoatController : MonoBehaviour
     [SerializeField] GameObject[] boatVisual;
     [SerializeField] Animator boatAnimator;
     [SerializeField] Animator[] waveAnimator;
+    Animator ghostAnimator;
+    Animator cat1Animator;
+    Animator cat2Animator;
+    Animator cat3Animator;
+    Animator cat4Animator;
 
     [Header("Parameter")]
     public BoatState state = BoatState.Moving;
@@ -38,6 +45,9 @@ public class BoatController : MonoBehaviour
     private void Update()
     {
         StopVisualize();
+        GetCatAnimator();
+        CatVisualize();
+        Travel();
         BoatLevelVisualize();
         ShopCollide();
     }
@@ -82,11 +92,45 @@ public class BoatController : MonoBehaviour
         }
     }
 
+    void Travel()
+    {
+        if (state == BoatState.Idle) return;
+
+        GlobalManager.Instance.distance += upgradeData.boatSpeed[GlobalManager.Instance.boatLevel - 1] * Time.deltaTime;
+    }
+
     void StopVisualize()
     {
         boatAnimator.SetBool("isStop", state == BoatState.Moving ? false : true);
         boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>().ghostAnimator.SetBool("isStop", state == BoatState.Moving ? false : true);
         waveAnimator[GlobalManager.Instance.boatLevel - 1].SetBool("isStop", state == BoatState.Moving ? false : true);
+    }
+
+    void GetCatAnimator()
+    {
+        cat1Animator = boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>().cat1Animator;
+        cat2Animator = boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>().cat2Animator;
+        cat3Animator = boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>().cat3Animator;
+        cat4Animator = boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>().cat4Animator;
+    }
+
+    void CatVisualize()
+    {
+        UpdateCat(cat1Animator, GlobalManager.Instance.cat1Level);
+        UpdateCat(cat2Animator, GlobalManager.Instance.cat2Level);
+        UpdateCat(cat3Animator, GlobalManager.Instance.cat3Level);
+        UpdateCat(cat4Animator, GlobalManager.Instance.cat4Level);
+    }
+
+    void UpdateCat(Animator animator, int level)
+    {
+        if (animator == null) return;
+
+        bool isActive = level > 0;
+        animator.gameObject.SetActive(isActive);
+
+        if (isActive)
+            animator.SetInteger("level", level);
     }
 
     private void OnDrawGizmos()

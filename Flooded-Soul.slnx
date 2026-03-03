@@ -2,6 +2,7 @@
   <Project Path="BetterHierarchy.csproj" />
   <Project Path="AYellowpaper.SerializedCollections.csproj" />
   <Project Path="LeanCommon.csproj" />
+  <Project Path="LeanTouch.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
   <Project Path="CW.Common.csproj" />
@@ -9,4 +10,5 @@
   <Project Path="BetterHierarchyDemoScripts.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
   <Project Path="LeanPool.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
 </Solution>

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum BiomeType
 {
@@ -16,6 +17,7 @@ public class ParallaxManager : MonoBehaviour
     [SerializeField] Transform regenPoint;
     public Transform RegenPoint { get => regenPoint; }
     [SerializeField] BiomeContainer[] biomeList;
+    [SerializeField] Animator biomeTrans;
 
     [Header("Properties")]
     BiomeContainer currentBiome;
@@ -31,6 +33,11 @@ public class ParallaxManager : MonoBehaviour
     public float Speed { get => speed; }
     [HideInInspector] public bool isBiomeChange = false;
 
+    #region Change Biome Condition
+    [Header("Biome Changing")]
+    [SerializeField] float biomeChangeDistance = 100f;
+    #endregion
+
     private void Start()
     {
         currentBiomeIndex = (int)GlobalManager.Instance.CurrentBiome;
@@ -41,23 +48,33 @@ public class ParallaxManager : MonoBehaviour
 
     void ChangeBiome()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        int currentStep = (int)GlobalManager.Instance.distance / (int)biomeChangeDistance;
+
+        if (currentStep > GlobalManager.Instance.biomeChangeLastStep)
         {
-            CurrentBiomeIndex--;
-            ApplyBiome();
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
-            CurrentBiomeIndex++;
+            GlobalManager.Instance.biomeChangeLastStep = currentStep;
+
+            int randomBiomeIndex = Random.Range(0,3);
+
+            if (randomBiomeIndex == currentBiomeIndex) return;
+
+            currentBiomeIndex = randomBiomeIndex;
             ApplyBiome();
         }
     }
 
     void ApplyBiome()
     {
-        currentBiome = biomeList[CurrentBiomeIndex];
-        SetBiome();
-        OnBiomeChanged?.Invoke(currentBiome);
+        biomeTrans.SetTrigger("BiomeIn");
+
+        HelperFunction.Delay(this, 1f, () =>
+        {
+            currentBiome = biomeList[CurrentBiomeIndex];
+            SetBiome();
+            OnBiomeChanged?.Invoke(currentBiome);
+        });
+
+        HelperFunction.Delay(this, 1,() => biomeTrans.SetTrigger("BiomeOut"));
     }
 
     void SetBiome() => GlobalManager.Instance.CurrentBiome = (BiomeType)currentBiomeIndex;

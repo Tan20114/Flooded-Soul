@@ -55,7 +55,7 @@ public class Fish : MonoBehaviour, IBoundArea
     FishingHook hook => FindAnyObjectByType<FishingHook>();
 
     [Header("Parameter")]
-    [SerializeField] int id;
+    public int id;
     public FishType fishType = FishType.Common;
     public CommonFishType commonFishType = CommonFishType.None;
     public UncommonFishType uncommonFishType = UncommonFishType.None;
@@ -157,6 +157,7 @@ public class Fish : MonoBehaviour, IBoundArea
                 isClicked = true;
 
                 hook.HookUpAnim();
+                SFXManager.instance.PlaySoundFXClip(hook.hookUpSFX);
 
                 currentSpeed *= .75f;
 
@@ -276,14 +277,14 @@ public class Fish : MonoBehaviour, IBoundArea
         HelperFunction.Delay(this, 3f, () => currentSpeed = swimSpeed);
     }
 
+    public void FishEscape() => animator.SetTrigger("Escape");
+
     bool HookInFishVision => Physics2D.Linecast(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y), LayerMask.GetMask("Hook"));
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider2D>().size);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(HelperFunction.GetWorldMouse(), .2f);
         Gizmos.color = Color.orange;
         Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y));
     }

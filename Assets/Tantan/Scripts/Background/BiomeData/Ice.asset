@@ -34,3 +34,4 @@ MonoBehaviour:
   layerWave: {fileID: 21300000, guid: 367c50a2e1b759347b64448104403a66, type: 3}
   underWater: {fileID: 21300000, guid: 52e9755674fc82f4ea997a4a8868062a, type: 3}
   shop: {fileID: -1669890387591323584, guid: 05dab62aa589f5e4bae9deee9ca35c1a, type: 3}
+  bgm: {fileID: 8300000, guid: c807424c28162ac44915e51a95dc297a, type: 3}

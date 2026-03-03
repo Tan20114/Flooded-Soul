@@ -6,6 +6,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] Animator transAnimator;
     [SerializeField] float animTime = 1f;
+    public float AnimTime { get => animTime; }
 
     public IEnumerator LoadScene(int index)
     {
@@ -16,7 +17,7 @@ public class SceneLoader : MonoBehaviour
 
     public IEnumerator ExitGame()
     {
-        transAnimator.SetTrigger("Exit");
+        transAnimator.SetTrigger("SceneOut");
         yield return new WaitForSecondsRealtime(animTime);
         Application.Quit();
     }

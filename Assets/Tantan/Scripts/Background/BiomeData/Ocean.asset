@@ -40,5 +40,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2312fbc261a356043b0389935deb70c4, type: 3}
   layerSky: {fileID: 21300000, guid: 97d60e9dd7ef1db4db3c9e4cea053d4e, type: 3}
   layerWave: {fileID: 21300000, guid: 5352bf730eaeff54ea974cc199269c88, type: 3}
-  underWater: {fileID: 21300000, guid: caa13a45800052949879157bc4d1aa72, type: 3}
+  underWater: {fileID: -1236549622172810138, guid: caa13a45800052949879157bc4d1aa72, type: 3}
   shop: {fileID: 1969792186218432847, guid: 8e91f6defccc01a45afcb22bd155dee1, type: 3}
+  bgm: {fileID: 8300000, guid: d6f3f1f44a5c33e4ca7e9a568db488ed, type: 3}

@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2debef5ed3571cd4894ceec9c9382a65
-      internalID: 807811595
+      spriteID: 41aa6df409e3b754481d4e436fa499c7
+      internalID: 1867202550
       vertices: []
       indices: 
       edges: []
@@ -199,7 +199,7 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":20.0,"y":20.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       ui_shop_upgrade_0: 4309078324266524644
-      ui_shop_upgrade_1: 807811595
+      ui_shop_upgrade_1: 1867202550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

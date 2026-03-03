@@ -43,7 +43,7 @@ public class ParallaxLayer : MonoBehaviour
         });
     }
 
-    private void OnEnable() => ParallaxManager.OnBiomeChanged += HandleBiomeChange;
+    protected virtual void OnEnable() => ParallaxManager.OnBiomeChanged += HandleBiomeChange;
 
     private void OnDisable() => ParallaxManager.OnBiomeChanged -= HandleBiomeChange;
 

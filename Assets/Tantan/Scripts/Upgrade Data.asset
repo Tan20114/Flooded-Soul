@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1110473973240ae44a3b863b51ae5cf2, type: 3}
+  m_Name: Upgrade Data
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  boatSpeed:
+  - 1
+  - 2
+  - 5
+  hookSpeed:
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  hookForce:
+  - 2.6
+  - 2.8
+  - 3
+  - 3.2
+  minigameRadius:
+  - 3
+  - 3.5
+  - 4.5
+  - 6
+  cat1Possibilities:
+  - interval: 18
+    value1: 60
+    value2: 20
+    value3: 15
+    value4: 5
+  - interval: 17
+    value1: 55
+    value2: 25
+    value3: 15
+    value4: 5
+  - interval: 16
+    value1: 50
+    value2: 25
+    value3: 20
+    value4: 5
+  - interval: 15
+    value1: 45
+    value2: 30
+    value3: 20
+    value4: 5
+  cat2Possibilities:
+  - interval: 15
+    value1: 54
+    value2: 25
+    value3: 15
+    value4: 6
+  - interval: 14
+    value1: 49
+    value2: 30
+    value3: 15
+    value4: 6
+  - interval: 13
+    value1: 44
+    value2: 30
+    value3: 20
+    value4: 6
+  - interval: 12
+    value1: 35
+    value2: 39
+    value3: 20
+    value4: 6
+  cat3Possibilities:
+  - interval: 11
+    value1: 47
+    value2: 30
+    value3: 15
+    value4: 8
+  - interval: 10
+    value1: 42
+    value2: 35
+    value3: 15
+    value4: 8
+  - interval: 9
+    value1: 37
+    value2: 35
+    value3: 20
+    value4: 8
+  - interval: 8
+    value1: 30
+    value2: 30
+    value3: 32
+    value4: 8
+  cat4Possibilities:
+  - interval: 7
+    value1: 40
+    value2: 33
+    value3: 17
+    value4: 10
+  - interval: 6
+    value1: 35
+    value2: 38
+    value3: 17
+    value4: 10
+  - interval: 5
+    value1: 25
+    value2: 38
+    value3: 22
+    value4: 15
+  - interval: 4
+    value1: 20
+    value2: 38
+    value3: 22
+    value4: 20
