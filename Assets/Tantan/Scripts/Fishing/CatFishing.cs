@@ -19,7 +19,7 @@ public class CatFishing : MonoBehaviour
         get => GlobalManager.Instance.cat1Level;
         set
         {
-            GlobalManager.Instance.cat1Level = Mathf.Clamp(value,0 , 4);
+            GlobalManager.Instance.cat1Level = Mathf.Clamp(value, 0, 4);
         }
     }
 

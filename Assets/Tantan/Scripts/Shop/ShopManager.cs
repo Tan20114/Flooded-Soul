@@ -7,22 +7,22 @@ public class ShopManager : MonoBehaviour
     #region Boat
     int maxBoatLevel = 3;
 
-    public int BoatCostUpdate() => costData.boatCost[GlobalManager.Instance.boatLevel - 1];
+    public int BoatCostUpdate() => (GlobalManager.Instance.boatLevel < maxBoatLevel) ? costData.boatCost[GlobalManager.Instance.boatLevel - 1] : 0;
     #endregion
 
     #region Hook
     int maxHookLevel = 4;
 
-    public int HookCostUpdate() => costData.hookCost[GlobalManager.Instance.hookLevel - 1];
+    public int HookCostUpdate() => (GlobalManager.Instance.hookLevel < maxHookLevel) ? costData.hookCost[GlobalManager.Instance.hookLevel - 1] : 0;
     #endregion
 
     #region Cat
-    int maxCatLevel = 3;
+    int maxCatLevel = 4;
 
-    public int Cat1CostUpdate() => costData.cat1Cost[GlobalManager.Instance.cat1Level];
-    public int Cat2CostUpdate() => costData.cat2Cost[GlobalManager.Instance.cat2Level];
-    public int Cat3CostUpdate() => costData.cat3Cost[GlobalManager.Instance.cat3Level];
-    public int Cat4CostUpdate() => costData.cat4Cost[GlobalManager.Instance.cat4Level];
+    public int Cat1CostUpdate() => (GlobalManager.Instance.cat1Level < maxCatLevel) ? costData.cat1Cost[GlobalManager.Instance.cat1Level] : 0;
+    public int Cat2CostUpdate() => (GlobalManager.Instance.cat2Level < maxCatLevel) ? costData.cat2Cost[GlobalManager.Instance.cat2Level] : 0;
+    public int Cat3CostUpdate() => (GlobalManager.Instance.cat3Level < maxCatLevel) ? costData.cat3Cost[GlobalManager.Instance.cat3Level] : 0;
+    public int Cat4CostUpdate() => (GlobalManager.Instance.cat4Level < maxCatLevel) ? costData.cat4Cost[GlobalManager.Instance.cat4Level] : 0;
     #endregion
 
     public void UpgradeBoat()

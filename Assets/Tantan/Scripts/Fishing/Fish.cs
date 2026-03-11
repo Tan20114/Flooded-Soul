@@ -164,31 +164,38 @@ public class Fish : MonoBehaviour, IBoundArea
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
 
-                swimDir *= Random.Range(0, 100) > 80 ? 1 : -1;
+                swimDir *= Random.Range(0, 100) > 95 ? 1 : -1;
                 isSwimmingRight = swimDir > 0 ? true : false;
             }
         }
         #endregion
 
         #region Fishing Condition
-        #region Catch Success Condition
-        if (transform.position.y > FishingManager.Instance.fishCatchLine.position.y)
-        {
-            Debug.Log("Success");
-            isClicked = false;
-            currentSpeed = swimSpeed;
+        float fishTop = sr.bounds.max.y;
+        float fishLeft = sr.bounds.min.x;
+        float fishRight = sr.bounds.max.x;
 
-            FishingManager.Instance.EndMinigame(true);
-        }
-        #endregion
+        float areaLeft = minigameArea.bounds.min.x;
+        float areaRight = minigameArea.bounds.max.x;
+
         #region Catch Fail Condition
-        else if (transform.position.x > minigameArea.transform.position.x + halfAreaWidth - halfFishWidth || transform.position.x < minigameArea.transform.position.x - halfAreaWidth + halfFishWidth)
+        if (fishRight > areaRight || fishLeft < areaLeft)
         {
             Debug.Log("Fail");
             isClicked = false;
             currentSpeed = swimSpeed;
 
             FishingManager.Instance.EndMinigame(false);
+        }
+        #endregion
+        #region Catch Success Condition
+        else if (fishTop > FishingManager.Instance.fishCatchLine.position.y)
+        {
+            Debug.Log("Success");
+            isClicked = false;
+            currentSpeed = swimSpeed;
+
+            FishingManager.Instance.EndMinigame(true);
         }
         #endregion
         #endregion
@@ -283,9 +290,12 @@ public class Fish : MonoBehaviour, IBoundArea
 
     private void OnDrawGizmos()
     {
+        var col = GetComponent<BoxCollider2D>();
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider2D>().size);
+        Gizmos.DrawWireCube(col.bounds.center, col.bounds.size);
+
         Gizmos.color = Color.orange;
-        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange), transform.position.y));
+        Gizmos.DrawLine(transform.position,new Vector2(transform.position.x + (isSwimmingRight ? fishVisionRange : -fishVisionRange),transform.position.y));
     }
 }

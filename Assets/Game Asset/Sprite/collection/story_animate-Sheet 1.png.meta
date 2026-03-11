@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 809ef73f844c73b469e9bebbd5b8cd5b
+guid: 3dd767e7bd68ba44390fed6ef5de5fbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2332291696857289425
-    second: collection_story_0
+      213: -5929113593409443905
+    second: story_animate-Sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,12 +139,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: collection_story_0
+      name: story_animate-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 152
         y: 0
-        width: 1280
+        width: 450
         height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -154,8 +154,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2d6a380f0902afd0800000000000000
-      internalID: -2332291696857289425
+      spriteID: fb7e3efb99e87bda0800000000000000
+      internalID: -5929113593409443905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: story_animate-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 0
+        width: 450
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a094e22b5b7a04fab5dc58a97346e6
+      internalID: -1795933910
       vertices: []
       indices: 
       edges: []
@@ -164,7 +186,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 84c50cbe9d022bb45ab6a737cde8fc24
+    spriteID: 8b0eecb3161dabb49b847ab39936ecf2
     internalID: 0
     vertices: []
     indices: 
@@ -172,9 +194,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      collection_story_0: -2332291696857289425
+      story_animate-Sheet_0: -5929113593409443905
+      story_animate-Sheet_1: -1795933910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

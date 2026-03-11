@@ -7,10 +7,9 @@ public abstract class HelperFunction : MonoBehaviour
 {
     public static Vector3 GetWorldMouse()
     {
-#if UNITY_EDITOR || UNITY_STANDALONE
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0f;
-#endif
+
         return mouseWorldPos;
     }
 

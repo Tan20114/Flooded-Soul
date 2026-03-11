@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1110473973240ae44a3b863b51ae5cf2, type: 3}
-  m_Name: Upgrade Data
+  m_Name: Upgrade Data 1
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
   boatSpeed:
   - 1
@@ -27,10 +27,10 @@ MonoBehaviour:
   - 3
   - 3.2
   minigameRadius:
-  - 3
-  - 3.5
-  - 4.5
   - 6
+  - 6.5
+  - 7
+  - 9
   cat1Possibilities:
   - interval: 0
     value1: 0

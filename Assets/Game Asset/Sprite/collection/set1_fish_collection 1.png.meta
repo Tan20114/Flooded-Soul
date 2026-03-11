@@ -1,31 +1,10 @@
 fileFormatVersion: 2
-guid: eae6b51fe4241334281b33c4e407081e
+guid: a9df766672557124eb2c13c5cb205b1f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3871678956684978107
-    second: fish8_animate-Sheet_0
-  - first:
-      213: 1805278089658629939
-    second: fish8_animate-Sheet_1
-  - first:
-      213: -7978593235534138960
-    second: fish8_animate-Sheet_2
-  - first:
-      213: -7719165017887689889
-    second: fish8_animate-Sheet_3
-  - first:
-      213: -2292230693054741688
-    second: fish8_animate-Sheet_4
-  - first:
-      213: -5393327437973420152
-    second: fish8_animate-Sheet_5
-  - first:
-      213: -8528192502941530108
-    second: fish8_animate-Sheet_6
-  - first:
-      213: -8557220103953087945
-    second: fish8_animate-Sheet_7
+      213: 144057009119066397
+    second: set1_fish_collection_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -68,8 +47,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -93,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -160,35 +139,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_0
+      name: set1_fish_collection_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 48
+        x: 152
+        y: 690
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2c0f09451fa56b54cbf8d74f02a31307
-      internalID: -333968809
+      spriteID: d1972f7261bcff100800000000000000
+      internalID: 144057009119066397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_1
+      name: set1_fish_collection_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 48
+        x: 1432
+        y: 690
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 347369bac1dbf304e8dbfa41bff6e338
-      internalID: -395580282
+      spriteID: fd97831456d87074eaea3bc6b736daf0
+      internalID: 213045547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_2
+      name: set1_fish_collection_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 48
+        x: 152
+        y: 460
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19c659b27e3d5d34db9e17a528a697e1
-      internalID: 357695745
+      spriteID: bc71875444cce02428ab67007aa8210a
+      internalID: 1321564302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_3
+      name: set1_fish_collection_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 48
+        x: 1432
+        y: 462
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cffe579dd6a17441901dcdad60d19ed
-      internalID: 1979942693
+      spriteID: d45702bffad950f4e88ab8b78c94099e
+      internalID: 367799112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_4
+      name: set1_fish_collection_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 48
+        x: 152
+        y: 230
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7bc854f5c61b345be6a7bb69743bb6
-      internalID: -2075274372
+      spriteID: 6dfb42b5a357f2c4ea1c3e52ff407d97
+      internalID: 1488114189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_5
+      name: set1_fish_collection_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 48
+        x: 1432
+        y: 232
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940f76d39c8bff445bf446d8593ced0a
-      internalID: 384576560
+      spriteID: a5645f9f9873a0848adf3fc4b6ad4603
+      internalID: 696682720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_6
+      name: set1_fish_collection_6
       rect:
         serializedVersion: 2
-        x: 600
+        x: 152
         y: 0
-        width: 100
-        height: 48
+        width: 450
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,30 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0b23d7abc45d7745b52fa5dbc8ca8ae
-      internalID: -1364390837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: uncommon_animated_goofslimeFish_forest_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 0
-        width: 100
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 654fdac3c09861e41968db75d97a776d
-      internalID: 1577517410
+      spriteID: dbef75a29f0a94544b621ef5d2189077
+      internalID: 1454474729
       vertices: []
       indices: 
       edges: []
@@ -339,7 +296,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3420e7738f4e259408868b48c857a63e
+    spriteID: ee6ebaad6c8b755479dff607ac4f409e
     internalID: 0
     vertices: []
     indices: 
@@ -349,16 +306,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":4.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      uncommon_animated_goofslimeFish_forest_0: -333968809
-      uncommon_animated_goofslimeFish_forest_1: -395580282
-      uncommon_animated_goofslimeFish_forest_2: 357695745
-      uncommon_animated_goofslimeFish_forest_3: 1979942693
-      uncommon_animated_goofslimeFish_forest_4: -2075274372
-      uncommon_animated_goofslimeFish_forest_5: 384576560
-      uncommon_animated_goofslimeFish_forest_6: -1364390837
-      uncommon_animated_goofslimeFish_forest_7: 1577517410
+      set1_fish_collection_0: 144057009119066397
+      set1_fish_collection_1: 213045547
+      set1_fish_collection_2: 1321564302
+      set1_fish_collection_3: 367799112
+      set1_fish_collection_4: 1488114189
+      set1_fish_collection_5: 696682720
+      set1_fish_collection_6: 1454474729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

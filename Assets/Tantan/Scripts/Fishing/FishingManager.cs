@@ -40,7 +40,7 @@ public class FishingManager : Singleton<FishingManager>
         isMinigame = true;
         targetFish = target;
 
-        minigameArea = Instantiate(minigameAreaPrefab, targetFish.transform.position, Quaternion.identity);
+        MinigameArea = Instantiate(minigameAreaPrefab, targetFish.transform.position, Quaternion.identity);
     }
 
     public void EndMinigame(bool isSuccess)
@@ -109,7 +109,7 @@ public class FishingManager : Singleton<FishingManager>
     {
         Gizmos.color = Color.orange;
         if (isMinigame && targetFish != null)
-            Gizmos.DrawWireCube(minigameArea.transform.position, minigameAreaPrefab.GetComponent<SpriteRenderer>().bounds.size);
+            Gizmos.DrawWireCube(MinigameArea.transform.position, MinigameArea.GetComponent<SpriteRenderer>().bounds.size);
     }
     #endregion
 }

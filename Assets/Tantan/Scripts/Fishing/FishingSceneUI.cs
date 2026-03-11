@@ -31,4 +31,6 @@ public class FishingSceneUI : MonoBehaviour
     {
         isPause = !isPause;
     }
+
+    public void Resume() => isPause = false;
 }
