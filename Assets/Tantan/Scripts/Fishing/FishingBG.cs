@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class FishingBG : MonoBehaviour
 {
-    SpriteRenderer sr => GetComponent<SpriteRenderer>();
+    Animator animator => GetComponent<Animator>();
 
-    [SerializeField] BiomeContainer[] biomeAsset; 
-
-    void Start() => sr.sprite = biomeAsset[(int)GlobalManager.Instance.CurrentBiome].underWater;
+    void Start() => animator.SetInteger("Biome", (int)GlobalManager.Instance.CurrentBiome);
 }

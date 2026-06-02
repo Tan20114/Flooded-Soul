@@ -75,10 +75,16 @@ public class FishingHook : MonoBehaviour, IBoundArea
         Vector2 distance = (Vector2)transform.position - pointerPos;
         Vector2 dir = distance.normalized;
 
+        float verticalMagnitude = dir.y > 0 ? 1.2f : .7f;
+
+        Vector2 finalDir = new Vector2(dir.x, dir.y * verticalMagnitude);
+
+        Vector2 drift = new Vector2(Mathf.Sin(Time.time * 1.5f) * 0.15f, Mathf.Cos(Time.time * 2f) * 0.1f);
+
         if (distance.magnitude < 0.1f)
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = drift;
         else
-            rb.linearVelocity = -dir * followSpeed;
+            rb.linearVelocity = (-finalDir * followSpeed) + drift;
     }
 
     void FollowFish()

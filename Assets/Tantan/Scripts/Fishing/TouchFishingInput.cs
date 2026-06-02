@@ -7,6 +7,6 @@ public class TouchFishingInput : IFishingInput
         if (Input.touchCount > 0)
             return Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
 
-        return Vector2.zero;
+        return new Vector2(0, 3.6f);
     }
 }

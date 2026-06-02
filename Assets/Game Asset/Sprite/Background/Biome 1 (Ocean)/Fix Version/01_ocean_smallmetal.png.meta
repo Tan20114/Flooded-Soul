@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 278dd2ad984f7c34cb77f96e9b99a665
+guid: 351f192b9bb698d45808b539ddc97911
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4260073763913420597
-    second: shop_forest_biome_shop (1)_0
+      213: -893591045254362444
+    second: 01_ocean_smallmetal_0
+  - first:
+      213: -7707667203162068392
+    second: 01_ocean_smallmetal_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,23 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shop_forest_biome_shop (1)_0
+      name: 01_ocean_smallmetal_0
       rect:
         serializedVersion: 2
-        x: 765
-        y: 0
-        width: 350
-        height: 230
+        x: 585
+        y: 47
+        width: 64
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0baf88b7d21e4c0800000000000000
-      internalID: -4260073763913420597
+      spriteID: 4bac425cda35993f0800000000000000
+      internalID: -893591045254362444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_ocean_smallmetal_1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 53
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85aa894048dd80590800000000000000
+      internalID: -7707667203162068392
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: abb8cca5fc48cd64d9b52e1232f3c0dd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      shop_forest_biome_shop (1)_0: -4260073763913420597
+      01_ocean_smallmetal_0: -893591045254362444
+      01_ocean_smallmetal_1: -7707667203162068392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

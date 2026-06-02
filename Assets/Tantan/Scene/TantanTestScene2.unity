@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 300492069}
   - component: {fileID: 300492071}
   - component: {fileID: 300492070}
+  - component: {fileID: 300492072}
   m_Layer: 0
   m_Name: 2BG (2)
   m_TagString: Untagged
@@ -298,10 +299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee05a6c55ac007c4daad9ffe0cd038b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingBG
-  biomeAsset:
-  - {fileID: 11400000, guid: e5af5cee97fcfef4aba2d8824ae3fe19, type: 2}
-  - {fileID: 11400000, guid: a7dad035a26c5804e8893b6205719c40, type: 2}
-  - {fileID: 11400000, guid: c9005c4f4c84f63468c357a2c1215984, type: 2}
 --- !u!212 &300492071
 SpriteRenderer:
   serializedVersion: 2
@@ -361,6 +358,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &300492072
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300492068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 712d437efb1ca8f4a99c3b9bf7942264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &534876202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2234329063413969935, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
@@ -730,6 +749,7 @@ GameObject:
   - component: {fileID: 986038709}
   - component: {fileID: 986038711}
   - component: {fileID: 986038710}
+  - component: {fileID: 986038712}
   m_Layer: 0
   m_Name: 2BG (1)
   m_TagString: Untagged
@@ -764,10 +784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee05a6c55ac007c4daad9ffe0cd038b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingBG
-  biomeAsset:
-  - {fileID: 11400000, guid: e5af5cee97fcfef4aba2d8824ae3fe19, type: 2}
-  - {fileID: 11400000, guid: a7dad035a26c5804e8893b6205719c40, type: 2}
-  - {fileID: 11400000, guid: c9005c4f4c84f63468c357a2c1215984, type: 2}
 --- !u!212 &986038711
 SpriteRenderer:
   serializedVersion: 2
@@ -827,6 +843,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &986038712
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986038708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 712d437efb1ca8f4a99c3b9bf7942264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1396821210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,6 +2149,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2263180130830077752, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5760066645224790403}
+    - targetCorrespondingSourceObject: {fileID: 2263180130830077752, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5760066645224790405}
     - targetCorrespondingSourceObject: {fileID: 3652782115211125760, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5760066645224790401}
@@ -2159,15 +2200,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee05a6c55ac007c4daad9ffe0cd038b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingBG
-  biomeAsset:
-  - {fileID: 11400000, guid: e5af5cee97fcfef4aba2d8824ae3fe19, type: 2}
-  - {fileID: 11400000, guid: a7dad035a26c5804e8893b6205719c40, type: 2}
-  - {fileID: 11400000, guid: c9005c4f4c84f63468c357a2c1215984, type: 2}
 --- !u!4 &5760066645224790404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8431223761034147191, guid: 58ee44fe2365c3b4f811c152eb94344b, type: 3}
   m_PrefabInstance: {fileID: 5760066645224790399}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &5760066645224790405
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760066645224790402}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 712d437efb1ca8f4a99c3b9bf7942264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

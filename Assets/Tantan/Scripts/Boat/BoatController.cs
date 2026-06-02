@@ -42,6 +42,17 @@ public class BoatController : MonoBehaviour
 
     public void ToggleAutoStop() => GameManager.Instance.autoStop = !GameManager.Instance.autoStop;
 
+    private void Start()
+    {
+        ParallaxManager.OnBiomeChanged += LightVisualize;
+        LightVisualize(null);
+    }
+
+    private void OnDestroy()
+    {
+        ParallaxManager.OnBiomeChanged -= LightVisualize;
+    }
+
     private void Update()
     {
         StopVisualize();
@@ -122,6 +133,17 @@ public class BoatController : MonoBehaviour
         UpdateCat(cat4Animator, GlobalManager.Instance.cat4Level);
     }
 
+    void LightVisualize(BiomeContainer biome)
+    {
+        var boatData = boatVisual[GlobalManager.Instance.boatLevel - 1].GetComponent<BoatData>();
+
+        bool active = GlobalManager.Instance.CurrentBiome != BiomeType.Ocean;
+
+        foreach (GameObject lightObj in boatData.lightSource)
+        {
+            lightObj.SetActive(active);
+        }
+    }
     void UpdateCat(Animator animator, int level)
     {
         if (animator == null) return;

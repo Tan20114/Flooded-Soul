@@ -7,4 +7,5 @@ public class BoatData : MonoBehaviour
     public Animator cat2Animator;
     public Animator cat3Animator;
     public Animator cat4Animator;
+    public GameObject[] lightSource;
 }
