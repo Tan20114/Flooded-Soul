@@ -1,3 +1,5 @@
+using AYellowpaper.SerializedCollections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,11 +20,14 @@ public class CollectionUi : MonoBehaviour
     [SerializeField] PageType currentPageType;
     [SerializeField] Button nextPageButton;
     [SerializeField] Button previousPageButton;
+    [SerializeField] Image imageShow;
+    [SerializeField] Image dataShow;
 
     [Header("Collection Page")]
-    [SerializeField] Sprite[] fishingPages;
-    [SerializeField] Sprite[] catPages;
-    [SerializeField] Sprite[] storyPages;
+    [SerializedDictionary("Fish Index", "Fish Sprites")]
+    [SerializeField] SerializedDictionary<int, List<Sprite>> fishingPages;
+    [SerializeField] List<Sprite> catPages;
+    [SerializeField] List<Sprite> storyPages;
     [SerializeField] Sprite storyLockPage;
     [SerializeField] Sprite tutorialPage;
 
@@ -38,19 +43,19 @@ public class CollectionUi : MonoBehaviour
     int CurrentFishPage
     {
         get => currentFishPage;
-        set => currentFishPage = WrapIndex(value, fishingPages.Length);
+        set => currentFishPage = WrapIndex(value, fishingPages.Count);
     }
 
     int CurrentCatPage
     {
         get => currentCatPage;
-        set => currentCatPage = WrapIndex(value, catPages.Length);
+        set => currentCatPage = WrapIndex(value, catPages.Count);
     }
 
     int CurrentStoryPage
     {
         get => currentStoryPage;
-        set => currentStoryPage = WrapIndex(value, storyPages.Length);
+        set => currentStoryPage = WrapIndex(value, storyPages.Count);
     }
 
     int WrapIndex(int value, int length)
@@ -70,7 +75,6 @@ public class CollectionUi : MonoBehaviour
     private void Start()
     {
         CheckStoryCondition();
-        RefreshUI();
     }
 
     private void Update()
@@ -94,84 +98,20 @@ public class CollectionUi : MonoBehaviour
         // Story 2 unlock condition
         if (cm.commonFishCollection[CommonFishType.SacabambaspisFish] >= 25)
             storyUnlocked[1] = true;
-
-        RefreshUI();
-    }
-
-    void RefreshUI()
-    {
-        UpdateButtons();
-        pageRenderer.sprite = GetCurrentPage();
-    }
-
-    void UpdateButtons()
-    {
-        bool shouldHideButtons = false;
-
-        if (currentPageType == PageType.Tutorial)
-        {
-            shouldHideButtons = true;
-        }
-        else if (currentPageType == PageType.Story && !AnyStoryUnlocked())
-        {
-            shouldHideButtons = true;
-        }
-
-        nextPageButton.gameObject.SetActive(!shouldHideButtons);
-        previousPageButton.gameObject.SetActive(!shouldHideButtons);
-    }
-
-    bool AnyStoryUnlocked()
-    {
-        if (storyUnlocked == null) return false;
-
-        for (int i = 0; i < storyUnlocked.Length; i++)
-        {
-            if (storyUnlocked[i])
-                return true;
-        }
-
-        return false;
-    }
-
-    Sprite GetCurrentPage()
-    {
-        switch (currentPageType)
-        {
-            case PageType.Fish:
-                return SafeGetSprite(fishingPages, CurrentFishPage);
-
-            case PageType.Cat:
-                return SafeGetSprite(catPages, CurrentCatPage);
-
-            case PageType.Story:
-                {
-                    int index = CurrentStoryPage;
-
-                    if (index >= storyUnlocked.Length || !storyUnlocked[index])
-                        return storyLockPage;
-
-                    return SafeGetSprite(storyPages, index);
-                }
-
-            case PageType.Tutorial:
-                return tutorialPage;
-
-            default:
-                return null;
-        }
-    }
-
-    Sprite SafeGetSprite(Sprite[] array, int index)
-    {
-        if (array == null || array.Length == 0)
-            return null;
-
-        index = Mathf.Clamp(index, 0, array.Length - 1);
-        return array[index];
     }
 
     #region Page Navigation
+
+    public void GoToPage(int index)
+    {
+        imageShow.sprite = fishingPages[index][0];
+        dataShow.sprite = fishingPages[index][1];
+    }
+
+    public void ResetButtonUI()
+    {
+
+    }
 
     public void NextPage()
     {
@@ -190,7 +130,6 @@ public class CollectionUi : MonoBehaviour
                 break;
         }
 
-        RefreshUI();
     }
 
     public void PreviosPage()
@@ -209,8 +148,6 @@ public class CollectionUi : MonoBehaviour
                 CurrentStoryPage--;
                 break;
         }
-
-        RefreshUI();
     }
 
     #endregion
@@ -227,7 +164,6 @@ public class CollectionUi : MonoBehaviour
             currentType = 0;
 
         currentPageType = (PageType)currentType;
-        RefreshUI();
     }
 
     public void PreviousType()
@@ -240,7 +176,6 @@ public class CollectionUi : MonoBehaviour
             currentType = (int)PageType.Tutorial;
 
         currentPageType = (PageType)currentType;
-        RefreshUI();
     }
 
     #endregion

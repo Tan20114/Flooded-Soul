@@ -2,6 +2,7 @@
   <Project Path="BetterHierarchy.csproj" />
   <Project Path="AYellowpaper.SerializedCollections.csproj" />
   <Project Path="LeanCommon.csproj" />
+  <Project Path="CustomToolbar.csproj" />
   <Project Path="LeanTouch.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
