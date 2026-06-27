@@ -746,27 +746,27 @@ MonoBehaviour:
       Value: 0
   uncommonFishCollection:
     _serializedList:
-    - Key: 1
+    - Key: 6
       Value: 0
-    - Key: 2
+    - Key: 7
       Value: 0
-    - Key: 3
+    - Key: 8
       Value: 0
   rareFishCollection:
     _serializedList:
-    - Key: 1
+    - Key: 9
       Value: 0
-    - Key: 2
+    - Key: 10
       Value: 0
-    - Key: 3
+    - Key: 11
       Value: 0
   legendaryFishCollection:
     _serializedList:
-    - Key: 1
+    - Key: 12
       Value: 0
-    - Key: 2
+    - Key: 13
       Value: 0
-    - Key: 3
+    - Key: 14
       Value: 0
 --- !u!114 &144720736
 MonoBehaviour:
@@ -6427,7 +6427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5557249902739490311, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: speed
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5557249902739490311, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: biomeTrans

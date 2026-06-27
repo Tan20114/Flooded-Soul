@@ -81,6 +81,8 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
 
         PlayerPrefs.SetInt("SoundOn", isSoundOn ? 1 : 0);
 
+        GetComponent<CollectionManager>().Save();
+
         PlayerPrefs.Save();
     }
 
@@ -116,6 +118,8 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         distance = PlayerPrefs.GetFloat("Distance", 0);
 
         isSoundOn = PlayerPrefs.GetInt("SoundOn", 1) == 1;
+
+        GetComponent<CollectionManager>().Load();
     }
 
     public void Initial()

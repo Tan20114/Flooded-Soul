@@ -1,4 +1,5 @@
 using AYellowpaper.SerializedCollections;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class CollectionManager : MonoBehaviour
@@ -43,4 +44,37 @@ public class CollectionManager : MonoBehaviour
     void AddFishToCollection(UncommonFishType fish) => uncommonFishCollection[fish]++;
     void AddFishToCollection(RareFishType fish) => rareFishCollection[fish]++;
     void AddFishToCollection(LegendaryFishType fish) => legendaryFishCollection[fish]++;
+
+    public void Save()
+    {
+        string commonFishJson = JsonConvert.SerializeObject(commonFishCollection);
+        string uncommonFishJson = JsonConvert.SerializeObject(uncommonFishCollection);
+        string rareFishJson = JsonConvert.SerializeObject(rareFishCollection);
+        string legendaryFishJson = JsonConvert.SerializeObject(legendaryFishCollection);
+
+        PlayerPrefs.SetString("CommonFishCollection", commonFishJson);
+        PlayerPrefs.SetString("UncommonFishCollection", uncommonFishJson);
+        PlayerPrefs.SetString("RareFishCollection", rareFishJson);
+        PlayerPrefs.SetString("LegendaryFishCollection", legendaryFishJson);
+    }
+
+    public void Load()
+    {
+        string commonFishJson = PlayerPrefs.GetString("CommonFishCollection");
+        string uncommonFishJson = PlayerPrefs.GetString("UncommonFishCollection");
+        string rareFishJson = PlayerPrefs.GetString("RareFishCollection");
+        string legendaryFishJson = PlayerPrefs.GetString("LegendaryFishCollection");
+
+        if (!string.IsNullOrEmpty(commonFishJson))
+            commonFishCollection = JsonConvert.DeserializeObject<SerializedDictionary<CommonFishType, int>>(commonFishJson);
+
+        if (!string.IsNullOrEmpty(uncommonFishJson))
+            uncommonFishCollection = JsonConvert.DeserializeObject<SerializedDictionary<UncommonFishType, int>>(uncommonFishJson);
+
+        if (!string.IsNullOrEmpty(rareFishJson))
+            rareFishCollection = JsonConvert.DeserializeObject<SerializedDictionary<RareFishType, int>>(rareFishJson);
+
+        if (!string.IsNullOrEmpty(legendaryFishJson))
+            legendaryFishCollection = JsonConvert.DeserializeObject<SerializedDictionary<LegendaryFishType, int>>(legendaryFishJson);
+    }
 }

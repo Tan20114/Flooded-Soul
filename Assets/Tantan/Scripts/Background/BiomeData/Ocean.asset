@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Ocean
   m_EditorClassIdentifier: Assembly-CSharp::BiomeContainer
   layer1:
+  - {fileID: 21300000, guid: cc5da42268f783643b3028ebf0cd5e74, type: 3}
   - {fileID: 21300000, guid: be66fffc55cf2ab4e8e804f962b24634, type: 3}
   - {fileID: 21300000, guid: 457631451a859b04d8c9320645882c7e, type: 3}
   - {fileID: 21300000, guid: ba0e2637a9f2f4f4bbfb4bc7a25962bf, type: 3}
   - {fileID: 21300000, guid: f2fe4f39c234e4e4383e425e4397387f, type: 3}
-  - {fileID: 21300000, guid: a93da122fe0f93f4d97f0c6262734c9a, type: 3}
-  - {fileID: 21300000, guid: cc5da42268f783643b3028ebf0cd5e74, type: 3}
   - {fileID: 21300000, guid: 351f192b9bb698d45808b539ddc97911, type: 3}
   - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
   layer2:
@@ -29,7 +28,7 @@ MonoBehaviour:
   layer3:
   - {fileID: 21300000, guid: 2e381f66dc3d35746a8d1a099f7cb5f2, type: 3}
   - {fileID: 21300000, guid: 8d8f4c78542c24a4caa8077dac9f6aa7, type: 3}
-  - {fileID: 21300000, guid: 836d9116a71d8554cbcfdfa009ee7792, type: 3}
+  - {fileID: 21300000, guid: a93da122fe0f93f4d97f0c6262734c9a, type: 3}
   - {fileID: 21300000, guid: 1a4be6f7e440baf47907a4174dbd145d, type: 3}
   - {fileID: 21300000, guid: 8b6f33577126cb74abe35dce745203b3, type: 3}
   - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
