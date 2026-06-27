@@ -50,13 +50,6 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         currentScene = scene.buildIndex;
     }
 
-    void Start()
-    {
-        LoadData();
-        StartCoroutine(AutoSave(60f));
-    }
-
-
     void OnApplicationQuit()
     {
         SaveData();
@@ -100,7 +93,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         }
     }
 
-    public void LoadData()
+    void LoadData()
     {
         if (!PlayerPrefs.HasKey("BoatLevel"))
             return;
@@ -123,5 +116,11 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         distance = PlayerPrefs.GetFloat("Distance", 0);
 
         isSoundOn = PlayerPrefs.GetInt("SoundOn", 1) == 1;
+    }
+
+    public void Initial()
+    {
+        LoadData();
+        StartCoroutine(AutoSave(60f));
     }
 }

@@ -23,25 +23,25 @@ public enum CommonFishType
 public enum UncommonFishType
 {
     None = 0,
-    DogFish = 1,
-    FrostPetalFish = 2,
-    GoofSlimeFish = 3,
+    DogFish = 6,
+    FrostPetalFish = 7,
+    GoofSlimeFish = 8,
 }
 
 public enum RareFishType
 {
     None = 0,
-    Seaturtle = 1,
-    ClingFish = 2,
-    RedJellyfish = 3,
+    Seaturtle = 9,
+    ClingFish = 10,
+    RedJellyfish = 11,
 }
 
 public enum LegendaryFishType
 {
     None = 0,
-    PlabFish = 1,
-    JollyFish = 2,
-    KelpboneFish = 3
+    PlabFish = 12,
+    JollyFish = 13,
+    KelpboneFish = 14
 }
 
 public class Fish : MonoBehaviour, IBoundArea
@@ -51,7 +51,6 @@ public class Fish : MonoBehaviour, IBoundArea
     SpriteRenderer sr => GetComponent<SpriteRenderer>();
     Animator animator => GetComponent<Animator>();
     SpriteRenderer boundingArea => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
-    FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
     FishingHook hook => FindAnyObjectByType<FishingHook>();
 
     [Header("Parameter")]
