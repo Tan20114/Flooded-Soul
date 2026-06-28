@@ -1,0 +1,2340 @@
+fileFormatVersion: 2
+guid: ed225e50105c558498b1dfb2fb938d29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8359916057255789769
+    second: 05_icebg-animate_0
+  - first:
+      213: -5769571001182644010
+    second: 05_icebg-animate_1
+  - first:
+      213: 759047438245378598
+    second: 05_icebg-animate_2
+  - first:
+      213: 2127543915266269381
+    second: 05_icebg-animate_3
+  - first:
+      213: -3878309509754793382
+    second: 05_icebg-animate_4
+  - first:
+      213: -3634341626530640299
+    second: 05_icebg-animate_5
+  - first:
+      213: -7163592273268847614
+    second: 05_icebg-animate_6
+  - first:
+      213: 4097133609740883821
+    second: 05_icebg-animate_7
+  - first:
+      213: 8856958675365671078
+    second: 05_icebg-animate_8
+  - first:
+      213: 7595290116666641696
+    second: 05_icebg-animate_9
+  - first:
+      213: 4522647949813393423
+    second: 05_icebg-animate_10
+  - first:
+      213: 4518991718695407121
+    second: 05_icebg-animate_11
+  - first:
+      213: 8249748512997689046
+    second: 05_icebg-animate_12
+  - first:
+      213: -144650540584738848
+    second: 05_icebg-animate_13
+  - first:
+      213: -5601151181239679452
+    second: 05_icebg-animate_14
+  - first:
+      213: 5420831778559042796
+    second: 05_icebg-animate_15
+  - first:
+      213: -7109083468724295366
+    second: 05_icebg-animate_16
+  - first:
+      213: -7165934684739306022
+    second: 05_icebg-animate_17
+  - first:
+      213: -551159627442770887
+    second: 05_icebg-animate_18
+  - first:
+      213: -8009928520730983000
+    second: 05_icebg-animate_19
+  - first:
+      213: 8446908596086546387
+    second: 05_icebg-animate_20
+  - first:
+      213: 26722926196405086
+    second: 05_icebg-animate_21
+  - first:
+      213: 9046110233962309609
+    second: 05_icebg-animate_22
+  - first:
+      213: 5395646865350939562
+    second: 05_icebg-animate_23
+  - first:
+      213: -3260585689807482229
+    second: 05_icebg-animate_24
+  - first:
+      213: 8900339826015200606
+    second: 05_icebg-animate_25
+  - first:
+      213: -5516077946913163800
+    second: 05_icebg-animate_26
+  - first:
+      213: -1288077118573823806
+    second: 05_icebg-animate_27
+  - first:
+      213: 4316152563222715632
+    second: 05_icebg-animate_28
+  - first:
+      213: 2106406908105492401
+    second: 05_icebg-animate_29
+  - first:
+      213: 6040660779321338042
+    second: 05_icebg-animate_30
+  - first:
+      213: -6696069380885402739
+    second: 05_icebg-animate_31
+  - first:
+      213: 8252784356765993251
+    second: 05_icebg-animate_32
+  - first:
+      213: -9098003632939771034
+    second: 05_icebg-animate_33
+  - first:
+      213: 8833459772414237075
+    second: 05_icebg-animate_34
+  - first:
+      213: 3414896906668077066
+    second: 05_icebg-animate_35
+  - first:
+      213: 3633822839390848373
+    second: 05_icebg-animate_36
+  - first:
+      213: -411469805876709407
+    second: 05_icebg-animate_37
+  - first:
+      213: -7261797619405442630
+    second: 05_icebg-animate_38
+  - first:
+      213: -5142793437409523380
+    second: 05_icebg-animate_39
+  - first:
+      213: -1504864604663220379
+    second: 05_icebg-animate_40
+  - first:
+      213: 8159310468283208887
+    second: 05_icebg-animate_41
+  - first:
+      213: -2473038994991745569
+    second: 05_icebg-animate_42
+  - first:
+      213: -4996383576775772805
+    second: 05_icebg-animate_43
+  - first:
+      213: 4707880176646805511
+    second: 05_icebg-animate_44
+  - first:
+      213: 664068223017143712
+    second: 05_icebg-animate_45
+  - first:
+      213: -8816526423973225082
+    second: 05_icebg-animate_46
+  - first:
+      213: 4972698029283167603
+    second: 05_icebg-animate_47
+  - first:
+      213: 8956485058884008817
+    second: 05_icebg-animate_48
+  - first:
+      213: 1218119639285199281
+    second: 05_icebg-animate_49
+  - first:
+      213: -8158363585114839915
+    second: 05_icebg-animate_50
+  - first:
+      213: -1411254258103097127
+    second: 05_icebg-animate_51
+  - first:
+      213: -2802593013322631901
+    second: 05_icebg-animate_52
+  - first:
+      213: -6610862898186664857
+    second: 05_icebg-animate_53
+  - first:
+      213: 2459321424226198428
+    second: 05_icebg-animate_54
+  - first:
+      213: -2284813070069106643
+    second: 05_icebg-animate_55
+  - first:
+      213: -4026133264134205094
+    second: 05_icebg-animate_56
+  - first:
+      213: 294191802269709561
+    second: 05_icebg-animate_57
+  - first:
+      213: -9195242361710903423
+    second: 05_icebg-animate_58
+  - first:
+      213: -5061382733638345388
+    second: 05_icebg-animate_59
+  - first:
+      213: 8053769513880633964
+    second: 05_icebg-animate_60
+  - first:
+      213: -8029012149028663282
+    second: 05_icebg-animate_61
+  - first:
+      213: -4729647963960390397
+    second: 05_icebg-animate_62
+  - first:
+      213: 8612016940194982478
+    second: 05_icebg-animate_63
+  - first:
+      213: 4760187565536983973
+    second: 05_icebg-animate_64
+  - first:
+      213: 30139892395434099
+    second: 05_icebg-animate_65
+  - first:
+      213: 2155079812144413609
+    second: 05_icebg-animate_66
+  - first:
+      213: -4674895179331268888
+    second: 05_icebg-animate_67
+  - first:
+      213: -1680602465225391043
+    second: 05_icebg-animate_68
+  - first:
+      213: 1596058436929422332
+    second: 05_icebg-animate_69
+  - first:
+      213: -7083168312595227338
+    second: 05_icebg-animate_70
+  - first:
+      213: 5144135486620171282
+    second: 05_icebg-animate_71
+  - first:
+      213: -7691364830508062741
+    second: 05_icebg-animate_72
+  - first:
+      213: 5368218528419311924
+    second: 05_icebg-animate_73
+  - first:
+      213: -8656753974192213899
+    second: 05_icebg-animate_74
+  - first:
+      213: -5161910854319540307
+    second: 05_icebg-animate_75
+  - first:
+      213: 6126941555530088535
+    second: 05_icebg-animate_76
+  - first:
+      213: -7342990617751230388
+    second: 05_icebg-animate_77
+  - first:
+      213: -3800943880749995704
+    second: 05_icebg-animate_78
+  - first:
+      213: 5803731812604403852
+    second: 05_icebg-animate_79
+  - first:
+      213: 2251534537281068506
+    second: 05_icebg-animate_80
+  - first:
+      213: -4786252090731354885
+    second: 05_icebg-animate_81
+  - first:
+      213: -5057548690640824771
+    second: 05_icebg-animate_82
+  - first:
+      213: -5365310851142813423
+    second: 05_icebg-animate_83
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 05_icebg-animate_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1453
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4c0d08c53640470800000000000000
+      internalID: 8359916057255789769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1453
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d81d103ebd5eefa0800000000000000
+      internalID: -5769571001182644010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1453
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a394c9f9da88a00800000000000000
+      internalID: 759047438245378598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_3
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1453
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c06d713bed868d10800000000000000
+      internalID: 2127543915266269381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1453
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52db0e8c0a7d2ac0800000000000000
+      internalID: -3878309509754793382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_5
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1453
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ec936db89309dc0800000000000000
+      internalID: -3634341626530640299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_6
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1453
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20cc31428cec59c90800000000000000
+      internalID: -7163592273268847614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_7
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1453
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d675bed7f41fbd830800000000000000
+      internalID: 4097133609740883821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_8
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1453
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a03c733dfc3aea70800000000000000
+      internalID: 8856958675365671078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_9
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1453
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d43f99e14e76960800000000000000
+      internalID: 7595290116666641696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_10
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 1453
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08a6cc295ca3ce30800000000000000
+      internalID: 4522647949813393423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_11
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1453
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e85c7860fa6be30800000000000000
+      internalID: 4518991718695407121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1223
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6c883409efc7270800000000000000
+      internalID: 8249748512997689046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1223
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efd0e789191efdf0800000000000000
+      internalID: -144650540584738848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_14
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1223
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42603f44da6b442b0800000000000000
+      internalID: -5601151181239679452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_15
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1223
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4292428c9aa3b40800000000000000
+      internalID: 5420831778559042796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_16
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1223
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3926103046775d90800000000000000
+      internalID: -7109083468724295366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_17
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1223
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add7678fe5c7d8c90800000000000000
+      internalID: -7165934684739306022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_18
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1223
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cacbf2d33e958f0800000000000000
+      internalID: -551159627442770887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_19
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1223
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a54f85e27407d090800000000000000
+      internalID: -8009928520730983000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_20
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1223
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df9eef4d92793570800000000000000
+      internalID: 8446908596086546387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_21
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1223
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53bb4b1c50fe5000800000000000000
+      internalID: 26722926196405086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_22
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 1223
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e76956545d3a8d70800000000000000
+      internalID: 9046110233962309609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_23
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1223
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa351b69c3031ea40800000000000000
+      internalID: 5395646865350939562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 993
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b829d47279210c2d0800000000000000
+      internalID: -3260585689807482229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_25
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 993
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55e5ed6aeb548b70800000000000000
+      internalID: 8900339826015200606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_26
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 993
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5ffdc2554f273b0800000000000000
+      internalID: -5516077946913163800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 993
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c839186fa4df1ee0800000000000000
+      internalID: -1288077118573823806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_28
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 993
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc184763ed06eb30800000000000000
+      internalID: 4316152563222715632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_29
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 993
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b78e063ce57b3d10800000000000000
+      internalID: 2106406908105492401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_30
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 993
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8251859fcb4d350800000000000000
+      internalID: 6040660779321338042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_31
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 993
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ba4f81068c213a0800000000000000
+      internalID: -6696069380885402739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_32
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 993
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32900f8b5a7c78270800000000000000
+      internalID: 8252784356765993251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_33
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 993
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b596d26e56db180800000000000000
+      internalID: -9098003632939771034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_34
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 993
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39914708cd0c69a70800000000000000
+      internalID: 8833459772414237075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_35
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 993
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00f78ac4a6246f20800000000000000
+      internalID: 3414896906668077066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_36
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 763
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575c79e9e9eed6230800000000000000
+      internalID: 3633822839390848373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_37
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 763
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e77be0446a2a4af0800000000000000
+      internalID: -411469805876709407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_38
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 763
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1bf803a89e83b90800000000000000
+      internalID: -7261797619405442630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_39
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 763
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49cef9cd9021a8b0800000000000000
+      internalID: -5142793437409523380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_40
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 763
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5677dfb7d95ad1be0800000000000000
+      internalID: -1504864604663220379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_41
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 763
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4952a14a1bb3170800000000000000
+      internalID: 8159310468283208887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_42
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 763
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5f3d303200eadd0800000000000000
+      internalID: -2473038994991745569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_43
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 763
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b753fa0eb9749aab0800000000000000
+      internalID: -4996383576775772805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_44
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 763
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708d226c310c55140800000000000000
+      internalID: 4707880176646805511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_45
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 763
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0adcf8bc78e373900800000000000000
+      internalID: 664068223017143712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_46
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 763
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d1b3aede765a580800000000000000
+      internalID: -8816526423973225082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_47
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 763
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d45bad282920540800000000000000
+      internalID: 4972698029283167603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 533
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bffd225b3db4c70800000000000000
+      internalID: 8956485058884008817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_49
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 533
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b17589ab51a7e010800000000000000
+      internalID: 1218119639285199281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_50
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 533
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5946fb05b8ba7ce80800000000000000
+      internalID: -8158363585114839915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_51
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 533
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8e10abab73a6ce0800000000000000
+      internalID: -1411254258103097127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_52
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 533
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325b9eec0803b19d0800000000000000
+      internalID: -2802593013322631901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_53
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 533
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76446ce483f7144a0800000000000000
+      internalID: -6610862898186664857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_54
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 533
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93a2872ec3412220800000000000000
+      internalID: 2459321424226198428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_55
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 533
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d287c544e96ba40e0800000000000000
+      internalID: -2284813070069106643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_56
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 533
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5195eca02d4028c0800000000000000
+      internalID: -4026133264134205094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_57
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 533
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f43e1ea2ed251400800000000000000
+      internalID: 294191802269709561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_58
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 533
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ff89e5acfe36080800000000000000
+      internalID: -9195242361710903423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_59
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 533
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45dd039583b52c9b0800000000000000
+      internalID: -5061382733638345388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_60
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 303
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62c9b1c3bcb4cf60800000000000000
+      internalID: 8053769513880633964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_61
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 303
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00d9df6df7339090800000000000000
+      internalID: -8029012149028663282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_62
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 303
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dcd7b4c3aec5eb0800000000000000
+      internalID: -4729647963960390397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_63
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 303
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ae7f757c7048770800000000000000
+      internalID: 8612016940194982478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_64
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 303
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab301cce559f0240800000000000000
+      internalID: 4760187565536983973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_65
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 303
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3706ccb82141b6000800000000000000
+      internalID: 30139892395434099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_66
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 303
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abbb79cba168ed10800000000000000
+      internalID: 2155079812144413609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_67
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 303
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee06c16a9f6f1fb0800000000000000
+      internalID: -4674895179331268888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_68
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 303
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34489b46fc4da8e0800000000000000
+      internalID: -1680602465225391043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_69
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 303
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf381fd21b6562610800000000000000
+      internalID: 1596058436929422332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_70
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 303
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d557ba2f783bd90800000000000000
+      internalID: -7083168312595227338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_71
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 303
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21cf97468f3a36740800000000000000
+      internalID: 5144135486620171282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_72
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 73
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be762afef68c24590800000000000000
+      internalID: -7691364830508062741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_73
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 73
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4317a1f3f4ebf7a40800000000000000
+      internalID: 5368218528419311924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_74
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 73
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570725c30280dd780800000000000000
+      internalID: -8656753974192213899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_75
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 73
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7fc0e4d653d58b0800000000000000
+      internalID: -5161910854319540307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_76
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 73
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75043f002e4470550800000000000000
+      internalID: 6126941555530088535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_77
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 73
+        width: 236
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4869ef10f4781a90800000000000000
+      internalID: -7342990617751230388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_78
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 73
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849a3b0cda5504bc0800000000000000
+      internalID: -3800943880749995704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_79
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 73
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c806be5855ffa8050800000000000000
+      internalID: 5803731812604403852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_80
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 73
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add59268bbe0f3f10800000000000000
+      internalID: 2251534537281068506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_81
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 73
+        width: 128
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4ac760511d39db0800000000000000
+      internalID: -4786252090731354885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_82
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 73
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d369c1c034affc9b0800000000000000
+      internalID: -5057548690640824771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 05_icebg-animate_83
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 73
+        width: 116
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119751025369a85b0800000000000000
+      internalID: -5365310851142813423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      05_icebg-animate_0: 8359916057255789769
+      05_icebg-animate_1: -5769571001182644010
+      05_icebg-animate_10: 4522647949813393423
+      05_icebg-animate_11: 4518991718695407121
+      05_icebg-animate_12: 8249748512997689046
+      05_icebg-animate_13: -144650540584738848
+      05_icebg-animate_14: -5601151181239679452
+      05_icebg-animate_15: 5420831778559042796
+      05_icebg-animate_16: -7109083468724295366
+      05_icebg-animate_17: -7165934684739306022
+      05_icebg-animate_18: -551159627442770887
+      05_icebg-animate_19: -8009928520730983000
+      05_icebg-animate_2: 759047438245378598
+      05_icebg-animate_20: 8446908596086546387
+      05_icebg-animate_21: 26722926196405086
+      05_icebg-animate_22: 9046110233962309609
+      05_icebg-animate_23: 5395646865350939562
+      05_icebg-animate_24: -3260585689807482229
+      05_icebg-animate_25: 8900339826015200606
+      05_icebg-animate_26: -5516077946913163800
+      05_icebg-animate_27: -1288077118573823806
+      05_icebg-animate_28: 4316152563222715632
+      05_icebg-animate_29: 2106406908105492401
+      05_icebg-animate_3: 2127543915266269381
+      05_icebg-animate_30: 6040660779321338042
+      05_icebg-animate_31: -6696069380885402739
+      05_icebg-animate_32: 8252784356765993251
+      05_icebg-animate_33: -9098003632939771034
+      05_icebg-animate_34: 8833459772414237075
+      05_icebg-animate_35: 3414896906668077066
+      05_icebg-animate_36: 3633822839390848373
+      05_icebg-animate_37: -411469805876709407
+      05_icebg-animate_38: -7261797619405442630
+      05_icebg-animate_39: -5142793437409523380
+      05_icebg-animate_4: -3878309509754793382
+      05_icebg-animate_40: -1504864604663220379
+      05_icebg-animate_41: 8159310468283208887
+      05_icebg-animate_42: -2473038994991745569
+      05_icebg-animate_43: -4996383576775772805
+      05_icebg-animate_44: 4707880176646805511
+      05_icebg-animate_45: 664068223017143712
+      05_icebg-animate_46: -8816526423973225082
+      05_icebg-animate_47: 4972698029283167603
+      05_icebg-animate_48: 8956485058884008817
+      05_icebg-animate_49: 1218119639285199281
+      05_icebg-animate_5: -3634341626530640299
+      05_icebg-animate_50: -8158363585114839915
+      05_icebg-animate_51: -1411254258103097127
+      05_icebg-animate_52: -2802593013322631901
+      05_icebg-animate_53: -6610862898186664857
+      05_icebg-animate_54: 2459321424226198428
+      05_icebg-animate_55: -2284813070069106643
+      05_icebg-animate_56: -4026133264134205094
+      05_icebg-animate_57: 294191802269709561
+      05_icebg-animate_58: -9195242361710903423
+      05_icebg-animate_59: -5061382733638345388
+      05_icebg-animate_6: -7163592273268847614
+      05_icebg-animate_60: 8053769513880633964
+      05_icebg-animate_61: -8029012149028663282
+      05_icebg-animate_62: -4729647963960390397
+      05_icebg-animate_63: 8612016940194982478
+      05_icebg-animate_64: 4760187565536983973
+      05_icebg-animate_65: 30139892395434099
+      05_icebg-animate_66: 2155079812144413609
+      05_icebg-animate_67: -4674895179331268888
+      05_icebg-animate_68: -1680602465225391043
+      05_icebg-animate_69: 1596058436929422332
+      05_icebg-animate_7: 4097133609740883821
+      05_icebg-animate_70: -7083168312595227338
+      05_icebg-animate_71: 5144135486620171282
+      05_icebg-animate_72: -7691364830508062741
+      05_icebg-animate_73: 5368218528419311924
+      05_icebg-animate_74: -8656753974192213899
+      05_icebg-animate_75: -5161910854319540307
+      05_icebg-animate_76: 6126941555530088535
+      05_icebg-animate_77: -7342990617751230388
+      05_icebg-animate_78: -3800943880749995704
+      05_icebg-animate_79: 5803731812604403852
+      05_icebg-animate_8: 8856958675365671078
+      05_icebg-animate_80: 2251534537281068506
+      05_icebg-animate_81: -4786252090731354885
+      05_icebg-animate_82: -5057548690640824771
+      05_icebg-animate_83: -5365310851142813423
+      05_icebg-animate_9: 7595290116666641696
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

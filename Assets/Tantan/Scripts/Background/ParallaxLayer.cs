@@ -20,6 +20,7 @@ public class ParallaxLayer : MonoBehaviour
     protected ParallaxManager pm;
     protected Rigidbody2D rb;
     protected SpriteRenderer sr;
+    Animator animator;
 
     [Header("Properties")]
     [SerializeField] LayerType layerType;
@@ -32,6 +33,7 @@ public class ParallaxLayer : MonoBehaviour
         pm = FindAnyObjectByType<ParallaxManager>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -83,17 +85,31 @@ public class ParallaxLayer : MonoBehaviour
 
     protected virtual void RandomBiomeLayer()
     {
-        sr.sprite = layerType switch
+        switch (layerType)
         {
-            LayerType.Sky => pm.CurrentBiomeAsset.layerSky,
+            case LayerType.Sky:
+                sr.sprite = pm.CurrentBiomeAsset.layerSky;
+                return;
+
+            case LayerType.Wave:
+                sr.sprite = pm.CurrentBiomeAsset.layerWave;
+                return;
+
+            case LayerType.UnderWater:
+                sr.sprite = pm.CurrentBiomeAsset.underWater;
+                return;
+        }
+
+        AnimationClip clip = layerType switch
+        {
             LayerType.Layer1 => pm.CurrentBiomeAsset.layer1[Random.Range(0, pm.CurrentBiomeAsset.layer1.Length)],
             LayerType.Layer2 => pm.CurrentBiomeAsset.layer2[Random.Range(0, pm.CurrentBiomeAsset.layer2.Length)],
             LayerType.Layer3 => pm.CurrentBiomeAsset.layer3[Random.Range(0, pm.CurrentBiomeAsset.layer3.Length)],
             LayerType.Layer4 => pm.CurrentBiomeAsset.layer4[Random.Range(0, pm.CurrentBiomeAsset.layer4.Length)],
             LayerType.Layer5 => pm.CurrentBiomeAsset.layer5[Random.Range(0, pm.CurrentBiomeAsset.layer5.Length)],
-            LayerType.Wave => pm.CurrentBiomeAsset.layerWave,
-            LayerType.UnderWater => pm.CurrentBiomeAsset.underWater,
             _ => null
         };
+
+        animator.Play(clip != null ? clip.name : "Idle");
     }
 }

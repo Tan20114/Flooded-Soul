@@ -6396,7 +6396,11 @@ PrefabInstance:
     - target: {fileID: 2442197329903504895, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1445577470216131692, guid: 6be8c37cf4604444292df7efabc71648, type: 3}
+      objectReference: {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+    - target: {fileID: 2442197329903504895, guid: 01d54fa5b9182944992c342763c10064, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2903845597128224581, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: parallaxFactor
       value: 0.9
@@ -6497,6 +6501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8116871319342429752, guid: 01d54fa5b9182944992c342763c10064, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 17981e58560d08f4599c45950d8d9888, type: 3}
     - target: {fileID: 8425160966202443413, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.5

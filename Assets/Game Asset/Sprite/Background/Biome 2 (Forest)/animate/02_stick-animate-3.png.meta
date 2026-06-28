@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: a995290bfc989a54cba6fcffd736149c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1307852812554995995
+    second: 02_stick-animate-3_0
+  - first:
+      213: -4705473800406582307
+    second: 02_stick-animate-3_1
+  - first:
+      213: 2304413863599108853
+    second: 02_stick-animate-3_2
+  - first:
+      213: -6836092544073272379
+    second: 02_stick-animate-3_3
+  - first:
+      213: 1166328411465468375
+    second: 02_stick-animate-3_4
+  - first:
+      213: -1638209192210020776
+    second: 02_stick-animate-3_5
+  - first:
+      213: 3054224861720969833
+    second: 02_stick-animate-3_6
+  - first:
+      213: 8053838359078966221
+    second: 02_stick-animate-3_7
+  - first:
+      213: 2977473679517824975
+    second: 02_stick-animate-3_8
+  - first:
+      213: -589830672691971616
+    second: 02_stick-animate-3_9
+  - first:
+      213: -231725704327267040
+    second: 02_stick-animate-3_10
+  - first:
+      213: -698214261806700922
+    second: 02_stick-animate-3_11
+  - first:
+      213: -1444065219938483069
+    second: 02_stick-animate-3_12
+  - first:
+      213: 679022538499860534
+    second: 02_stick-animate-3_13
+  - first:
+      213: -898154982861254140
+    second: 02_stick-animate-3_14
+  - first:
+      213: -826495614804446160
+    second: 02_stick-animate-3_15
+  - first:
+      213: 2031441631051896275
+    second: 02_stick-animate-3_16
+  - first:
+      213: 5297929555569484625
+    second: 02_stick-animate-3_17
+  - first:
+      213: -5715040754290571225
+    second: 02_stick-animate-3_18
+  - first:
+      213: 4331849666084112160
+    second: 02_stick-animate-3_19
+  - first:
+      213: -4446196361533541094
+    second: 02_stick-animate-3_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 02_stick-animate-3_0
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1433
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6f929dbc299dde0800000000000000
+      internalID: -1307852812554995995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_1
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1433
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbbbda528cc2beb0800000000000000
+      internalID: -4705473800406582307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_2
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1433
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f27f4b133ceaff10800000000000000
+      internalID: 2304413863599108853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_3
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1203
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3f0d2ec025121a0800000000000000
+      internalID: -6836092544073272379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_4
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1203
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d948d0c281af2010800000000000000
+      internalID: 1166328411465468375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_5
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1203
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856ca865b69e349e0800000000000000
+      internalID: -1638209192210020776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_6
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 973
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9628b0b6459c26a20800000000000000
+      internalID: 3054224861720969833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_7
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 973
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc31157015bf4cf60800000000000000
+      internalID: 8053838359078966221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_8
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 973
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc73cb3498c125920800000000000000
+      internalID: 2977473679517824975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_9
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 743
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9b094d02080d7f0800000000000000
+      internalID: -589830672691971616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_10
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 743
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dfe3c13beb8ccf0800000000000000
+      internalID: -231725704327267040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_11
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 743
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68666e304d17f46f0800000000000000
+      internalID: -698214261806700922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_12
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 513
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384021d5556a5fbe0800000000000000
+      internalID: -1444065219938483069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_13
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 513
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638a4c1b66f5c6900800000000000000
+      internalID: 679022538499860534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_14
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 513
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402de4d3dcc1983f0800000000000000
+      internalID: -898154982861254140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_15
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 283
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034b9270e92b784f0800000000000000
+      internalID: -826495614804446160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_16
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 283
+        width: 52
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5d9c08661213c10800000000000000
+      internalID: 2031441631051896275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_17
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 283
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15323c47cd6068940800000000000000
+      internalID: 5297929555569484625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_18
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 53
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72841aba6b810b0b0800000000000000
+      internalID: -5715040754290571225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_19
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 53
+        width: 52
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0278657f152dd1c30800000000000000
+      internalID: 4331849666084112160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02_stick-animate-3_20
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 53
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15b82557ffeb42c0800000000000000
+      internalID: -4446196361533541094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      02_stick-animate-3_0: -1307852812554995995
+      02_stick-animate-3_1: -4705473800406582307
+      02_stick-animate-3_10: -231725704327267040
+      02_stick-animate-3_11: -698214261806700922
+      02_stick-animate-3_12: -1444065219938483069
+      02_stick-animate-3_13: 679022538499860534
+      02_stick-animate-3_14: -898154982861254140
+      02_stick-animate-3_15: -826495614804446160
+      02_stick-animate-3_16: 2031441631051896275
+      02_stick-animate-3_17: 5297929555569484625
+      02_stick-animate-3_18: -5715040754290571225
+      02_stick-animate-3_19: 4331849666084112160
+      02_stick-animate-3_2: 2304413863599108853
+      02_stick-animate-3_20: -4446196361533541094
+      02_stick-animate-3_3: -6836092544073272379
+      02_stick-animate-3_4: 1166328411465468375
+      02_stick-animate-3_5: -1638209192210020776
+      02_stick-animate-3_6: 3054224861720969833
+      02_stick-animate-3_7: 8053838359078966221
+      02_stick-animate-3_8: 2977473679517824975
+      02_stick-animate-3_9: -589830672691971616
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
