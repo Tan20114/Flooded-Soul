@@ -265,12 +265,12 @@ TextureImporter:
       name: 02_wood-animate-group_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 1433
-        width: 50
-        height: 16
+        x: 0
+        y: 1380
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,12 +287,12 @@ TextureImporter:
       name: 02_wood-animate-group_1
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1433
-        width: 96
-        height: 36
+        x: 0
+        y: 1150
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,12 +309,12 @@ TextureImporter:
       name: 02_wood-animate-group_2
       rect:
         serializedVersion: 2
-        x: 487
-        y: 1433
-        width: 28
-        height: 38
+        x: 0
+        y: 920
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,12 +331,12 @@ TextureImporter:
       name: 02_wood-animate-group_3
       rect:
         serializedVersion: 2
-        x: 849
-        y: 1433
-        width: 22
-        height: 34
+        x: 0
+        y: 690
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,12 +353,12 @@ TextureImporter:
       name: 02_wood-animate-group_4
       rect:
         serializedVersion: 2
-        x: 905
-        y: 1433
-        width: 52
-        height: 20
+        x: 0
+        y: 460
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,12 +375,12 @@ TextureImporter:
       name: 02_wood-animate-group_5
       rect:
         serializedVersion: 2
-        x: 961
-        y: 1433
-        width: 42
-        height: 28
+        x: 0
+        y: 230
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -397,12 +397,12 @@ TextureImporter:
       name: 02_wood-animate-group_6
       rect:
         serializedVersion: 2
-        x: 169
-        y: 1203
-        width: 50
-        height: 16
+        x: 0
+        y: 0
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -415,781 +415,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_7
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 1203
-        width: 96
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d8d7dac223ffb720800000000000000
-      internalID: 2864275218788505817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_8
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 1203
-        width: 28
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a365317a54d31bd30800000000000000
-      internalID: 4445401676556490298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_9
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 1203
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa312ddfd2511fc40800000000000000
-      internalID: 5544235903545906090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_10
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 1203
-        width: 52
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3f9fa9b28f294b70800000000000000
-      internalID: 8883683978472562493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_11
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 1203
-        width: 42
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e91fb6b996ca11b0800000000000000
-      internalID: -5685013216103556635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_12
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 973
-        width: 50
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7db5aa76f731e8d50800000000000000
-      internalID: 6741347130141203415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_13
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 973
-        width: 96
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8c50885b4b214cc0800000000000000
-      internalID: -3728651413878711157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_14
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 973
-        width: 28
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ceae1d1bc92f7bcd0800000000000000
-      internalID: -2542296709815211284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_15
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 973
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f40d0be7eaf005d0800000000000000
-      internalID: -3098200669643012873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_16
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 973
-        width: 52
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2c593058a0bb7c90800000000000000
-      internalID: -7170943744710452178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_17
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 973
-        width: 42
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53dbfc18a2a15e5b0800000000000000
-      internalID: -5339833013309031115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_18
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 743
-        width: 50
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 928d191a7c1b6a170800000000000000
-      internalID: 8189428443387123753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_19
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 743
-        width: 96
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f19b8c24a863605a0800000000000000
-      internalID: -6555492240137340641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_20
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 743
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd595d5bafd33d9e0800000000000000
-      internalID: -1597865295784602149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_21
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 743
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 28f230e8d1dcc2cc0800000000000000
-      internalID: -3734384464176664702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_22
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 743
-        width: 52
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2793c27461bbc2cf0800000000000000
-      internalID: -275639772818687630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_23
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 743
-        width: 42
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b1a94fef2f0638a0800000000000000
-      internalID: -6325851928042823240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_24
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 513
-        width: 50
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b86d4e166e96b0940800000000000000
-      internalID: 5263417027718338187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_25
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 513
-        width: 94
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6174f8336289e8810800000000000000
-      internalID: 1769518993444390678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_26
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 513
-        width: 28
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9479d261e5869afc0800000000000000
-      internalID: -3483138083486066871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_27
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 513
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1646a8547f0b307f0800000000000000
-      internalID: -647479345341111199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_28
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 513
-        width: 52
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f752b7ca9a053050800000000000000
-      internalID: 5779537356691494900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_29
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 513
-        width: 42
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef5bfc48a26a2de00800000000000000
-      internalID: 1068098763187271166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_30
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 283
-        width: 50
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 17e32324000c150e0800000000000000
-      internalID: -2282832428757008783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_31
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 283
-        width: 96
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb2e11906cfa19740800000000000000
-      internalID: 5157096313406481083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_32
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 283
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a884a35e53253b50800000000000000
-      internalID: 6572198119254296742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_33
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 283
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 863679d5cf01f0a60800000000000000
-      internalID: 7642345768759026536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_34
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 283
-        width: 52
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bfeac3be3d9be4c90800000000000000
-      internalID: -7183600035773501701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_35
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 283
-        width: 42
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25267fa79ab6d0430800000000000000
-      internalID: 3750772440326169170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_36
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 53
-        width: 50
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de157582d5216ad80800000000000000
-      internalID: -8239878276909674003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_37
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 53
-        width: 96
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44587beafacd57420800000000000000
-      internalID: 2627248604749202756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_38
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 53
-        width: 28
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87a1347885f2ea6b0800000000000000
-      internalID: -5283233255586063752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_39
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 53
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c7b42d33d9b924a0800000000000000
-      internalID: -6617553860529178680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_40
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 53
-        width: 52
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b304b34be286ec1d0800000000000000
-      internalID: -3328608524778651589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_wood-animate-group_41
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 53
-        width: 42
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f48b773526b010b0800000000000000
-      internalID: -5759903652445977359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d7ce58f3f2f76ee48b1c410a4901e4f6
     internalID: 0
     vertices: []
     indices: 
@@ -1197,50 +427,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":7.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       02_wood-animate-group_0: -1034901709714711024
       02_wood-animate-group_1: -415252255188263009
-      02_wood-animate-group_10: 8883683978472562493
-      02_wood-animate-group_11: -5685013216103556635
-      02_wood-animate-group_12: 6741347130141203415
-      02_wood-animate-group_13: -3728651413878711157
-      02_wood-animate-group_14: -2542296709815211284
-      02_wood-animate-group_15: -3098200669643012873
-      02_wood-animate-group_16: -7170943744710452178
-      02_wood-animate-group_17: -5339833013309031115
-      02_wood-animate-group_18: 8189428443387123753
-      02_wood-animate-group_19: -6555492240137340641
       02_wood-animate-group_2: 5964985399202520631
-      02_wood-animate-group_20: -1597865295784602149
-      02_wood-animate-group_21: -3734384464176664702
-      02_wood-animate-group_22: -275639772818687630
-      02_wood-animate-group_23: -6325851928042823240
-      02_wood-animate-group_24: 5263417027718338187
-      02_wood-animate-group_25: 1769518993444390678
-      02_wood-animate-group_26: -3483138083486066871
-      02_wood-animate-group_27: -647479345341111199
-      02_wood-animate-group_28: 5779537356691494900
-      02_wood-animate-group_29: 1068098763187271166
       02_wood-animate-group_3: 1368089480289099538
-      02_wood-animate-group_30: -2282832428757008783
-      02_wood-animate-group_31: 5157096313406481083
-      02_wood-animate-group_32: 6572198119254296742
-      02_wood-animate-group_33: 7642345768759026536
-      02_wood-animate-group_34: -7183600035773501701
-      02_wood-animate-group_35: 3750772440326169170
-      02_wood-animate-group_36: -8239878276909674003
-      02_wood-animate-group_37: 2627248604749202756
-      02_wood-animate-group_38: -5283233255586063752
-      02_wood-animate-group_39: -6617553860529178680
       02_wood-animate-group_4: 2427124651795784602
-      02_wood-animate-group_40: -3328608524778651589
-      02_wood-animate-group_41: -5759903652445977359
       02_wood-animate-group_5: -309801120912031098
       02_wood-animate-group_6: -3236497034041289390
-      02_wood-animate-group_7: 2864275218788505817
-      02_wood-animate-group_8: 4445401676556490298
-      02_wood-animate-group_9: 5544235903545906090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

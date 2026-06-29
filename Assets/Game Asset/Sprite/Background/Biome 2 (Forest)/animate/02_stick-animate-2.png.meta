@@ -181,12 +181,12 @@ TextureImporter:
       name: 02_stick-animate-2_0
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1433
-        width: 96
-        height: 36
+        x: 0
+        y: 1380
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: 02_stick-animate-2_1
       rect:
         serializedVersion: 2
-        x: 487
-        y: 1433
-        width: 28
-        height: 38
+        x: 0
+        y: 1150
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: 02_stick-animate-2_2
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1203
-        width: 96
-        height: 36
+        x: 0
+        y: 920
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: 02_stick-animate-2_3
       rect:
         serializedVersion: 2
-        x: 487
-        y: 1203
-        width: 28
-        height: 38
+        x: 0
+        y: 690
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: 02_stick-animate-2_4
       rect:
         serializedVersion: 2
-        x: 385
-        y: 973
-        width: 96
-        height: 36
+        x: 0
+        y: 460
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: 02_stick-animate-2_5
       rect:
         serializedVersion: 2
-        x: 487
-        y: 973
-        width: 28
-        height: 38
+        x: 0
+        y: 230
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,12 +313,12 @@ TextureImporter:
       name: 02_stick-animate-2_6
       rect:
         serializedVersion: 2
-        x: 385
-        y: 743
-        width: 96
-        height: 34
+        x: 0
+        y: 0
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,165 +331,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_7
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 743
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e61b2d7b798cac50800000000000000
-      internalID: 6677863510957561576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_8
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 513
-        width: 94
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bdf46b40f5fc1f50800000000000000
-      internalID: 6853623145356918196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_9
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 513
-        width: 28
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25b8559681c081410800000000000000
-      internalID: 1447920579185576786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_10
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 283
-        width: 96
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d60e2803c01686580800000000000000
-      internalID: -8833703964105842579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_11
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 283
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a538ceec18aa7d720800000000000000
-      internalID: 2870950761971090266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_12
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 53
-        width: 96
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a1be148e37917bf0800000000000000
-      internalID: -328315003060964954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_stick-animate-2_13
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 53
-        width: 28
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f18614b432c9da4d0800000000000000
-      internalID: -3121667291297519585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5f6357d98dcd21841a424ca7e79d7fad
     internalID: 0
     vertices: []
     indices: 
@@ -497,22 +343,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":7.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       02_stick-animate-2_0: 2415556091230048026
       02_stick-animate-2_1: 4686102861776982951
-      02_stick-animate-2_10: -8833703964105842579
-      02_stick-animate-2_11: 2870950761971090266
-      02_stick-animate-2_12: -328315003060964954
-      02_stick-animate-2_13: -3121667291297519585
       02_stick-animate-2_2: 7112923001179349814
       02_stick-animate-2_3: -8277535951045167557
       02_stick-animate-2_4: 2438723856368964853
       02_stick-animate-2_5: 4315428442487365670
       02_stick-animate-2_6: 2665628252277587569
-      02_stick-animate-2_7: 6677863510957561576
-      02_stick-animate-2_8: 6853623145356918196
-      02_stick-animate-2_9: 1447920579185576786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

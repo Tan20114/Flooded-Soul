@@ -160,12 +160,12 @@ TextureImporter:
       name: 01_igloo-animate-1_0
       rect:
         serializedVersion: 2
-        x: 549
-        y: 1433
-        width: 160
-        height: 70
+        x: 0
+        y: 1380
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -182,12 +182,12 @@ TextureImporter:
       name: 01_igloo-animate-1_1
       rect:
         serializedVersion: 2
-        x: 549
-        y: 1203
-        width: 160
-        height: 70
+        x: 0
+        y: 1150
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: 01_igloo-animate-1_2
       rect:
         serializedVersion: 2
-        x: 549
-        y: 973
-        width: 160
-        height: 70
+        x: 0
+        y: 920
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: 01_igloo-animate-1_3
       rect:
         serializedVersion: 2
-        x: 549
-        y: 745
-        width: 160
-        height: 68
+        x: 0
+        y: 690
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -248,12 +248,12 @@ TextureImporter:
       name: 01_igloo-animate-1_4
       rect:
         serializedVersion: 2
-        x: 549
-        y: 515
-        width: 160
-        height: 68
+        x: 0
+        y: 460
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,12 +270,12 @@ TextureImporter:
       name: 01_igloo-animate-1_5
       rect:
         serializedVersion: 2
-        x: 549
-        y: 285
-        width: 160
-        height: 68
+        x: 0
+        y: 230
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,12 +292,12 @@ TextureImporter:
       name: 01_igloo-animate-1_6
       rect:
         serializedVersion: 2
-        x: 549
-        y: 53
-        width: 160
-        height: 70
+        x: 0
+        y: 0
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -314,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14f2fb50ddafd894eb5ab040b12632aa
     internalID: 0
     vertices: []
     indices: 
@@ -322,7 +322,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":7.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       01_igloo-animate-1_0: 6903737779224371944
       01_igloo-animate-1_1: 724890549333812683

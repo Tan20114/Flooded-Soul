@@ -187,12 +187,12 @@ TextureImporter:
       name: 02_firefly-animate-3_0
       rect:
         serializedVersion: 2
-        x: 965
-        y: 1457
-        width: 26
-        height: 30
+        x: 0
+        y: 1380
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,12 +209,12 @@ TextureImporter:
       name: 02_firefly-animate-3_1
       rect:
         serializedVersion: 2
-        x: 987
-        y: 1453
-        width: 18
-        height: 20
+        x: 0
+        y: 1150
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: 02_firefly-animate-3_2
       rect:
         serializedVersion: 2
-        x: 1013
-        y: 1465
-        width: 18
-        height: 18
+        x: 0
+        y: 920
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,12 +253,12 @@ TextureImporter:
       name: 02_firefly-animate-3_3
       rect:
         serializedVersion: 2
-        x: 965
-        y: 1225
-        width: 38
-        height: 32
+        x: 0
+        y: 690
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: 02_firefly-animate-3_4
       rect:
         serializedVersion: 2
-        x: 1001
-        y: 1229
-        width: 24
-        height: 22
+        x: 0
+        y: 460
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -297,12 +297,12 @@ TextureImporter:
       name: 02_firefly-animate-3_5
       rect:
         serializedVersion: 2
-        x: 1007
-        y: 1225
-        width: 12
-        height: 6
+        x: 0
+        y: 230
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: 02_firefly-animate-3_6
       rect:
         serializedVersion: 2
-        x: 973
-        y: 991
-        width: 42
-        height: 34
+        x: 0
+        y: 0
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,209 +337,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_7
-      rect:
-        serializedVersion: 2
-        x: 967
-        y: 779
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 843aee3cfdaddcf50800000000000000
-      internalID: 6903414458428597064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_8
-      rect:
-        serializedVersion: 2
-        x: 979
-        y: 763
-        width: 40
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce22b8c14260c8ca0800000000000000
-      internalID: -6013424650278984980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_9
-      rect:
-        serializedVersion: 2
-        x: 975
-        y: 537
-        width: 44
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f0958f6e958973d0800000000000000
-      internalID: -3208386344002416392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_10
-      rect:
-        serializedVersion: 2
-        x: 987
-        y: 525
-        width: 28
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae5cb0ada6ee9ce50800000000000000
-      internalID: 6830252452576216554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_11
-      rect:
-        serializedVersion: 2
-        x: 979
-        y: 295
-        width: 30
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 341a2eda7ff497730800000000000000
-      internalID: 3997314069460853059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_12
-      rect:
-        serializedVersion: 2
-        x: 1005
-        y: 317
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a66214fd8ca20d8b0800000000000000
-      internalID: -5129552933347580310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_13
-      rect:
-        serializedVersion: 2
-        x: 971
-        y: 73
-        width: 40
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de52d6428490ca010800000000000000
-      internalID: 1201345406054508013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_14
-      rect:
-        serializedVersion: 2
-        x: 989
-        y: 95
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f9c8cd9839a768f0800000000000000
-      internalID: -547282769071781388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_firefly-animate-3_15
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 81
-        width: 20
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 696f1e3269eb69e70800000000000000
-      internalID: 9121687647341901462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e8b06feed0bf5a244beb8ae2bd3fb3ac
     internalID: 0
     vertices: []
     indices: 
@@ -547,24 +349,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":7.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       02_firefly-animate-3_0: -8576661317277782858
       02_firefly-animate-3_1: -7271013484558967059
-      02_firefly-animate-3_10: 6830252452576216554
-      02_firefly-animate-3_11: 3997314069460853059
-      02_firefly-animate-3_12: -5129552933347580310
-      02_firefly-animate-3_13: 1201345406054508013
-      02_firefly-animate-3_14: -547282769071781388
-      02_firefly-animate-3_15: 9121687647341901462
       02_firefly-animate-3_2: 1113495129998322259
       02_firefly-animate-3_3: -8626295680588710179
       02_firefly-animate-3_4: 9190800568685918788
       02_firefly-animate-3_5: 5548516957093553762
       02_firefly-animate-3_6: -6772911586526903346
-      02_firefly-animate-3_7: 6903414458428597064
-      02_firefly-animate-3_8: -6013424650278984980
-      02_firefly-animate-3_9: -3208386344002416392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -67,6 +67,8 @@ public class Fish : MonoBehaviour, IBoundArea
     public int fishPoint = 1;
     bool isClicked = false;
     public float resistanceForce = 1f;
+    float currentResistance = 0;
+    float resistTreshold = 0;
     public float fishVisionRange = 2f;
     public int FishPoint { get => fishPoint; }
     float swimDir = -1f;
@@ -75,6 +77,8 @@ public class Fish : MonoBehaviour, IBoundArea
     void Start()
     {
         currentSpeed = swimSpeed;
+        currentResistance = resistanceForce;
+        resistTreshold = resistanceForce * .25f;
         RandomFish();
         RandomDirection();
         rb.linearVelocity = Vector2.right * swimSpeed * swimDir;
@@ -159,8 +163,9 @@ public class Fish : MonoBehaviour, IBoundArea
                 SFXManager.instance.PlaySoundFXClip(hook.hookUpSFX);
 
                 currentSpeed *= .75f;
+                currentResistance -= resistanceForce * .1f;
 
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - resistanceForce));
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - (currentResistance < resistTreshold ? 0 : currentResistance)));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
 
                 swimDir *= Random.Range(0, 100) > 95 ? 1 : -1;
@@ -222,7 +227,7 @@ public class Fish : MonoBehaviour, IBoundArea
 
                 commonFishType = (CommonFishType)commonPity[Random.Range(0,3)];
 
-                id = GetFishTypeID(fishType) + (int)commonFishType;
+                id = (int)commonFishType;
                 break;
             case FishType.Uncommon:
                 uncommonFishType = GlobalManager.Instance.CurrentBiome switch
@@ -233,7 +238,7 @@ public class Fish : MonoBehaviour, IBoundArea
                     _ => UncommonFishType.DogFish
                 };
 
-                id = GetFishTypeID(fishType) + (int)uncommonFishType;
+                id = (int)uncommonFishType;
                 break;
             case FishType.Rare:
                 rareFishType = GlobalManager.Instance.CurrentBiome switch
@@ -244,7 +249,7 @@ public class Fish : MonoBehaviour, IBoundArea
                     _ => RareFishType.Seaturtle
                 };
 
-                id = GetFishTypeID(fishType) + (int)rareFishType;
+                id = (int)rareFishType;
                 break;
             case FishType.Legendary:
                 legendaryFishType = GlobalManager.Instance.CurrentBiome switch
@@ -255,32 +260,23 @@ public class Fish : MonoBehaviour, IBoundArea
                     _ => LegendaryFishType.PlabFish
                 };
 
-                id = GetFishTypeID(fishType) + (int)legendaryFishType;
+                id = (int)legendaryFishType;
                 break;
         }
 
         animator.SetInteger("ID", id);
     }
 
-    int GetFishTypeID(FishType type)
-    {
-        int id = type switch
-        {
-            FishType.Common => 0,
-            FishType.Uncommon => 5,
-            FishType.Rare => 8,
-            FishType.Legendary => 11,
-            _ => 0
-        };
-
-        return id;
-    }
-
     public void ResetFish()
     {
         RandomFish();
         currentSpeed = 0;
-        HelperFunction.Delay(this, 3f, () => currentSpeed = swimSpeed);
+        currentResistance = 0;
+        HelperFunction.Delay(this, 3f, () =>
+        {
+            currentSpeed = swimSpeed;
+            currentResistance = resistanceForce;
+        });
     }
 
     public void FishEscape() => animator.SetTrigger("Escape");

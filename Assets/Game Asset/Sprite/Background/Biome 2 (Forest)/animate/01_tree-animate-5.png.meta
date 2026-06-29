@@ -181,12 +181,12 @@ TextureImporter:
       name: 01_tree-animate-5_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1421
-        width: 292
-        height: 189
+        x: 0
+        y: 1380
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: 01_tree-animate-5_1
       rect:
         serializedVersion: 2
-        x: 549
-        y: 1421
-        width: 326
-        height: 189
+        x: 0
+        y: 1150
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: 01_tree-animate-5_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1191
-        width: 292
-        height: 190
+        x: 0
+        y: 920
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: 01_tree-animate-5_3
       rect:
         serializedVersion: 2
-        x: 549
-        y: 1191
-        width: 326
-        height: 190
+        x: 0
+        y: 690
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: 01_tree-animate-5_4
       rect:
         serializedVersion: 2
-        x: 147
-        y: 961
-        width: 292
-        height: 190
+        x: 0
+        y: 460
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: 01_tree-animate-5_5
       rect:
         serializedVersion: 2
-        x: 549
-        y: 961
-        width: 326
-        height: 190
+        x: 0
+        y: 230
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,12 +313,12 @@ TextureImporter:
       name: 01_tree-animate-5_6
       rect:
         serializedVersion: 2
-        x: 147
-        y: 733
-        width: 292
-        height: 188
+        x: 0
+        y: 0
+        width: 1280
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,165 +331,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_7
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 733
-        width: 326
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15bc2136fa67a6ef0800000000000000
-      internalID: -114148344890995887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_8
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 503
-        width: 292
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a4ba22a9ec0ba110800000000000000
-      internalID: 1273125517249918114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_9
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 503
-        width: 326
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b3a80dbe810e16b0800000000000000
-      internalID: -5323815996936903759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_10
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 273
-        width: 292
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80fc374f2ba0be640800000000000000
-      internalID: 5110189965903646472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_11
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 273
-        width: 326
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 54e900260bfc8c840800000000000000
-      internalID: 5244670122538344005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_12
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 41
-        width: 292
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4953522c46eac32a0800000000000000
-      internalID: -6756333593185405548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 01_tree-animate-5_13
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 41
-        width: 326
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31685658a431cf3e0800000000000000
-      internalID: -2018717322182293997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d6c36b9c8839b62428e620573b6b80fe
     internalID: 0
     vertices: []
     indices: 
@@ -497,22 +343,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":7.0},"gridSpriteSize":{"x":1280.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       01_tree-animate-5_0: 8755185366571173811
       01_tree-animate-5_1: -4817489795467768966
-      01_tree-animate-5_10: 5110189965903646472
-      01_tree-animate-5_11: 5244670122538344005
-      01_tree-animate-5_12: -6756333593185405548
-      01_tree-animate-5_13: -2018717322182293997
       01_tree-animate-5_2: -299829944849951277
       01_tree-animate-5_3: -2042487186260412032
       01_tree-animate-5_4: -968979713124385117
       01_tree-animate-5_5: 3460162517654077006
       01_tree-animate-5_6: 7633329741296385247
-      01_tree-animate-5_7: -114148344890995887
-      01_tree-animate-5_8: 1273125517249918114
-      01_tree-animate-5_9: -5323815996936903759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

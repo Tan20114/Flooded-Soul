@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Ice
   m_EditorClassIdentifier: Assembly-CSharp::BiomeContainer
   layer1:
-  - {fileID: 21300000, guid: af21eb7757381f04b97dd6d2aa29ce81, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: ca1c9ab746711b84cae3e8bbc7d6dba7, type: 2}
+  - {fileID: 7400000, guid: af384bbf12a87be46bde48fe058a7d0c, type: 2}
+  - {fileID: 7400000, guid: af384bbf12a87be46bde48fe058a7d0c, type: 2}
   layer2:
-  - {fileID: 21300000, guid: 4195789fb69ea0e4faf3a88f34138ebe, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: 941700e3c86acc948ae4f5c724d4fe12, type: 2}
+  - {fileID: 7400000, guid: 27dff808186e1ae45bee4896e24fb5d2, type: 2}
   layer3:
-  - {fileID: 21300000, guid: 4f72394c04f0ae14a80ceb42000af7a1, type: 3}
-  - {fileID: 21300000, guid: a3f54d21cda431343b77836b9fbada4e, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: 319f97b35552d384b8033710d765fcee, type: 2}
+  - {fileID: 7400000, guid: cc34393bd4acfc54a84a1d625e013223, type: 2}
+  - {fileID: 7400000, guid: 95f39a6b4f2f8ac4a932ec8b4271406d, type: 2}
   layer4:
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: 8894e72bfd66e97449af586333adac9f, type: 2}
   layer5:
-  - {fileID: 21300000, guid: c3891da19c443014688d0ad7178b7246, type: 3}
-  - {fileID: 21300000, guid: ae357046bb2900f41a4a0d564bec0185, type: 3}
-  - {fileID: 21300000, guid: 820aaea4c71cadf449a82c12b973923f, type: 3}
-  - {fileID: 21300000, guid: b70a69a611371204ab4ab769230ef571, type: 3}
+  - {fileID: 7400000, guid: 18593d766dd34594285fb98d1f9111bd, type: 2}
+  - {fileID: 7400000, guid: 050d3efa00ec6ae428c01018e8c5ee7a, type: 2}
+  - {fileID: 7400000, guid: f8d36d64f505866418a93d1e6a7a555b, type: 2}
+  - {fileID: 7400000, guid: e2293665f5fe4c24cb1f0d15ae30eb1a, type: 2}
   layerSky: {fileID: 21300000, guid: 5f826718495b7c849ad2b4a6d71a9d26, type: 3}
   layerWave: {fileID: 21300000, guid: 367c50a2e1b759347b64448104403a66, type: 3}
   underWater: {fileID: 21300000, guid: 52e9755674fc82f4ea997a4a8868062a, type: 3}

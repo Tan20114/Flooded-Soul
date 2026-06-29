@@ -13,33 +13,32 @@ MonoBehaviour:
   m_Name: Ocean
   m_EditorClassIdentifier: Assembly-CSharp::BiomeContainer
   layer1:
-  - {fileID: 21300000, guid: cc5da42268f783643b3028ebf0cd5e74, type: 3}
-  - {fileID: 21300000, guid: be66fffc55cf2ab4e8e804f962b24634, type: 3}
-  - {fileID: 21300000, guid: 457631451a859b04d8c9320645882c7e, type: 3}
-  - {fileID: 21300000, guid: ba0e2637a9f2f4f4bbfb4bc7a25962bf, type: 3}
-  - {fileID: 21300000, guid: f2fe4f39c234e4e4383e425e4397387f, type: 3}
-  - {fileID: 21300000, guid: 351f192b9bb698d45808b539ddc97911, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: f3e84ee27a60977458a074bede58cee7, type: 2}
+  - {fileID: 7400000, guid: 74e80eb9069c2b845922a22e160a1047, type: 2}
+  - {fileID: 7400000, guid: ec1004c8a49375740b384d6f48fd4600, type: 2}
+  - {fileID: 7400000, guid: 6d0b99f8aa4f1354a8624b10b6488bed, type: 2}
+  - {fileID: 7400000, guid: 239ac04c65ecd5a43b685ebe2af73fec, type: 2}
+  - {fileID: 7400000, guid: 6125f62f934c5ef4c8f13a83e61d73df, type: 2}
+  - {fileID: 7400000, guid: af384bbf12a87be46bde48fe058a7d0c, type: 2}
   layer2:
-  - {fileID: 21300000, guid: 9adfe997e0daa364dbfd209de5cfaee2, type: 3}
-  - {fileID: 21300000, guid: 0dbd790d743fe944fa308878c2f0e880, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: 1a308780a8ef8fb43ab82b48fc577521, type: 2}
+  - {fileID: 7400000, guid: 53aacfc89198bfa4a9fb08feaabae926, type: 2}
+  - {fileID: 7400000, guid: 203281e8d5a262c44862cf95c2b52c94, type: 2}
+  - {fileID: 7400000, guid: 27dff808186e1ae45bee4896e24fb5d2, type: 2}
+  - {fileID: 7400000, guid: 27dff808186e1ae45bee4896e24fb5d2, type: 2}
   layer3:
-  - {fileID: 21300000, guid: 2e381f66dc3d35746a8d1a099f7cb5f2, type: 3}
-  - {fileID: 21300000, guid: 8d8f4c78542c24a4caa8077dac9f6aa7, type: 3}
-  - {fileID: 21300000, guid: a93da122fe0f93f4d97f0c6262734c9a, type: 3}
-  - {fileID: 21300000, guid: 1a4be6f7e440baf47907a4174dbd145d, type: 3}
-  - {fileID: 21300000, guid: 8b6f33577126cb74abe35dce745203b3, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: 2f5b1b3e206c24d45968611d523327c8, type: 2}
+  - {fileID: 7400000, guid: e8c8c75deba205048b8feb8737c05956, type: 2}
+  - {fileID: 7400000, guid: 38c70fd27529571438ab8b736c9ccb01, type: 2}
+  - {fileID: 7400000, guid: 95f39a6b4f2f8ac4a932ec8b4271406d, type: 2}
   layer4:
-  - {fileID: 21300000, guid: ea9052c643c8a45498bd9e00573f8a8c, type: 3}
-  - {fileID: 21300000, guid: fb4ce76d55ae0d14f9c9bc7d318774fc, type: 3}
-  - {fileID: 5472088473382854169, guid: 675d5d05919366d44aca9f2f22594e09, type: 3}
+  - {fileID: 7400000, guid: 2a3858e8e0680664f83971c5d3b132d7, type: 2}
+  - {fileID: 7400000, guid: 5d219dbd1049769478b03157c141cd52, type: 2}
+  - {fileID: 7400000, guid: 8894e72bfd66e97449af586333adac9f, type: 2}
   layer5:
-  - {fileID: 21300000, guid: 001befcb3013aa54796ffc7ddbaad9d9, type: 3}
-  - {fileID: 21300000, guid: 9adb13f7a39270b4ca9ba646b96ed00e, type: 3}
-  - {fileID: 21300000, guid: 2312fbc261a356043b0389935deb70c4, type: 3}
+  - {fileID: 7400000, guid: 6b6b45c528008c242b305119d3c98dc0, type: 2}
+  - {fileID: 7400000, guid: 6ea3af8e7dd0c0a4fb2cdb2ca4b1acd6, type: 2}
+  - {fileID: 7400000, guid: 6d834d9297338f841bd206d002cc0aac, type: 2}
   layerSky: {fileID: 21300000, guid: 17981e58560d08f4599c45950d8d9888, type: 3}
   layerWave: {fileID: 21300000, guid: 5352bf730eaeff54ea974cc199269c88, type: 3}
   underWater: {fileID: -1236549622172810138, guid: caa13a45800052949879157bc4d1aa72, type: 3}
