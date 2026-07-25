@@ -137,14 +137,7 @@ public class Fish : MonoBehaviour, IBoundArea
         if (!FishingManager.Instance.isMinigame) return;
         if (this != FishingManager.Instance.TargetFish) return;
 
-        SpriteRenderer minigameArea = FishingManager.Instance.MinigameArea.GetComponent<SpriteRenderer>();
         LeanGameObjectPool pool = HelperFunction.GetFishPool(this);
-
-        float halfAreaWidth = minigameArea.bounds.size.x / 2;
-        float halfAreaHeight = minigameArea.bounds.size.y / 2;
-
-        float halfFishWidth = sr.bounds.size.x / 2;
-        float halfFishHeight = sr.bounds.size.y / 2;
 
         #region Fish Clicked
         if (Input.GetMouseButtonDown(0))
@@ -164,6 +157,7 @@ public class Fish : MonoBehaviour, IBoundArea
 
                 currentSpeed *= .75f;
                 currentResistance -= resistanceForce * .1f;
+                hook.DecreaseOffset();
 
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - (currentResistance < resistTreshold ? 0 : currentResistance)));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
@@ -176,24 +170,9 @@ public class Fish : MonoBehaviour, IBoundArea
 
         #region Fishing Condition
         float fishTop = sr.bounds.max.y;
-        float fishLeft = sr.bounds.min.x;
-        float fishRight = sr.bounds.max.x;
 
-        float areaLeft = minigameArea.bounds.min.x;
-        float areaRight = minigameArea.bounds.max.x;
-
-        #region Catch Fail Condition
-        if (fishRight > areaRight || fishLeft < areaLeft)
-        {
-            Debug.Log("Fail");
-            isClicked = false;
-            currentSpeed = swimSpeed;
-
-            FishingManager.Instance.EndMinigame(false);
-        }
-        #endregion
         #region Catch Success Condition
-        else if (fishTop > FishingManager.Instance.fishCatchLine.position.y)
+        if (fishTop > FishingManager.Instance.fishCatchLine.position.y)
         {
             Debug.Log("Success");
             isClicked = false;

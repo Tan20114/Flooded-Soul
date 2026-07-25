@@ -4761,6 +4761,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -5175,6 +5176,7 @@ GameObject:
   - component: {fileID: 1615821222}
   - component: {fileID: 1615821219}
   - component: {fileID: 1615821221}
+  - component: {fileID: 1615821223}
   m_Layer: 5
   m_Name: Hook
   m_TagString: Untagged
@@ -5322,6 +5324,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
   textBoxAnimator: {fileID: 1953731880}
   animationIndex: 1
+--- !u!114 &1615821223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615821217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d96a4df15fca7840833ef15b3bd8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopButtonPerLevel
+  levelSprites:
+  - {fileID: 6822099595515378202, guid: 5d0df20e934c4fc48bf16df7f64b35b7, type: 3}
+  - {fileID: 381987572799522710, guid: 5d0df20e934c4fc48bf16df7f64b35b7, type: 3}
+  - {fileID: -5575869932145399114, guid: 5d0df20e934c4fc48bf16df7f64b35b7, type: 3}
+  - {fileID: -4614819076203795258, guid: 5d0df20e934c4fc48bf16df7f64b35b7, type: 3}
 --- !u!1 &1627315074
 GameObject:
   m_ObjectHideFlags: 0

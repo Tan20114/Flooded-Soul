@@ -11,14 +11,23 @@ public class FishingHook : MonoBehaviour, IBoundArea
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer boundingArea;
     [SerializeField] LayerMask fishLayer;
-    [SerializeField] Transform stringStartPoint;
-    [SerializeField] Transform stringEndPoint;
 
     [Header("Parameter")]
     [SerializeField] Vector2 startPos;
     [SerializeField] float followSpeed = 5.0f;
     [SerializeField] float dragUpForce = 5;
     Vector2 minigameStartPoint = Vector2.zero;
+    [SerializeField] Vector3 hookFollowFishOffset = Vector2.zero;
+    Vector3 currentFollowFishOffset = Vector2.zero;
+    Vector3 CurrentFollowFishOffset
+    {
+        get => currentFollowFishOffset;
+        set
+        {
+            float x = Mathf.Clamp(value.x, hookFollowFishOffset.x / 2, hookFollowFishOffset.x);
+            currentFollowFishOffset = new Vector3(x, value.y, value.z);
+        }
+    }
 
     [Header("Audio")]
     public AudioClip hookUpSFX;
@@ -75,9 +84,7 @@ public class FishingHook : MonoBehaviour, IBoundArea
 
         Vector2 drift = new Vector2(Mathf.Sin(Time.time * 1.5f) * 0.15f, Mathf.Cos(Time.time * 2f) * 0.1f);
 
-        Vector3 mousePos = input.GetPointerWorldPosition();
-
-        sr.flipX = mousePos.x < transform.position.x;
+        sr.flipX = pointerPos.x < transform.position.x;
 
         if (distance.magnitude < 0.1f)
             rb.linearVelocity = drift;
@@ -87,8 +94,13 @@ public class FishingHook : MonoBehaviour, IBoundArea
 
     void FollowFish()
     {
+        Fish targetFish = FishingManager.Instance.TargetFish;
+
         rb.linearVelocity = Vector2.zero;
-        transform.position = FishingManager.Instance.TargetFish.transform.position;
+
+        sr.flipX = !targetFish.GetComponent<SpriteRenderer>().flipX;
+
+        transform.position = targetFish.transform.position + ((sr.flipX) ? currentFollowFishOffset : -currentFollowFishOffset);
     }
 
     public void MoveRestriction(SpriteRenderer boundingArea)
@@ -111,7 +123,11 @@ public class FishingHook : MonoBehaviour, IBoundArea
         dragUpForce = upgradeData.hookForce[GlobalManager.Instance.hookLevel - 1];
     }
 
-    public void ResetHookPosition() => transform.position = startPos;
+    public void ResetHookPosition()
+    {
+        currentFollowFishOffset = hookFollowFishOffset;
+        transform.position = startPos;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -128,6 +144,11 @@ public class FishingHook : MonoBehaviour, IBoundArea
     void HookVisualize()
     {
         animator.SetInteger("level", GlobalManager.Instance.hookLevel - 1);
+    }
+
+    public void DecreaseOffset()
+    {
+        currentFollowFishOffset -= hookFollowFishOffset * 0.1f;
     }
 
     private void OnDrawGizmos()

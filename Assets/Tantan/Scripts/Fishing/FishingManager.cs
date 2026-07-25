@@ -1,5 +1,6 @@
 using Lean.Pool;
 using System.Collections;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class FishingManager : Singleton<FishingManager>
@@ -13,20 +14,36 @@ public class FishingManager : Singleton<FishingManager>
 
     [Header("Status")]
     public bool isMinigame = false;
+    [SerializeField] float maxMinigameTime = 7.5f;
+    [SerializeField] float minMinigameTime = 4f;
+    [SerializeField] float fastestFishSpeed = 3f;
+    [SerializeField] float slowestFishSpeed = 1.0f;
+    [SerializeField] float maxHookForce = 3.2f;
+    [SerializeField] float minHookForce = 2.6f;
+    [Range(0,1)] [SerializeField] float difficultyMultiplier = 1.0f;
+    public float calculatedTime = 0;
+    float currentMinigameTime = 0;
+    public float CurrentMinigameTime
+    {
+        get => currentMinigameTime;
+    }
 
     [Header("Objects")]
-    [SerializeField] GameObject minigameAreaPrefab;
     public Transform fishCatchLine;
     [SerializeField] Fish targetFish;
     public Fish TargetFish
     {
         get => targetFish;
     }
-    GameObject minigameArea;
-    public GameObject MinigameArea
+
+    private void Update()
     {
-        get => minigameArea;
-        private set => minigameArea = value;
+        if (isMinigame && targetFish != null)
+        {
+            currentMinigameTime -= Time.deltaTime;
+            if (currentMinigameTime <= 0)
+                EndMinigame(false);
+        }
     }
 
     [Header("Audio")]
@@ -37,10 +54,11 @@ public class FishingManager : Singleton<FishingManager>
     #region Minigame
     public void StartMinigame(Fish target)
     {
+        calculatedTime = CatchTimeCalculate(target.swimSpeed, hook.DragUpForce);
+        currentMinigameTime = calculatedTime;
+
         isMinigame = true;
         targetFish = target;
-
-        MinigameArea = Instantiate(minigameAreaPrefab, targetFish.transform.position, Quaternion.identity);
     }
 
     public void EndMinigame(bool isSuccess)
@@ -72,8 +90,7 @@ public class FishingManager : Singleton<FishingManager>
             isMinigame = false;
             targetFish = null;
 
-            if (minigameArea != null)
-                Destroy(minigameArea);
+            currentMinigameTime = 0;
         }
         else
         {
@@ -88,8 +105,7 @@ public class FishingManager : Singleton<FishingManager>
 
             isMinigame = false;
 
-            if (minigameArea != null)
-                Destroy(minigameArea);
+            currentMinigameTime = 0;
 
             StartCoroutine(DespawnAfterEscape(targetFish, pool));
 
@@ -97,19 +113,25 @@ public class FishingManager : Singleton<FishingManager>
         }
     }
 
+    float CatchTimeCalculate(float fishSpeed, float hookForce)
+    {
+        Debug.Log("Fish Speed : " + fishSpeed);
+        Debug.Log("Hook Force : " + hookForce);
+
+        float difficulty = fishSpeed / hookForce;
+        float maxDifficulty = fastestFishSpeed / minHookForce;
+        float minDifficulty = slowestFishSpeed / maxHookForce;
+
+        float normalizedDifficulty = Mathf.InverseLerp(minDifficulty, maxDifficulty, difficulty);
+        float diffcultyMutiplied = Mathf.Pow(normalizedDifficulty, 1 - difficultyMultiplier);
+
+        return Mathf.Lerp(maxMinigameTime, minMinigameTime, diffcultyMutiplied);
+    }
+
     IEnumerator DespawnAfterEscape(Fish fish, LeanGameObjectPool pool)
     {
         yield return new WaitForSeconds(.26f);
         pool.Despawn(fish.gameObject);
-    }
-    #endregion
-
-    #region Debugging
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.orange;
-        if (isMinigame && targetFish != null)
-            Gizmos.DrawWireCube(MinigameArea.transform.position, MinigameArea.GetComponent<SpriteRenderer>().bounds.size);
     }
     #endregion
 }

@@ -10,6 +10,11 @@ public class ShopSpawner : MonoBehaviour
     void Update()
     {
         CheckShopSpawn();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnShop();
+        }
     }
 
     void CheckShopSpawn()

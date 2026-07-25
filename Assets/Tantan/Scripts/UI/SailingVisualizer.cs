@@ -42,12 +42,12 @@ public class SailingVisualizer : MonoBehaviour
         if (boatController.isInShopArea)
         {
             shopButton.gameObject.SetActive(true);
-            fishButton.gameObject.SetActive(false);
+            fishButton.gameObject.SetActive(true);
         }
         else
         {
             shopButton.gameObject.SetActive(false);
-            fishButton.gameObject.SetActive(true);
+            fishButton.gameObject.SetActive(false);
         }
     }
 }
