@@ -1,5 +1,6 @@
 using AYellowpaper.SerializedCollections;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectionManager : MonoBehaviour
@@ -77,4 +78,51 @@ public class CollectionManager : MonoBehaviour
         if (!string.IsNullOrEmpty(legendaryFishJson))
             legendaryFishCollection = JsonConvert.DeserializeObject<SerializedDictionary<LegendaryFishType, int>>(legendaryFishJson);
     }
+
+    public SerializedDictionary<CommonFishType, int> GetCommonFishCollection() => commonFishCollection;
+    public SerializedDictionary<UncommonFishType, int> GetUncommonFishCollection() => uncommonFishCollection;
+    public SerializedDictionary<RareFishType, int> GetRareFishCollection() => rareFishCollection;
+    public SerializedDictionary<LegendaryFishType, int> GetLegendaryFishCollection() => legendaryFishCollection;
+
+    public int TotalCommonFish()
+    {
+        int total = 0;
+        foreach (KeyValuePair<CommonFishType, int> kvp in commonFishCollection)
+        {
+            total += kvp.Value;
+        }
+        return total;
+    }
+
+    public int TotalUncommonFish()
+    {
+        int total = 0;
+        foreach (KeyValuePair<UncommonFishType, int> kvp in uncommonFishCollection)
+        {
+            total += kvp.Value;
+        }
+        return total;
+    }
+
+    public int TotalRareFish()
+    {
+        int total = 0;
+        foreach (KeyValuePair<RareFishType, int> kvp in rareFishCollection)
+        {
+            total += kvp.Value;
+        }
+        return total;
+    }
+
+    public int TotalLegendaryFish()
+    {
+        int total = 0;
+        foreach (KeyValuePair<LegendaryFishType, int> kvp in legendaryFishCollection)
+        {
+            total += kvp.Value;
+        }
+        return total;
+    }
+
+    public int TotalFish() => TotalCommonFish() + TotalUncommonFish() + TotalRareFish() + TotalLegendaryFish();
 }

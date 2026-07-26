@@ -1,10 +1,26 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ButtonBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    Button button;
+
     [SerializeField] Animator textBoxAnimator;
     [SerializeField] int animationIndex;
+    [SerializeField] GameObject buttonLock;
+    [SerializeField] bool isUnlocked = false;
+
+    private void Awake()
+    {
+        button = GetComponent<Button>();
+    }
+
+    private void FixedUpdate()
+    {
+        button.interactable = isUnlocked;
+        buttonLock.SetActive(!isUnlocked);
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -19,4 +35,6 @@ public class ButtonBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         textBoxAnimator.SetBool("isHover", false);
         Debug.Log($"Pointer Exit : {gameObject.name}");
     }
+
+    public void Unlock() => isUnlocked = true;
 }

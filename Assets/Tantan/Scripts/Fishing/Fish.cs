@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum FishType
 {
-    Common,
-    Uncommon,
-    Rare,
-    Legendary
+    Common = 1,
+    Uncommon = 2,
+    Rare = 3,
+    Legendary = 4
 }
 
 public enum CommonFishType

@@ -9,12 +9,14 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     public int previousScene = 0;
     public int currentScene = 0;
     public int biomeChangeLastStep = 0;
-    public int lastShopStep = -1;
 
     [Header("Status")]
     public bool isAlwaysOnTop = true;
     public bool isSoundOn = true;
     bool isFirstLoad = true;
+    public bool oceanVisited = false;
+    public bool iceVisited = false;
+    public bool forestVisited = false;
 
     public int boatLevel = 1;
     public int hookLevel = 1;
@@ -37,6 +39,22 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    private void FixedUpdate()
+    {
+        switch (CurrentBiome)
+        {
+            case BiomeType.Ocean:
+                oceanVisited = true;
+                break;
+            case BiomeType.Ice:
+                iceVisited = true;
+                break;
+            case BiomeType.Forest:
+                forestVisited = true;
+                break;
+        }
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (isFirstLoad)
@@ -47,7 +65,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         else
             previousScene = currentScene;
 
-        currentScene = scene.buildIndex;
+        currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     void OnApplicationQuit()
@@ -65,9 +83,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     {
         PlayerPrefs.SetInt("CurrentBiome", (int)CurrentBiome);
         PlayerPrefs.SetInt("PreviousScene", previousScene);
-        PlayerPrefs.SetInt("CurrentScene", currentScene);
         PlayerPrefs.SetInt("BiomeChangeLastStep", biomeChangeLastStep);
-        PlayerPrefs.SetInt("LastShopStep", lastShopStep);
 
         PlayerPrefs.SetInt("BoatLevel", boatLevel);
         PlayerPrefs.SetInt("HookLevel", hookLevel);
@@ -80,6 +96,9 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         PlayerPrefs.SetFloat("Distance", distance);
 
         PlayerPrefs.SetInt("SoundOn", isSoundOn ? 1 : 0);
+        PlayerPrefs.SetInt("OceanVisited", oceanVisited ? 1 : 0);
+        PlayerPrefs.SetInt("IceVisited", iceVisited ? 1 : 0);
+        PlayerPrefs.SetInt("ForestVisited", forestVisited ? 1 : 0);
 
         GetComponent<CollectionManager>().Save();
 
@@ -102,9 +121,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
 
         CurrentBiome = (BiomeType)PlayerPrefs.GetInt("CurrentBiome", 0);
         previousScene = PlayerPrefs.GetInt("PreviousScene", 3);
-        currentScene = PlayerPrefs.GetInt("CurrentScene", 0);
         biomeChangeLastStep = PlayerPrefs.GetInt("BiomeChangeLastStep", 0);
-        lastShopStep = PlayerPrefs.GetInt("LastShopStep", -1);
 
         boatLevel = PlayerPrefs.GetInt("BoatLevel", 1);
         hookLevel = PlayerPrefs.GetInt("HookLevel", 1);
@@ -118,6 +135,9 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         distance = PlayerPrefs.GetFloat("Distance", 0);
 
         isSoundOn = PlayerPrefs.GetInt("SoundOn", 1) == 1;
+        oceanVisited = PlayerPrefs.GetInt("OceanVisited", 0) == 1;
+        iceVisited = PlayerPrefs.GetInt("IceVisited", 0) == 1;
+        forestVisited = PlayerPrefs.GetInt("ForestVisited", 0) == 1;
 
         GetComponent<CollectionManager>().Load();
     }

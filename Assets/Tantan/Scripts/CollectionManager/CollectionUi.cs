@@ -156,7 +156,7 @@ public class CollectionUi : MonoBehaviour
 
     }
 
-    public void PreviosPage()
+    public void PreviousPage()
     {
         switch (currentPageType)
         {

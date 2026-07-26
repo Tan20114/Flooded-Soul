@@ -7,6 +7,11 @@ public class ShopSpawner : MonoBehaviour
     [SerializeField] float shopSpawnDistance = 50;
     [SerializeField] int shopSpawnChance = 20;
 
+    private void Start()
+    {
+        SpawnShop();
+    }
+
     void Update()
     {
         CheckShopSpawn();
@@ -20,14 +25,6 @@ public class ShopSpawner : MonoBehaviour
     void CheckShopSpawn()
     {
         int currentStep = (int)(GlobalManager.Instance.distance / shopSpawnDistance);
-        int ranVal = Random.Range(1, 101);
-
-        if (currentStep > GlobalManager.Instance.lastShopStep)
-        {
-            GlobalManager.Instance.lastShopStep = currentStep;
-            if (ranVal <= shopSpawnChance)
-                SpawnShop();
-        }
     }
 
     void SpawnShop()

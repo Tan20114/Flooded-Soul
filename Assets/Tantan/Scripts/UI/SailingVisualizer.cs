@@ -11,10 +11,6 @@ public class SailingVisualizer : MonoBehaviour
     [SerializeField] TextMeshProUGUI distanceText;
 
     [Header("Button")]
-    #region AutoStop
-    [SerializeField] Button autoStopButton;
-    [SerializeField] Sprite[] autoStopSprites;
-    #endregion
     #region TopMost
     [SerializeField] Button topMostButton;
     [SerializeField] Sprite[] topMostSprites;
@@ -26,7 +22,6 @@ public class SailingVisualizer : MonoBehaviour
 
     private void LateUpdate()
     {
-        autoStopButton.image.sprite = GameManager.Instance.autoStop ? autoStopSprites[1] : autoStopSprites[0];
         topMostButton.image.sprite = GlobalManager.Instance.isAlwaysOnTop ? topMostSprites[1] : topMostSprites[0];
         sailButton.gameObject.SetActive(boatController.state == BoatState.Idle);
         soundButton.image.color = GlobalManager.Instance.isSoundOn ? Color.white : Color.gray;

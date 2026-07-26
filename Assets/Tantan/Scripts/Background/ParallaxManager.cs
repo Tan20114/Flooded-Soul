@@ -56,9 +56,12 @@ public class ParallaxManager : MonoBehaviour
         {
             GlobalManager.Instance.biomeChangeLastStep = currentStep;
 
-            int randomBiomeIndex = Random.Range(0,3);
-
-            if (randomBiomeIndex == currentBiomeIndex) return;
+            int randomBiomeIndex = 0;
+            do
+            {
+                randomBiomeIndex = Random.Range(0, 3);
+            }
+            while (randomBiomeIndex == currentBiomeIndex);
 
             currentBiomeIndex = randomBiomeIndex;
             ApplyBiome();

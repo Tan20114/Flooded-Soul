@@ -355,6 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 4
+  id: 13
   sprites:
   - {fileID: -212178462154986706, guid: 5de392672a21dcb40aa46957fdbfa4d6, type: 3}
   - {fileID: 7176162157562286290, guid: dc1192471a97cbb45876bee58404035a, type: 3}
@@ -528,6 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 0
+  id: 0
   sprites:
   - {fileID: 192556542021533322, guid: d5494c4c39777d649810fe25ca8f9519, type: 3}
   - {fileID: 5789970507870368285, guid: 67357e04ab29f0346b5ec4ba495b8817, type: 3}
@@ -788,6 +792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 2
+  id: 7
   sprites:
   - {fileID: 7787213542928751921, guid: 0202ee695979d15479b671ac1b748f26, type: 3}
   - {fileID: 7145642777428419228, guid: b448a5a4cc7fd8f4bbdd887fbe441706, type: 3}
@@ -961,6 +967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 0
+  id: 0
   sprites:
   - {fileID: 8328348941301305769, guid: 338962fa0363be44c855e2bab93bef2a, type: 3}
   - {fileID: -2520980126529128301, guid: af6183408cb80934793677286d0f1f4b, type: 3}
@@ -1126,6 +1134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 5
+  id: 1
   sprites:
   - {fileID: -7029409865501147034, guid: b3d166c16d87e94488aeabe2dcd9460d, type: 3}
   - {fileID: 8908057804916251559, guid: b14189cede46be64ebc3cbb1e0b6ad14, type: 3}
@@ -1386,6 +1396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 3
+  id: 10
   sprites:
   - {fileID: -5742894820872579314, guid: 6bc259972a4d98a4fb432e3993f83375, type: 3}
   - {fileID: 7263153559092073488, guid: 30b9c74e1d5cfa14ab2f10c577eb27fb, type: 3}
@@ -1561,6 +1573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 1
+  id: 3
   sprites:
   - {fileID: -1668508004003139907, guid: 680af15950876724089e039a3551af3a, type: 3}
   - {fileID: -5637733738238438732, guid: 7a826029c2116834cad0717eeeff9b27, type: 3}
@@ -1656,6 +1670,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1838,6 +1853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 4
+  id: 14
   sprites:
   - {fileID: 7705040431269847551, guid: 1b801753df037e944ab76e8ecd24b1a7, type: 3}
   - {fileID: -6986655984879363948, guid: c7e4832dac361284889d592c405064af, type: 3}
@@ -2664,6 +2681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 1
+  id: 2
   sprites:
   - {fileID: -1146732418413775523, guid: 2c1e148a447e91242aaad763a984e048, type: 3}
   - {fileID: 8852332944565954426, guid: b678c47d900e2ff4b9804cbff1dce8be, type: 3}
@@ -2839,6 +2858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 1
+  id: 1
   sprites:
   - {fileID: -4016935214984973869, guid: 8fc6711e53d23d64bb8ecec3f1ed1b54, type: 3}
   - {fileID: -7855153157252494824, guid: 3c80f319a53cd42499cca3b1f7f26168, type: 3}
@@ -2919,6 +2940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 5
+  id: 3
   sprites:
   - {fileID: 8328348941301305769, guid: 338962fa0363be44c855e2bab93bef2a, type: 3}
   - {fileID: -2520980126529128301, guid: af6183408cb80934793677286d0f1f4b, type: 3}
@@ -3084,6 +3107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 0
+  id: 0
   sprites:
   - {fileID: -7029409865501147034, guid: b3d166c16d87e94488aeabe2dcd9460d, type: 3}
   - {fileID: 8908057804916251559, guid: b14189cede46be64ebc3cbb1e0b6ad14, type: 3}
@@ -3344,6 +3369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 3
+  id: 11
   sprites:
   - {fileID: 8976450862347158871, guid: e5b996c7c48f90d4f98fcccbafd0b67e, type: 3}
   - {fileID: -9114620165376235600, guid: 061af3d52037a8440aa677a2e2a51b84, type: 3}
@@ -3636,6 +3663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 5
+  id: 4
   sprites:
   - {fileID: -1115052061915579069, guid: f33b5a892900915478f3a136f302118f, type: 3}
   - {fileID: 8753102358668181673, guid: 911ad750117297346857b08cdc666d5e, type: 3}
@@ -3907,6 +3936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 4
+  id: 12
   sprites:
   - {fileID: 8223883774917686336, guid: d841503d80ff7a643a0cd211581a3cdb, type: 3}
   - {fileID: 804533056702176954, guid: e0196a8b17fd5d147a7d96285e50a59e, type: 3}
@@ -4232,6 +4263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 1
+  id: 5
   sprites:
   - {fileID: -1308177688654187925, guid: 83625d7326e14ba4caa0e0bc71fff0cf, type: 3}
   - {fileID: 5243720028817108304, guid: f2bb9a1efb976cc4dbf41688803ae811, type: 3}
@@ -4312,6 +4345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 5
+  id: 2
   sprites:
   - {fileID: 192556542021533322, guid: d5494c4c39777d649810fe25ca8f9519, type: 3}
   - {fileID: 5789970507870368285, guid: 67357e04ab29f0346b5ec4ba495b8817, type: 3}
@@ -5019,6 +5054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 2
+  id: 6
   sprites:
   - {fileID: -8888305005254990920, guid: c424ac7640306774da2dd4ecd7fb0038, type: 3}
   - {fileID: 4433811292402359506, guid: 0da57cab029a81046847f233ee928d3d, type: 3}
@@ -5581,6 +5618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 2
+  id: 8
   sprites:
   - {fileID: -6370095174305017367, guid: 589267eb71222fa4186a8f50fa25ccb3, type: 3}
   - {fileID: 2328472558293769133, guid: 35f144f54d583ce4aa8c31fd9b0fba62, type: 3}
@@ -5877,6 +5916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 0
+  id: 0
   sprites:
   - {fileID: -1115052061915579069, guid: f33b5a892900915478f3a136f302118f, type: 3}
   - {fileID: 8753102358668181673, guid: 911ad750117297346857b08cdc666d5e, type: 3}
@@ -6148,6 +6189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 1
+  id: 4
   sprites:
   - {fileID: -6165572172446451777, guid: f45e7265004aa2d4d8668f3597e33f23, type: 3}
   - {fileID: 8352505551080833862, guid: e80cdb1d55582e544982428d1e5d6f26, type: 3}
@@ -6724,6 +6767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4fe588a3275443965f1bf13c2d38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectionPageSelectionButton
+  itemID: 3
+  id: 9
   sprites:
   - {fileID: 6126944840386139884, guid: 05c493f8e331a4345a974b1d2f2c595e, type: 3}
   - {fileID: 5530865771059190952, guid: 0e49af08765141c4d9213ea568db9e6b, type: 3}
