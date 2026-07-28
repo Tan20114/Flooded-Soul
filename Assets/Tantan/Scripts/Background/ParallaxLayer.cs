@@ -17,9 +17,9 @@ public class ParallaxLayer : MonoBehaviour
 {
     protected BoatController player => FindAnyObjectByType<BoatController>();
 
-    protected ParallaxManager pm;
+    protected ParallaxManager pm => FindAnyObjectByType<ParallaxManager>();
     protected Rigidbody2D rb;
-    protected SpriteRenderer sr;
+    protected SpriteRenderer sr => GetComponent<SpriteRenderer>();
     Animator animator;
 
     [Header("Properties")]
@@ -30,9 +30,7 @@ public class ParallaxLayer : MonoBehaviour
 
     private void Awake()
     {
-        pm = FindAnyObjectByType<ParallaxManager>();
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
@@ -107,7 +105,6 @@ public class ParallaxLayer : MonoBehaviour
             LayerType.Layer3 => pm.CurrentBiomeAsset.layer3[Random.Range(0, pm.CurrentBiomeAsset.layer3.Length)],
             LayerType.Layer4 => pm.CurrentBiomeAsset.layer4[Random.Range(0, pm.CurrentBiomeAsset.layer4.Length)],
             LayerType.Layer5 => pm.CurrentBiomeAsset.layer5[Random.Range(0, pm.CurrentBiomeAsset.layer5.Length)],
-            _ => null
         };
 
         animator.Play(clip != null ? clip.name : "Idle");

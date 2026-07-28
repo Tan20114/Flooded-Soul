@@ -19,7 +19,14 @@ public class ShopLayer : ParallaxLayer
     protected override void OnEnable()
     {
         base.OnEnable();
-        RandomBiomeLayer();
+    }
+
+    private void Start()
+    {
+        HelperFunction.Delay(this, 0.01f, () =>
+        {
+            RandomBiomeLayer();
+        });
     }
 
     protected override void RegenLayer()
@@ -34,10 +41,10 @@ public class ShopLayer : ParallaxLayer
 
     protected override void RandomBiomeLayer()
     {
-        Sprite shopSprite = pm.CurrentBiomeAsset.shop;
-        if (shopSprite != null)
-        {
-            sr.sprite = shopSprite;
-        }
+        Debug.Log($"SR: {sr}");
+        Debug.Log($"PM: {pm}");
+        Debug.Log($"CurrentBiomeAsset: {pm?.CurrentBiomeAsset}");
+        Debug.Log($"Shop Sprite: {pm?.CurrentBiomeAsset?.shop}");
+        sr.sprite = pm.CurrentBiomeAsset.shop;
     }
 }

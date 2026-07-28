@@ -65,6 +65,35 @@ public class CollectionPageSelectionButton : MonoBehaviour
                 button.interactable = condition;
                 img.color = condition ? new Color(1, 1, 1, 1) : new Color(0, 0, 0, 1);
                 break;
+            case 6:
+                switch (id)
+                {
+                    case 1: 
+                        condition = GlobalManager.Instance.story1Unlocked;
+                        break;
+                    case 2:
+                        condition = GlobalManager.Instance.story2Unlocked;
+                        break;
+                    case 3:
+                        condition = GlobalManager.Instance.story3Unlocked;
+                        break;
+                    case 4:
+                        condition = GlobalManager.Instance.story4Unlocked;
+                        break;
+                    case 5:
+                        condition = GlobalManager.Instance.story5Unlocked;
+                        break;
+                    case 6:
+                        condition = GlobalManager.Instance.story6Unlocked;
+                        break;
+                    case 7:
+                        condition = GlobalManager.Instance.story7Unlocked;
+                        break;
+                }
+
+                button.interactable = condition;
+                img.color = condition ? new Color(1, 1, 1, 1) : new Color(0, 0, 0, 1);
+                break;
         }
     }
 

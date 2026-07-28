@@ -96,7 +96,7 @@ public class CatFishing : MonoBehaviour
     {
         if (GlobalManager.Instance.cat1Level < 1) return;
 
-        CatLevelData cat1Data = upgradeData.cat1Possibilities[GlobalManager.Instance.cat1Level - 1];
+        CatLevelData cat1Data = upgradeData.cat1Possibilities[GlobalManager.Instance.cat1Level];
 
         int point = GenerateCatPoint(cat1Data.value1,cat1Data.value2,cat1Data.value3,cat1Data.value4);
 
@@ -107,7 +107,6 @@ public class CatFishing : MonoBehaviour
             reward.Init(point);
             HelperFunction.Delay(this, 1f, () => Lean.Pool.LeanPool.Despawn(reward.gameObject, .75f));
         }
-        Debug.Log("Cat1 generated: " + point);
 
         GlobalManager.Instance.fishPoints += point;
     }
@@ -116,7 +115,7 @@ public class CatFishing : MonoBehaviour
     {
         if (GlobalManager.Instance.cat2Level < 1 || GlobalManager.Instance.boatLevel < 2) return;
 
-        CatLevelData cat2Data = upgradeData.cat2Possibilities[GlobalManager.Instance.cat2Level - 1];
+        CatLevelData cat2Data = upgradeData.cat2Possibilities[GlobalManager.Instance.cat2Level];
 
         int point = GenerateCatPoint(cat2Data.value1, cat2Data.value2, cat2Data.value3, cat2Data.value4);
 
@@ -128,8 +127,6 @@ public class CatFishing : MonoBehaviour
             HelperFunction.Delay(this, 1f, () => Lean.Pool.LeanPool.Despawn(reward.gameObject, .75f));
         }
 
-        Debug.Log("Cat2 generated: " + point);
-
         GlobalManager.Instance.fishPoints += point;
     }
 
@@ -137,7 +134,7 @@ public class CatFishing : MonoBehaviour
     {
         if (GlobalManager.Instance.cat3Level < 1 || GlobalManager.Instance.boatLevel < 3) return;
 
-        CatLevelData cat3Data = upgradeData.cat3Possibilities[GlobalManager.Instance.cat3Level - 1];
+        CatLevelData cat3Data = upgradeData.cat3Possibilities[GlobalManager.Instance.cat3Level];
 
         int point = GenerateCatPoint(cat3Data.value1, cat3Data.value2, cat3Data.value3, cat3Data.value4);
 
@@ -149,8 +146,6 @@ public class CatFishing : MonoBehaviour
             HelperFunction.Delay(this, 1f, () => Lean.Pool.LeanPool.Despawn(reward.gameObject, .75f));
         }
 
-        Debug.Log("Cat3 generated: " + point);
-
         GlobalManager.Instance.fishPoints += point;
     }
 
@@ -158,7 +153,7 @@ public class CatFishing : MonoBehaviour
     {
         if (GlobalManager.Instance.cat4Level < 1 || GlobalManager.Instance.boatLevel < 3) return;
 
-        CatLevelData cat4Data = upgradeData.cat4Possibilities[GlobalManager.Instance.cat4Level - 1];
+        CatLevelData cat4Data = upgradeData.cat4Possibilities[GlobalManager.Instance.cat4Level];
 
         int point = GenerateCatPoint(cat4Data.value1, cat4Data.value2, cat4Data.value3, cat4Data.value4);
 
@@ -169,8 +164,6 @@ public class CatFishing : MonoBehaviour
             reward.Init(point);
             HelperFunction.Delay(this, 1f, () => Lean.Pool.LeanPool.Despawn(reward.gameObject, .75f));
         }
-
-        Debug.Log("Cat4 generated: " + point);
 
         GlobalManager.Instance.fishPoints += point;
     }

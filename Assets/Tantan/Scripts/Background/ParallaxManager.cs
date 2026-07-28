@@ -40,8 +40,6 @@ public class ParallaxManager : MonoBehaviour
 
     private void Start()
     {
-        GlobalManager.Instance.Initial();
-
         currentBiomeIndex = (int)GlobalManager.Instance.CurrentBiome;
         currentBiome = biomeList[CurrentBiomeIndex];  
     }

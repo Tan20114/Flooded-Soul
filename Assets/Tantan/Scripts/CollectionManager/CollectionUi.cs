@@ -1,6 +1,5 @@
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,78 +35,15 @@ public class CollectionUi : MonoBehaviour
     [SerializeField] SerializedDictionary<int, List<Sprite>> catPages;
     [SerializedDictionary("Story Index", "Story Sprites")]
     [SerializeField] SerializedDictionary<int, List<Sprite>> storyPages;
+    [SerializedDictionary("Story Index", "Story Description")]
+    [SerializeField] SerializedDictionary<int, GameObject> storyDescriptions;
     [SerializeField] Sprite storyLockPage;
     [SerializeField] Sprite tutorialPage;
-
-    [Header("Story Unlock State")]
-    [SerializeField] bool[] storyUnlocked;
-
-    int currentFishPage;
-    int currentCatPage;
-    int currentStoryPage;
-
-    #region Page Index Wrapping
-
-    int CurrentFishPage
-    {
-        get => currentFishPage;
-        set => currentFishPage = WrapIndex(value, fishingPages.Count);
-    }
-
-    int CurrentCatPage
-    {
-        get => currentCatPage;
-        set => currentCatPage = WrapIndex(value, catPages.Count);
-    }
-
-    int CurrentStoryPage
-    {
-        get => currentStoryPage;
-        set => currentStoryPage = WrapIndex(value, storyPages.Count);
-    }
-
-    int WrapIndex(int value, int length)
-    {
-        if (length == 0) return 0;
-
-        if (value < 0)
-            return length - 1;
-        if (value >= length)
-            return 0;
-
-        return value;
-    }
-
-    #endregion
 
     private void Start()
     {
         currentButtonList = pageButtons[currentPageType];
         GoToType((int)currentPageType);
-        CheckStoryCondition();
-    }
-
-    private void Update()
-    {
-        CheckStoryCondition();
-    }
-
-    // Call this manually if collection updates
-    public void CheckStoryCondition()
-    {
-        if (cm == null) return;
-
-        // Story 1 unlock condition
-        bool l1 = cm.legendaryFishCollection[LegendaryFishType.PlabFish] > 0;
-        bool l2 = cm.legendaryFishCollection[LegendaryFishType.JollyFish] > 0;
-        bool l3 = cm.legendaryFishCollection[LegendaryFishType.KelpboneFish] > 0;
-
-        if (l1 && l2 && l3)
-            storyUnlocked[0] = true;
-
-        // Story 2 unlock condition
-        if (cm.commonFishCollection[CommonFishType.SacabambaspisFish] >= 25)
-            storyUnlocked[1] = true;
     }
 
     #region Page Navigation
@@ -133,43 +69,11 @@ public class CollectionUi : MonoBehaviour
             case PageType.Story:
                 imageShow.sprite = storyPages[pageIndex][0];
                 dataShow.sprite = storyPages[pageIndex][1];
-                break;
-        }
-    }
-
-    public void NextPage()
-    {
-        switch (currentPageType)
-        {
-            case PageType.Fish:
-                CurrentFishPage++;
-                break;
-
-            case PageType.Cat:
-                CurrentCatPage++;
-                break;
-
-            case PageType.Story:
-                CurrentStoryPage++;
-                break;
-        }
-
-    }
-
-    public void PreviousPage()
-    {
-        switch (currentPageType)
-        {
-            case PageType.Fish:
-                CurrentFishPage--;
-                break;
-
-            case PageType.Cat:
-                CurrentCatPage--;
-                break;
-
-            case PageType.Story:
-                CurrentStoryPage--;
+                foreach (GameObject description in storyDescriptions.Values)
+                {
+                    description.SetActive(false);
+                }
+                storyDescriptions[pageIndex].SetActive(true);
                 break;
         }
     }
@@ -184,8 +88,24 @@ public class CollectionUi : MonoBehaviour
 
         pageRenderer.sprite = baseSprites[currentPageType];
 
-        imageShow.sprite = blankShowSprites[0];
-        dataShow.sprite = blankShowSprites[1];
+        foreach (GameObject description in storyDescriptions.Values)
+        {
+            description.SetActive(false);
+        }
+
+        if (currentPageType != PageType.Tutorial)
+        {
+            imageShow.gameObject.SetActive(true);
+            dataShow.gameObject.SetActive(true);
+
+            imageShow.sprite = blankShowSprites[0];
+            dataShow.sprite = blankShowSprites[1];
+        }
+        else
+        {
+            imageShow.gameObject.SetActive(false);
+            dataShow.gameObject.SetActive(false);
+        }
 
         currentButtonList.SetActive(false);
 

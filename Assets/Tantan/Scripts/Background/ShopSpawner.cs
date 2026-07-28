@@ -7,11 +7,6 @@ public class ShopSpawner : MonoBehaviour
     [SerializeField] float shopSpawnDistance = 50;
     [SerializeField] int shopSpawnChance = 20;
 
-    private void Start()
-    {
-        SpawnShop();
-    }
-
     void Update()
     {
         CheckShopSpawn();
@@ -32,8 +27,8 @@ public class ShopSpawner : MonoBehaviour
         if (shop.state == ShopState.despawned)
         {
             shop.transform.position = new Vector2(spawnPoint.position.x,shop.transform.position.y);
-            shop.state = ShopState.spawned;
             shop.gameObject.SetActive(true);
+            shop.state = ShopState.spawned;
         }
     }
 

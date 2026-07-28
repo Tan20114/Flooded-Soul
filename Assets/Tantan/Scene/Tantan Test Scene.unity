@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalManager
   CurrentBiome: 0
-  previousScene: 3
+  previousScene: 2
   currentScene: 0
   biomeChangeLastStep: 0
   isAlwaysOnTop: 1
@@ -716,12 +716,19 @@ MonoBehaviour:
   oceanVisited: 0
   iceVisited: 0
   forestVisited: 0
-  boatLevel: 3
+  boatLevel: 1
   hookLevel: 1
-  cat1Level: 1
-  cat2Level: 1
-  cat3Level: 1
-  cat4Level: 1
+  cat1Level: 0
+  cat2Level: 0
+  cat3Level: 0
+  cat4Level: 0
+  story1Unlocked: 0
+  story2Unlocked: 0
+  story3Unlocked: 0
+  story4Unlocked: 0
+  story5Unlocked: 0
+  story6Unlocked: 0
+  story7Unlocked: 0
   fishPoints: 0
   distance: 0
 --- !u!4 &144720734
@@ -1816,55 +1823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6665a763c5243c84d921fd1902843516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransparentWindow
---- !u!1 &481001327
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 481001328}
-  - component: {fileID: 481001329}
-  m_Layer: 0
-  m_Name: ShopSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &481001328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481001327}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1022525430}
-  m_Father: {fileID: 1424901135}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &481001329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481001327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a730772585e783438b6a91e95e69f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShopSpawner
-  spawnPoint: {fileID: 481001328}
-  shop: {fileID: 1084996588}
-  shopSpawnDistance: 50
-  shopSpawnChance: 30
 --- !u!1 &498203940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,17 +2658,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7058897397695549699, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
   m_PrefabInstance: {fileID: 1643935805}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1084996588 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5962979058648700942, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
-  m_PrefabInstance: {fileID: 1643935805}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15531a61c0340d4bb06a8295f97b3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShopMovement
 --- !u!1 &1120027014
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,7 +4429,11 @@ MonoBehaviour:
         m_SelectedSource:
           rid: -2
         m_Provider2DCache:
-          rid: -2
+          rid: 3630566055680671744
+    - rid: 3630566055680671744
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!4 &1589583690
 Transform:
   m_ObjectHideFlags: 0
@@ -4504,15 +4455,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 481001328}
+    m_TransformParent: {fileID: 1424901135}
     m_Modifications:
     - target: {fileID: 7058897397695549699, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 7058897397695549699, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099999905
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 7058897397695549699, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4546,25 +4497,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7247175341768248871, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
-      propertyPath: m_Size.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7247175341768248871, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7276605518143647622, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
       propertyPath: m_Name
       value: ShopLayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7276605518143647622, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
-      propertyPath: m_Layer
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 7276605518143647622, guid: ce0a58726ae69e345bfc040bcec3f532, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6490,7 +6425,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5935846058622851328, guid: 01d54fa5b9182944992c342763c10064, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 481001328}
+      addedObject: {fileID: 1022525430}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d54fa5b9182944992c342763c10064, type: 3}
 --- !u!1001 &702314903789270432

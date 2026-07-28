@@ -1,9 +1,13 @@
+using AYellowpaper.SerializedCollections;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class GlobalManager : SingletonPersistant<GlobalManager>
 {
+    CollectionManager cm => GetComponent<CollectionManager>();
+
     [Header("Data")]
     public BiomeType CurrentBiome;
     public int previousScene = 0;
@@ -25,6 +29,15 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     public int cat3Level = 0;
     public int cat4Level = 0;
 
+    [Header("Achievements")]
+    public bool story1Unlocked = false; // 10 All Legend
+    public bool story2Unlocked = false; // 100 Scamambas
+    public bool story3Unlocked = false; // First Upgrade
+    public bool story4Unlocked = false; // All Cat
+    public bool story5Unlocked = false; // 25 Plab Fish
+    public bool story6Unlocked = false; // 2 Cat
+    public bool story7Unlocked = false; // All Biome
+
     [Header("Currency")]
     public int fishPoints = 0;
     public float distance = 0;
@@ -32,6 +45,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        Initial();
     }
 
     private void OnDisable()
@@ -41,18 +55,8 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
 
     private void FixedUpdate()
     {
-        switch (CurrentBiome)
-        {
-            case BiomeType.Ocean:
-                oceanVisited = true;
-                break;
-            case BiomeType.Ice:
-                iceVisited = true;
-                break;
-            case BiomeType.Forest:
-                forestVisited = true;
-                break;
-        }
+        BiomeCheck();
+        AchievementCheck();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -100,7 +104,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         PlayerPrefs.SetInt("IceVisited", iceVisited ? 1 : 0);
         PlayerPrefs.SetInt("ForestVisited", forestVisited ? 1 : 0);
 
-        GetComponent<CollectionManager>().Save();
+        cm.Save();
 
         PlayerPrefs.Save();
     }
@@ -139,12 +143,86 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         iceVisited = PlayerPrefs.GetInt("IceVisited", 0) == 1;
         forestVisited = PlayerPrefs.GetInt("ForestVisited", 0) == 1;
 
-        GetComponent<CollectionManager>().Load();
+        cm.Load();
     }
 
-    public void Initial()
+    void Initial()
     {
         LoadData();
         StartCoroutine(AutoSave(60f));
     }
+
+    void BiomeCheck()
+    {
+        switch (CurrentBiome)
+        {
+            case BiomeType.Ocean:
+                oceanVisited = true;
+                break;
+            case BiomeType.Ice:
+                iceVisited = true;
+                break;
+            case BiomeType.Forest:
+                forestVisited = true;
+                break;
+        }
+    }
+
+    #region Achievement
+    void AchievementCheck()
+    {
+        story1Unlocked = Achievement1Condition();
+        story2Unlocked = Achievement2Condition();
+        story3Unlocked = Achievement3Condition();
+        story4Unlocked = Achievement4Condition();
+        story5Unlocked = Achievement5Condition();
+        story6Unlocked = Achievement6Condition();
+        story7Unlocked = Achievement7Condition();
+    }
+
+    bool Achievement1Condition()
+    {
+        SerializedDictionary<LegendaryFishType, int> legendary = cm.GetLegendaryFishCollection();
+
+        return legendary[LegendaryFishType.PlabFish] >= 10
+            && legendary[LegendaryFishType.JollyFish] >= 10
+            && legendary[LegendaryFishType.KelpboneFish] >= 10;
+    }
+
+    bool Achievement2Condition()
+    {
+        return cm.GetCommonFishCollection()[CommonFishType.SacabambaspisFish] >= 100;
+    }
+
+    bool Achievement3Condition()
+    {
+        return boatLevel >= 2 || hookLevel >= 2 || cat1Level >= 1 || cat2Level >= 1 || cat3Level >= 1 || cat4Level >= 1;
+    }
+
+    bool Achievement4Condition()
+    {
+        return cat1Level >= 1 && cat2Level >= 1 && cat3Level >= 1 && cat4Level >= 1;
+    }
+
+    bool Achievement5Condition()
+    {
+        return cm.GetLegendaryFishCollection()[LegendaryFishType.PlabFish] >= 25;
+    }
+
+    bool Achievement6Condition()
+    {
+        return new[]
+        {
+            cat1Level,
+            cat2Level,
+            cat3Level,
+            cat4Level
+        }.Count(level => level > 0) >= 2;
+    }
+
+    bool Achievement7Condition()
+    {
+        return oceanVisited && iceVisited && forestVisited;
+    }
+    #endregion
 }
