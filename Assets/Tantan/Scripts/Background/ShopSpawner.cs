@@ -4,25 +4,16 @@ public class ShopSpawner : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
     [SerializeField] ShopLayer shop;
-    [SerializeField] float shopSpawnDistance = 50;
-    [SerializeField] int shopSpawnChance = 20;
 
     void Update()
     {
-        CheckShopSpawn();
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SpawnShop();
         }
     }
 
-    void CheckShopSpawn()
-    {
-        int currentStep = (int)(GlobalManager.Instance.distance / shopSpawnDistance);
-    }
-
-    void SpawnShop()
+    public void SpawnShop()
     {
         if (shop.state == ShopState.despawned)
         {

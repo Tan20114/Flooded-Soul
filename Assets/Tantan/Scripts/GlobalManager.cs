@@ -29,6 +29,11 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     public int cat3Level = 0;
     public int cat4Level = 0;
 
+    [Header("Buff")]
+    public bool isRarityUp = false;
+    public bool isStrength = false;
+    public bool passiveUp = false;
+
     [Header("Achievements")]
     public bool story1Unlocked = false; // 10 All Legend
     public bool story2Unlocked = false; // 100 Scamambas

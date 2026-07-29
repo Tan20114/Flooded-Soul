@@ -5693,7 +5693,7 @@ MonoBehaviour:
     - Key: 3
       Value: {fileID: 4258370346026866370, guid: fc1dd47fe99a4d34f8669185a0c3a5f5, type: 3}
     - Key: 4
-      Value: {fileID: 6756507848721884876, guid: 878ed4e6f83a2ea4f9fae854bdc58ea2, type: 3}
+      Value: {fileID: 7447223390063442370, guid: 712436f77b516a1448fb7cd061ce3ebc, type: 3}
   pageButtons:
     _serializedList:
     - Key: 1
@@ -5785,31 +5785,31 @@ MonoBehaviour:
     _serializedList:
     - Key: 1
       Value:
-      - {fileID: -5200684587941632335, guid: 110cf303463052640b32bb9d6286ff2c, type: 3}
+      - {fileID: -1844300852343761645, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: 4676579965688967190, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
     - Key: 2
       Value:
-      - {fileID: -3100967748830863288, guid: 110cf303463052640b32bb9d6286ff2c, type: 3}
+      - {fileID: -2073099319328508924, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: -1165520821, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
     - Key: 3
       Value:
-      - {fileID: 8656258175466316809, guid: 8cac4d9ca70ef1346ab1edb0216b1f03, type: 3}
+      - {fileID: 1828502818, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: 385334144, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
     - Key: 4
       Value:
-      - {fileID: 2497359162672292102, guid: 9be76157b2c29aa40ad26b1a782e1e1e, type: 3}
+      - {fileID: -630369169, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: -1152898313, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
     - Key: 5
       Value:
-      - {fileID: -8878615769132560933, guid: 110cf303463052640b32bb9d6286ff2c, type: 3}
+      - {fileID: 6244829863892748235, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: 919345836, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
     - Key: 6
       Value:
-      - {fileID: -1038091904, guid: 110cf303463052640b32bb9d6286ff2c, type: 3}
+      - {fileID: -426050902, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: 561762602, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
     - Key: 7
       Value:
-      - {fileID: -1309597690, guid: 110cf303463052640b32bb9d6286ff2c, type: 3}
+      - {fileID: 188456682, guid: 705839281f2163f4e93d5440cb29ab5e, type: 3}
       - {fileID: -1330200004, guid: 39b7acbdd47880241ab825c67b3470d2, type: 3}
   storyDescriptions:
     _serializedList:
@@ -5827,8 +5827,8 @@ MonoBehaviour:
       Value: {fileID: 311532747}
     - Key: 7
       Value: {fileID: 753712905}
-  storyLockPage: {fileID: -2332291696857289425, guid: 809ef73f844c73b469e9bebbd5b8cd5b, type: 3}
-  tutorialPage: {fileID: 7927451038347839002, guid: 0ff66cced8813104689804fd81436f0e, type: 3}
+  storyLockPage: {fileID: 0}
+  tutorialPage: {fileID: 7447223390063442370, guid: 712436f77b516a1448fb7cd061ce3ebc, type: 3}
 --- !u!1 &1535556785
 GameObject:
   m_ObjectHideFlags: 0
@@ -6256,7 +6256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 171.51}
+  m_AnchoredPosition: {x: 0, y: 171.51001}
   m_SizeDelta: {x: 0, y: 343.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1569663433

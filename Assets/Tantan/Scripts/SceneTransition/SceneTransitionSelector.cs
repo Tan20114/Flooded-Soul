@@ -33,7 +33,6 @@ public class SceneTransitionSelector : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isInFin);
         if (!isInFin) return;
         animator.SetBool("isFish",isFishingScene);
         animator.SetInteger("sceneIndex", sceneIdex);

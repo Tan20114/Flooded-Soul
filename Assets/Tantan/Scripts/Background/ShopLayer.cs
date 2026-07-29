@@ -41,10 +41,6 @@ public class ShopLayer : ParallaxLayer
 
     protected override void RandomBiomeLayer()
     {
-        Debug.Log($"SR: {sr}");
-        Debug.Log($"PM: {pm}");
-        Debug.Log($"CurrentBiomeAsset: {pm?.CurrentBiomeAsset}");
-        Debug.Log($"Shop Sprite: {pm?.CurrentBiomeAsset?.shop}");
         sr.sprite = pm.CurrentBiomeAsset.shop;
     }
 }

@@ -15,7 +15,6 @@ public class SailingVisualizer : MonoBehaviour
     [SerializeField] Button topMostButton;
     [SerializeField] Sprite[] topMostSprites;
     #endregion
-    [SerializeField] Button sailButton;
     [SerializeField] Button fishButton;
     [SerializeField] Button shopButton;
     [SerializeField] Button soundButton;
@@ -23,7 +22,6 @@ public class SailingVisualizer : MonoBehaviour
     private void LateUpdate()
     {
         topMostButton.image.sprite = GlobalManager.Instance.isAlwaysOnTop ? topMostSprites[1] : topMostSprites[0];
-        sailButton.gameObject.SetActive(boatController.state == BoatState.Idle);
         soundButton.image.color = GlobalManager.Instance.isSoundOn ? Color.white : Color.gray;
         FishNShopSwitch();
 

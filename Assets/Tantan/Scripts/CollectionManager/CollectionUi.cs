@@ -114,30 +114,5 @@ public class CollectionUi : MonoBehaviour
         currentButtonList = pageButtons[currentPageType];
         currentButtonList.SetActive(true);
     }
-
-    public void NextType()
-    {
-        int currentType = (int)currentPageType;
-
-        if (currentType < (int)PageType.Tutorial)
-            currentType++;
-        else
-            currentType = 0;
-
-        currentPageType = (PageType)currentType;
-    }
-
-    public void PreviousType()
-    {
-        int currentType = (int)currentPageType;
-
-        if (currentType > 0)
-            currentType--;
-        else
-            currentType = (int)PageType.Tutorial;
-
-        currentPageType = (PageType)currentType;
-    }
-
     #endregion
 }
