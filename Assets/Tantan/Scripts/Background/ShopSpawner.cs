@@ -7,10 +7,7 @@ public class ShopSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnShop();
-        }
+        
     }
 
     public void SpawnShop()

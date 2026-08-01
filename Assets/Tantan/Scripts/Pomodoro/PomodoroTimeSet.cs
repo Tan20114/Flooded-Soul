@@ -10,14 +10,14 @@ public class PomodoroTimeSet : MonoBehaviour
     public void AddTime()
     {
         int totalMinutes = GetTotalMinutes();
-        totalMinutes = Mathf.Min(totalMinutes + 5, MaxMinutes);
+        totalMinutes = Mathf.Min(totalMinutes + 15, MaxMinutes);
         SetTime(totalMinutes);
     }
 
     public void SubtractTime()
     {
         int totalMinutes = GetTotalMinutes();
-        totalMinutes = Mathf.Max(totalMinutes - 5, 0);
+        totalMinutes = Mathf.Max(totalMinutes - 15, 0);
         SetTime(totalMinutes);
     }
 
@@ -40,6 +40,7 @@ public class PomodoroTimeSet : MonoBehaviour
 
     public void FocusTime()
     {
-        GameManager.Instance.timeToCount = GetTotalMinutes() * 60f;
+        GameManager.Instance.timeToCount = GetTotalMinutes() * 60;
+        GlobalManager.Instance.buffDuration = (GetTotalMinutes() * 10f);
     }
 }

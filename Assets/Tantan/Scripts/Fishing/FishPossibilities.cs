@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class FishPossibilities : MonoBehaviour
+[CreateAssetMenu(fileName = "FishPossibilities", menuName = "Fishing/Fish Possibilities")]
+public class FishPossibilities : ScriptableObject
 {
     [Header("Fish Possibilities")]
     [Range(0, 100)] public float common = 60;

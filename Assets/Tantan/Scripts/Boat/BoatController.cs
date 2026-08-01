@@ -34,6 +34,7 @@ public class BoatController : MonoBehaviour
 
     public void Sail()
     {
+        if (!GameManager.Instance.inSession) return;
         shopEntered = true;
         state = BoatState.Moving;
     }

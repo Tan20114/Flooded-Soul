@@ -12,19 +12,19 @@ public class GameManager : Singleton<GameManager>
     [Header("Timer")]
     public float timeToCount = 0;
 
+
     private void Update()
     {
         if (!inSession) return;
 
         timeToCount -= Time.deltaTime;
-        Debug.Log("Time Left : " + (int)timeToCount);
-        
-        if (timeToCount < 5)
+
+        if (timeToCount < 34)
         {
             spawner.SpawnShop();
         }
 
-        if (timeToCount < 0)
+        if (timeToCount < 0 && inSession)
         {
             timeToCount = 0;
             EndFocus(true);
@@ -33,10 +33,16 @@ public class GameManager : Singleton<GameManager>
 
     public void ToggleSound() => GlobalManager.Instance.isSoundOn = !GlobalManager.Instance.isSoundOn;
 
-    public void StartFocus() => inSession = true;
+    public void StartFocus()
+    {
+        if (timeToCount <= 0) return;
+        inSession = true;
+    }
 
     public void EndFocus(bool isSuccessful)
     {
+        inSession = false;
+
         if (isSuccessful)
             RandomBuff();
     }
@@ -51,5 +57,7 @@ public class GameManager : Singleton<GameManager>
             ranVal = Random.Range(0, 3);
         }
         while (ranVal == 2 && catLevel < 1);
+
+        GlobalManager.Instance.BuffActivate(ranVal, GlobalManager.Instance.buffDuration);
     }
 }

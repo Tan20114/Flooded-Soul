@@ -66,7 +66,7 @@ public class CatFishing : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer >= getInterval())
+            if (timer >= getInterval() * (GlobalManager.Instance.buffs[2] ? 1f : 1/2))
             {
                 timer = 0f;
                 generateMethod.Invoke();

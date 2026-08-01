@@ -159,7 +159,7 @@ public class Fish : MonoBehaviour, IBoundArea
                 currentResistance -= resistanceForce * .1f;
                 hook.DecreaseOffset();
 
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, (hook.DragUpForce - (currentResistance < resistTreshold ? 0 : currentResistance)));
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, ((hook.DragUpForce * (GlobalManager.Instance.buffs[1] ? 1.25f : 1f)) - (currentResistance < resistTreshold ? 0 : currentResistance)));
                 HelperFunction.Delay(this, .5f, () => isClicked = false);
 
                 swimDir *= Random.Range(0, 100) > 95 ? 1 : -1;

@@ -6,8 +6,9 @@ public class FishSpawner : MonoBehaviour
 
     [Header ("References")]
     SpriteRenderer fishBound => GameObject.FindGameObjectWithTag("FishBound").GetComponent<SpriteRenderer>();
-    FishPossibilities possibilities => GetComponent<FishPossibilities>();
+    [SerializeField] FishPossibilities[] possibilities;
     [SerializeField] Transform[] spawnPoints;
+    bool rarityUp => GlobalManager.Instance.buffs[0];
 
     [Header("Fish Pool")]
     public LeanGameObjectPool commonFishPool;
@@ -110,11 +111,11 @@ public class FishSpawner : MonoBehaviour
         {
             int ranVal = Random.Range(0, 100);
 
-            if (ranVal < possibilities.CommonMax)
+            if (ranVal < possibilities[rarityUp ? 1 : 0].CommonMax)
                 commonFishCapacity++;
-            else if (ranVal < possibilities.UncommonMax)
+            else if (ranVal < possibilities[rarityUp ? 1 : 0].UncommonMax)
                 uncommonFishCapacity++;
-            else if (ranVal < possibilities.RareMax)
+            else if (ranVal < possibilities[rarityUp ? 1 : 0].RareMax)
                 rareFishCapacity++;
             else
                 legendaryFishCapacity++;
@@ -134,11 +135,11 @@ public class FishSpawner : MonoBehaviour
         {
             int ranVal = Random.Range(0, 100);
 
-            if (ranVal < possibilities.CommonMax)
+            if (ranVal < possibilities[rarityUp ? 1 : 0].CommonMax)
                 commonFishPool.Capacity++;
-            else if (ranVal < possibilities.UncommonMax)
+            else if (ranVal < possibilities[rarityUp ? 1 : 0].UncommonMax)
                 uncommonFishPool.Capacity++;
-            else if (ranVal < possibilities.RareMax)
+            else if (ranVal < possibilities[rarityUp ? 1 : 0].RareMax)
                 rareFishPool.Capacity++;
             else
                 legendaryFishPool.Capacity++;

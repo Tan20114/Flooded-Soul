@@ -30,9 +30,9 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     public int cat4Level = 0;
 
     [Header("Buff")]
-    public bool isRarityUp = false;
-    public bool isStrength = false;
-    public bool passiveUp = false;
+    // 0 = Rarity Up, 1 = Strength Up, 2 = Double Passive Income
+    public bool[] buffs;
+    public float buffDuration = 0;
 
     [Header("Achievements")]
     public bool story1Unlocked = false; // 10 All Legend
@@ -171,6 +171,21 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
                 forestVisited = true;
                 break;
         }
+    }
+
+    public void BuffActivate(int buffIndex, float duration)
+    {
+        StartCoroutine(BuffOn(buffIndex, duration));
+    }
+
+    IEnumerator BuffOn(int buffIndex, float duration)
+    {
+        Debug.Log($"Buff On : Duration : {duration}");
+        buffs[buffIndex] = true;
+        yield return new WaitForSeconds(duration);
+        Debug.Log("Buff Off");
+        buffs[buffIndex] = false;
+        buffDuration = 0;
     }
 
     #region Achievement
