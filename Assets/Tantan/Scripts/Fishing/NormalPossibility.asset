@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ce6fe4d17fbf649a7e82a5771e5b84, type: 3}
   m_Name: NormalPossibility
   m_EditorClassIdentifier: Assembly-CSharp::FishPossibilities
-  common: 60
-  uncommon: 30
+  common: 70
+  uncommon: 20
   rare: 9.5
   legendary: 0.5

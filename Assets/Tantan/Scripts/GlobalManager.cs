@@ -17,6 +17,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     [Header("Status")]
     public bool isAlwaysOnTop = true;
     public bool isSoundOn = true;
+    public bool isTutorialCompleted = false;
     bool isFirstLoad = true;
     public bool oceanVisited = false;
     public bool iceVisited = false;
@@ -108,7 +109,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         PlayerPrefs.SetInt("OceanVisited", oceanVisited ? 1 : 0);
         PlayerPrefs.SetInt("IceVisited", iceVisited ? 1 : 0);
         PlayerPrefs.SetInt("ForestVisited", forestVisited ? 1 : 0);
-
+        PlayerPrefs.SetInt("TutorialCompleted", isTutorialCompleted ? 1 : 0);
         cm.Save();
 
         PlayerPrefs.Save();
@@ -147,6 +148,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         oceanVisited = PlayerPrefs.GetInt("OceanVisited", 0) == 1;
         iceVisited = PlayerPrefs.GetInt("IceVisited", 0) == 1;
         forestVisited = PlayerPrefs.GetInt("ForestVisited", 0) == 1;
+        isTutorialCompleted = PlayerPrefs.GetInt("TutorialCompleted", 0) == 1;
 
         cm.Load();
     }

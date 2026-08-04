@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,10 @@ public class FishingSceneUI : MonoBehaviour
     [SerializeField] Button pauseButton;
     [SerializeField] Button backButton;
     [SerializeField] Sprite[] pauseSprites;
+
+    [SerializeField] GameObject buffPanel;
+    [SerializeField] Image buffImage; 
+    [SerializeField] Sprite[] buffSprites;
 
     bool isPause = false;
 
@@ -25,6 +30,11 @@ public class FishingSceneUI : MonoBehaviour
 
         fishText.text = GlobalManager.Instance.fishPoints.ToString("0000");
         pauseButton.image.sprite = isPause ? pauseSprites[0] : pauseSprites[1];
+
+        buffPanel.SetActive(GlobalManager.Instance.buffDuration > 0);
+
+        if (buffPanel.activeSelf)
+            buffImage.sprite = buffSprites[Array.IndexOf(GlobalManager.Instance.buffs, true)];
     }
 
     public void TogglePause()

@@ -18,6 +18,9 @@ public class ButtonBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private void FixedUpdate()
     {
+        if (!buttonLock) return;
+
+        button.image.color = isUnlocked ? Color.white : Color.black;
         button.interactable = isUnlocked;
         buttonLock.SetActive(!isUnlocked);
     }

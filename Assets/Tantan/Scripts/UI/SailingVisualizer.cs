@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SailingVisualizer : MonoBehaviour
 {
     BoatController boatController => FindAnyObjectByType<BoatController>();
+    ShopSpawner spawner => FindAnyObjectByType<ShopSpawner>();
 
     [Header("Currency")]
     [SerializeField] TextMeshProUGUI fishPointText;
@@ -57,6 +58,7 @@ public class SailingVisualizer : MonoBehaviour
 
         focusButton.gameObject.SetActive(boatController.state == BoatState.Idle && !GameManager.Instance.inSession);
         endSessionButton.gameObject.SetActive(GameManager.Instance.inSession && boatController.state != BoatState.Idle);
+        endSessionButton.interactable = spawner.shop.state == ShopState.despawned;
 
         foreach (Button b in timeSetButton)
             b.gameObject.SetActive(!GameManager.Instance.inSession);

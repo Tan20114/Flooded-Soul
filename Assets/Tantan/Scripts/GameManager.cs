@@ -4,6 +4,7 @@ public class GameManager : Singleton<GameManager>
 {
     [Header("References")]
     [SerializeField] ShopSpawner spawner;
+    [SerializeField] GameObject tutorialPanel;
 
     [Header("Status")]
     public bool autoStop = true;
@@ -12,6 +13,10 @@ public class GameManager : Singleton<GameManager>
     [Header("Timer")]
     public float timeToCount = 0;
 
+    private void Start()
+    {
+        tutorialPanel.SetActive(!GlobalManager.Instance.isTutorialCompleted);
+    }
 
     private void Update()
     {
@@ -45,6 +50,11 @@ public class GameManager : Singleton<GameManager>
 
         if (isSuccessful)
             RandomBuff();
+        else
+        {
+            GlobalManager.Instance.buffDuration = 0;
+            HelperFunction.Delay(this, .1f, spawner.SpawnShop);
+        }
     }
 
     void RandomBuff()

@@ -38,7 +38,7 @@ public class ShopVisulize : MonoBehaviour
             buttons[3].Unlock();
         }
 
-        if (cm.TotalCommonFish() > 100)
+        if (cm.TotalFish() > 100)
         {
             buttons[4].Unlock();
         }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishPossibilities
   common: 40
   uncommon: 45
-  rare: 14
-  legendary: 1
+  rare: 13
+  legendary: 2

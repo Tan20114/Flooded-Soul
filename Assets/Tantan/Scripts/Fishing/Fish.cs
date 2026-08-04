@@ -70,7 +70,7 @@ public class Fish : MonoBehaviour, IBoundArea
     float currentResistance = 0;
     float resistTreshold = 0;
     public float fishVisionRange = 2f;
-    public int FishPoint { get => fishPoint; }
+    public int FishPoint { get => fishPoint * (GlobalManager.Instance.buffs[0] ? 2 : 1); }
     float swimDir = -1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

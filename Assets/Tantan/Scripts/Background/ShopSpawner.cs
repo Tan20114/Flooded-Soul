@@ -3,18 +3,17 @@ using UnityEngine;
 public class ShopSpawner : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
-    [SerializeField] ShopLayer shop;
+    [SerializeField] Transform tutorialSpawnPoint;
+    public ShopLayer shop;
 
-    void Update()
-    {
-        
-    }
 
     public void SpawnShop()
     {
         if (shop.state == ShopState.despawned)
         {
-            shop.transform.position = new Vector2(spawnPoint.position.x,shop.transform.position.y);
+            Transform refPoint = spawnPoint;
+
+            shop.transform.position = new Vector2(refPoint.position.x, shop.transform.position.y);
             shop.gameObject.SetActive(true);
             shop.state = ShopState.spawned;
         }
@@ -23,7 +22,8 @@ public class ShopSpawner : MonoBehaviour
     public void DespawnShop()
     {
         if (shop.state == ShopState.despawned) return;
-        transform.position = new Vector2(spawnPoint.position.x, shop.transform.position.y);
+        Transform refPoint = spawnPoint;
+        shop.transform.position = new Vector2(refPoint.position.x, shop.transform.position.y);
         shop.state = ShopState.despawned;
         gameObject.SetActive(false);
     }
