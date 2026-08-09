@@ -6,12 +6,14 @@ public class FishingManager : Singleton<FishingManager>
 {
     #region Variables
     [Header("References")]
+    SceneLoader sl => FindAnyObjectByType<SceneLoader>();
     [SerializeField] LeanGameObjectPool rewardPool;
     FishSpawner spawner => FindAnyObjectByType<FishSpawner>();
     CollectionManager collection => FindAnyObjectByType<CollectionManager>();
     FishingHook hook => FindAnyObjectByType<FishingHook>();
 
     [Header("Status")]
+    bool isSceneOut = false;
     public bool isMinigame = false;
     [SerializeField] float maxMinigameTime = 7.5f;
     [SerializeField] float minMinigameTime = 4f;
@@ -42,6 +44,11 @@ public class FishingManager : Singleton<FishingManager>
             currentMinigameTime -= Time.deltaTime;
             if (currentMinigameTime <= 0)
                 EndMinigame(false);
+        }
+        else if (!isMinigame && GlobalManager.Instance.buffDuration <= 0 && !isSceneOut)
+        {
+            isSceneOut = true;
+            sl.ChangeScene(0);
         }
     }
 

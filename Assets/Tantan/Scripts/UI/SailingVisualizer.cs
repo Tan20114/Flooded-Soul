@@ -12,6 +12,7 @@ public class SailingVisualizer : MonoBehaviour
     [SerializeField] TextMeshProUGUI fishPointText;
     [SerializeField] TextMeshProUGUI distanceText;
     [SerializeField] TextMeshProUGUI hourText;
+    [SerializeField] GameObject[] timerVisual;
 
     [Header("Button")]
     #region TopMost
@@ -62,6 +63,9 @@ public class SailingVisualizer : MonoBehaviour
 
         foreach (Button b in timeSetButton)
             b.gameObject.SetActive(!GameManager.Instance.inSession);
+
+        foreach (GameObject g in timerVisual)
+            g.SetActive(GameManager.Instance.inSession);
 
         if (buffPanel.activeSelf)
             buffImage.sprite = buffSprites[Array.IndexOf(GlobalManager.Instance.buffs, true)];

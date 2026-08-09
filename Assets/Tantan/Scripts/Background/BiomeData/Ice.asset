@@ -35,4 +35,4 @@ MonoBehaviour:
   underWater: {fileID: 21300000, guid: 52e9755674fc82f4ea997a4a8868062a, type: 3}
   shop: {fileID: -8377377352323975265, guid: 52bc16ebca7838e4e8c1e622d4aceda2, type: 3}
   insideShop: {fileID: 8830066665954079317, guid: a03d85a010821274599bc3de3bcd56ca, type: 3}
-  bgm: {fileID: 8300000, guid: c807424c28162ac44915e51a95dc297a, type: 3}
+  bgm: {fileID: 8300000, guid: 58287e812ed5a7b4c8aeafad98d4ca9a, type: 3}
