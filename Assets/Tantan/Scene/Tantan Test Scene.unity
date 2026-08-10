@@ -1877,6 +1877,7 @@ MonoBehaviour:
   - {fileID: 1870996456}
   - {fileID: 73614200}
   - {fileID: 167094042}
+  stopSFX: {fileID: 8300000, guid: 0b529a4e65c5c534681465411259f943, type: 3}
   state: 1
   boatSpeed: 2
   isInShopArea: 0

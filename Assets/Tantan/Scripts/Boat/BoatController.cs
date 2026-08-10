@@ -20,6 +20,7 @@ public class BoatController : MonoBehaviour
     [SerializeField] GameObject[] boatVisual;
     [SerializeField] Animator boatAnimator;
     [SerializeField] Animator[] waveAnimator;
+    [SerializeField] AudioClip stopSFX;
     Animator ghostAnimator;
     Animator cat1Animator;
     Animator cat2Animator;
@@ -74,6 +75,7 @@ public class BoatController : MonoBehaviour
             if (state == BoatState.Moving && GameManager.Instance.autoStop && !shopEntered)
             {
                 Stop();
+                SFXManager.instance.PlaySoundFXClip(stopSFX);
             }
         }
         else
