@@ -3,9 +3,7 @@ using UnityEngine;
 public class ShopSpawner : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
-    [SerializeField] Transform tutorialSpawnPoint;
     public ShopLayer shop;
-
 
     public void SpawnShop()
     {

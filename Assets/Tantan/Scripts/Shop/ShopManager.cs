@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    [SerializeField] CostManager costData;
+    SFXManager sfx => FindAnyObjectByType<SFXManager>();
 
+    [SerializeField] CostManager costData;
+    [SerializeField] AudioClip coin;
     #region Boat
     int maxBoatLevel = 3;
 
@@ -31,6 +33,7 @@ public class ShopManager : MonoBehaviour
         {
             if (GlobalManager.Instance.fishPoints >= BoatCostUpdate())
             {
+                sfx.PlaySoundFXClip(coin);
                 GlobalManager.Instance.fishPoints -= BoatCostUpdate();
                 GlobalManager.Instance.boatLevel++;
             }
@@ -43,6 +46,7 @@ public class ShopManager : MonoBehaviour
         {
             if (GlobalManager.Instance.fishPoints >= HookCostUpdate())
             {
+                sfx.PlaySoundFXClip(coin);
                 GlobalManager.Instance.fishPoints -= HookCostUpdate();
                 GlobalManager.Instance.hookLevel++;
             }
@@ -58,6 +62,7 @@ public class ShopManager : MonoBehaviour
                 {
                     if (GlobalManager.Instance.fishPoints >= Cat1CostUpdate())
                     {
+                        sfx.PlaySoundFXClip(coin);
                         GlobalManager.Instance.fishPoints -= Cat1CostUpdate();
                         GlobalManager.Instance.cat1Level++;
                     }
@@ -68,6 +73,7 @@ public class ShopManager : MonoBehaviour
                 {
                     if (GlobalManager.Instance.fishPoints >= Cat2CostUpdate())
                     {
+                        sfx.PlaySoundFXClip(coin);
                         GlobalManager.Instance.fishPoints -= Cat2CostUpdate();
                         GlobalManager.Instance.cat2Level++;
                     }
@@ -78,6 +84,7 @@ public class ShopManager : MonoBehaviour
                 {
                     if (GlobalManager.Instance.fishPoints >= Cat3CostUpdate())
                     {
+                        sfx.PlaySoundFXClip(coin);
                         GlobalManager.Instance.fishPoints -= Cat3CostUpdate();
                         GlobalManager.Instance.cat3Level++;
                     }
@@ -88,6 +95,7 @@ public class ShopManager : MonoBehaviour
                 {
                     if (GlobalManager.Instance.fishPoints >= Cat4CostUpdate())
                     {
+                        sfx.PlaySoundFXClip(coin);
                         GlobalManager.Instance.fishPoints -= Cat4CostUpdate();
                         GlobalManager.Instance.cat4Level++;
                     }

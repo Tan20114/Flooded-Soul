@@ -9,6 +9,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     CollectionManager cm => GetComponent<CollectionManager>();
 
     [Header("Data")]
+    Coroutine currentBuffCycle = null;
     public BiomeType CurrentBiome;
     public int previousScene = 0;
     public int currentScene = 0;
@@ -177,7 +178,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
 
     public void BuffActivate(int buffIndex, float duration)
     {
-        StartCoroutine(BuffOn(buffIndex, duration));
+        currentBuffCycle = StartCoroutine(BuffOn(buffIndex, duration));
     }
 
     IEnumerator BuffOn(int buffIndex, float duration)
@@ -187,6 +188,23 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         yield return new WaitForSeconds(duration);
         Debug.Log("Buff Off");
         buffs[buffIndex] = false;
+        currentBuffCycle = null;
+        buffDuration = 0;
+    }
+
+    public void ResetBuff()
+    {
+        if (currentBuffCycle != null)
+        {
+            StopCoroutine(currentBuffCycle);
+            currentBuffCycle = null;
+        }
+
+        for (int i = 0; i < buffs.Length; i++)
+        {
+            buffs[i] = false;
+        }
+
         buffDuration = 0;
     }
 

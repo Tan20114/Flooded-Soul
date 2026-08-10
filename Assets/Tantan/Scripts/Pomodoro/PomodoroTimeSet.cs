@@ -6,18 +6,19 @@ public class PomodoroTimeSet : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] timeText;
 
     const int MaxMinutes = 90;
+    [SerializeField] int timerSetBase = 15;
 
     public void AddTime()
     {
         int totalMinutes = GetTotalMinutes();
-        totalMinutes = Mathf.Min(totalMinutes + 15, MaxMinutes);
+        totalMinutes = Mathf.Min(totalMinutes + timerSetBase, MaxMinutes);
         SetTime(totalMinutes);
     }
 
     public void SubtractTime()
     {
         int totalMinutes = GetTotalMinutes();
-        totalMinutes = Mathf.Max(totalMinutes - 15, 0);
+        totalMinutes = Mathf.Max(totalMinutes - timerSetBase, 0);
         SetTime(totalMinutes);
     }
 

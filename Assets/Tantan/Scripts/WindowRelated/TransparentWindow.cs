@@ -51,6 +51,7 @@ public class TransparentWindow : MonoBehaviour
 
     const uint WS_EX_LAYERED = 0x00080000;
     const uint WS_EX_TRANSPARENT = 0x00000020;
+    const uint SWP_NOZORDER = 0x0004;
     #endregion
 
     #region WWorking Area Constants
@@ -88,7 +89,7 @@ public class TransparentWindow : MonoBehaviour
         Screen.fullScreenMode = FullScreenMode.Windowed;
         Screen.fullScreen = false;
 
-        yield return null;
+        yield return new WaitForEndOfFrame();
 
         Rect workArea = GetWorkArea();
 
@@ -98,13 +99,12 @@ public class TransparentWindow : MonoBehaviour
             false
         );
 
-        yield return null;
+        yield return new WaitForEndOfFrame();
 
         hWnd = GetActiveWindow();
 
         uint style = GetWindowLong(hWnd, GWL_STYLE);
 
-        // Remove borders
         style &= ~WS_CAPTION;
         style &= ~WS_THICKFRAME;
         style &= ~WS_BORDER;
@@ -125,6 +125,13 @@ public class TransparentWindow : MonoBehaviour
         DwmExtendFrameIntoClientArea(hWnd, ref margins);
 
         SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
+
+        SetWindowPos(
+            hWnd,
+            IntPtr.Zero,
+            0, 0, 0, 0,
+            SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED);
+
         ApplyTopmost();
 #endif
         Application.runInBackground = true;

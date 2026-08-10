@@ -19,14 +19,7 @@ public class ShopLayer : ParallaxLayer
     protected override void OnEnable()
     {
         base.OnEnable();
-    }
-
-    private void Start()
-    {
-        HelperFunction.Delay(this, 0.01f, () =>
-        {
-            RandomBiomeLayer();
-        });
+        HelperFunction.Delay(this, 0.01f, RandomBiomeLayer);
     }
 
     protected override void RegenLayer()
