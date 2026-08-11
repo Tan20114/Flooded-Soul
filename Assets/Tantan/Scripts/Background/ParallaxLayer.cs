@@ -58,7 +58,7 @@ public class ParallaxLayer : MonoBehaviour
 
     protected virtual void RegenLayer()
     {
-        if (transform.position.x <= -pm.RegenPoint.position.x)
+        if (transform.position.x <= -pm.RegenPoint.position.x + 5)
         {
             transform.position = new Vector2(pm.RegenPoint.position.x, transform.position.y);
             RandomBiomeLayer();
