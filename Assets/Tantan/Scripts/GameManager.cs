@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public bool inSession = false;
 
     [Header("Timer")]
+    public float timer = 0;
     public float timeToCount = 0;
 
     private void Start()
@@ -48,13 +49,21 @@ public class GameManager : Singleton<GameManager>
     {
         inSession = false;
 
-        if (isSuccessful)
-            RandomBuff();
-        else
+        float elapse = timer - timeToCount;
+        Debug.Log($"Focus Ended. Elapsed Time: {elapse}, Time to Count: {timeToCount}, Is Successful: {isSuccessful}");
+
+        if (!isSuccessful)
         {
-            GlobalManager.Instance.buffDuration = 0;
+            if (elapse > .5f * timer)
+                GlobalManager.Instance.buffDuration = (int)(timer - timeToCount) / 6;
+            else
+                GlobalManager.Instance.buffDuration = 0;
+
             HelperFunction.Delay(this, .1f, spawner.SpawnShop);
+            HelperFunction.Delay(this, 35, RandomBuff);
         }
+        else
+            RandomBuff();
     }
 
     void RandomBuff()

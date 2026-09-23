@@ -51,7 +51,7 @@ public class SailingVisualizer : MonoBehaviour
         soundButton.image.color = GlobalManager.Instance.isSoundOn ? Color.white : Color.gray;
         FishNShopSwitch();
         fishButton.interactable = GlobalManager.Instance.buffDuration > 0;
-        buffPanel.SetActive(GlobalManager.Instance.buffDuration > 0 && !GameManager.Instance.inSession);
+        buffPanel.SetActive(GlobalManager.Instance.buffDuration > 0 && !GameManager.Instance.inSession && boatController.state == BoatState.Idle);
         collectionButton.interactable = boatController.state == BoatState.Idle && !GameManager.Instance.inSession;
 
         fishPointText.text = GlobalManager.Instance.fishPoints.ToString("0000");
@@ -68,7 +68,11 @@ public class SailingVisualizer : MonoBehaviour
             g.SetActive(GameManager.Instance.inSession);
 
         if (buffPanel.activeSelf)
-            buffImage.sprite = buffSprites[Array.IndexOf(GlobalManager.Instance.buffs, true)];
+        {
+            int index = Array.IndexOf(GlobalManager.Instance.buffs, true);
+            Debug.Log($"Buff index: {index}");
+            buffImage.sprite = buffSprites[index];
+        }
     }
 
     void FishNShopSwitch()

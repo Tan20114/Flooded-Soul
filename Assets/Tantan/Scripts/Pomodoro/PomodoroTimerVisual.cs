@@ -20,7 +20,7 @@ public class PomodoroTimerVisual : MonoBehaviour
     private void Update()
     {
         if (!isHour)
-            visualText.text = ((int)(GameManager.Instance.timeToCount / 60)).ToString("00");
+            visualText.text = ((int)((GameManager.Instance.timeToCount / 60) % 60)).ToString("00");
         else
             visualText.text = ((int)(GameManager.Instance.timeToCount / 3600)).ToString("00");
 

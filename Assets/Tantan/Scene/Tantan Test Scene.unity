@@ -983,6 +983,7 @@ GameObject:
   - component: {fileID: 144720735}
   - component: {fileID: 144720736}
   - component: {fileID: 144720738}
+  - component: {fileID: 144720739}
   m_Layer: 0
   m_Name: 4GlobalManager
   m_TagString: Untagged
@@ -1137,6 +1138,18 @@ MonoBehaviour:
   fadeDuration: 1
   sourceA: {fileID: 1470976830}
   sourceB: {fileID: 176006155}
+--- !u!114 &144720739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144720732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b034770ca400245adb53d47de795b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExternalLinkOpener
 --- !u!1 &167094039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3543,7 +3556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 49.999985, y: -50}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &799130920
@@ -5021,6 +5034,7 @@ MonoBehaviour:
   tutorialPanel: {fileID: 837100324}
   autoStop: 1
   inSession: 0
+  timer: 0
   timeToCount: 0
 --- !u!4 &1341469047
 Transform:
@@ -6266,7 +6280,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 25
+  m_SortingOrder: 24
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5115618752126089108, guid: f1fcd818bc94bd34885c44775a6b20e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6426,7 +6440,11 @@ MonoBehaviour:
         m_SelectedSource:
           rid: -2
         m_Provider2DCache:
-          rid: -2
+          rid: 7470654008816828498
+    - rid: 7470654008816828498
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!1 &1589583688
 GameObject:
   m_ObjectHideFlags: 0

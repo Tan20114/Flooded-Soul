@@ -224,9 +224,9 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     {
         SerializedDictionary<LegendaryFishType, int> legendary = cm.GetLegendaryFishCollection();
 
-        return legendary[LegendaryFishType.PlabFish] >= 10
-            && legendary[LegendaryFishType.JollyFish] >= 10
-            && legendary[LegendaryFishType.KelpboneFish] >= 10;
+        return legendary[LegendaryFishType.PlabFish] >= 5
+            && legendary[LegendaryFishType.JollyFish] >= 5
+            && legendary[LegendaryFishType.KelpboneFish] >= 5;
     }
 
     bool Achievement2Condition()
@@ -234,22 +234,22 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         return cm.GetCommonFishCollection()[CommonFishType.SacabambaspisFish] >= 100;
     }
 
-    bool Achievement3Condition()
+    bool Achievement6Condition()
     {
         return boatLevel >= 2 || hookLevel >= 2 || cat1Level >= 1 || cat2Level >= 1 || cat3Level >= 1 || cat4Level >= 1;
     }
 
-    bool Achievement4Condition()
+    bool Achievement7Condition()
     {
         return cat1Level >= 1 && cat2Level >= 1 && cat3Level >= 1 && cat4Level >= 1;
     }
 
-    bool Achievement5Condition()
+    bool Achievement3Condition()
     {
-        return cm.GetLegendaryFishCollection()[LegendaryFishType.PlabFish] >= 25;
+        return cm.GetLegendaryFishCollection()[LegendaryFishType.PlabFish] >= 5;
     }
 
-    bool Achievement6Condition()
+    bool Achievement4Condition()
     {
         return new[]
         {
@@ -260,7 +260,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
         }.Count(level => level > 0) >= 2;
     }
 
-    bool Achievement7Condition()
+    bool Achievement5Condition()
     {
         return oceanVisited && iceVisited && forestVisited;
     }

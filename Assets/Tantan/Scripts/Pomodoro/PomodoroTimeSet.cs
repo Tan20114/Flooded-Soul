@@ -41,15 +41,8 @@ public class PomodoroTimeSet : MonoBehaviour
 
     public void FocusTime()
     {
-        if(GlobalManager.Instance.isTutorialCompleted)
-        {
-            GameManager.Instance.timeToCount = GetTotalMinutes() * 60;
-            GlobalManager.Instance.buffDuration = (GetTotalMinutes() * 10f);
-        }
-        else
-        {
-            GameManager.Instance.timeToCount = 30;
-            GlobalManager.Instance.buffDuration = 30;
-        }
+        GameManager.Instance.timer = GetTotalMinutes() * 60;
+        GameManager.Instance.timeToCount = GetTotalMinutes() * 60;
+        GlobalManager.Instance.buffDuration = (GetTotalMinutes() * 10f);
     }
 }
