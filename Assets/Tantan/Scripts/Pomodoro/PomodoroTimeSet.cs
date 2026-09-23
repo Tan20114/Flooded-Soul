@@ -5,7 +5,7 @@ public class PomodoroTimeSet : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI[] timeText;
 
-    const int MaxMinutes = 90;
+    const int MaxMinutes = 10;
     [SerializeField] int timerSetBase = 15;
 
     public void AddTime()

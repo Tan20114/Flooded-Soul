@@ -19,6 +19,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     public bool isAlwaysOnTop = true;
     public bool isSoundOn = true;
     public bool isTutorialCompleted = false;
+    public bool isDemoEnd = false;
     bool isFirstLoad = true;
     public bool oceanVisited = false;
     public bool iceVisited = false;
@@ -64,6 +65,7 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
     {
         BiomeCheck();
         AchievementCheck();
+        DemoEndCheck();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -174,6 +176,14 @@ public class GlobalManager : SingletonPersistant<GlobalManager>
                 forestVisited = true;
                 break;
         }
+    }
+
+    void DemoEndCheck()
+    {
+        if (GlobalManager.Instance.distance >= 2000)
+            isDemoEnd = true;
+        else
+            isDemoEnd = false;
     }
 
     public void BuffActivate(int buffIndex, float duration)

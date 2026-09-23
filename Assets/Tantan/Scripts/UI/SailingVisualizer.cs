@@ -31,6 +31,7 @@ public class SailingVisualizer : MonoBehaviour
     [SerializeField] GameObject buffPanel;
     [SerializeField] Image buffImage;
     [SerializeField] Sprite[] buffSprites;
+    [SerializeField] GameObject EndDemoPanel;
 
     [Header("Animator")]
     [SerializeField] Animator[] paperAnimator;
@@ -73,6 +74,9 @@ public class SailingVisualizer : MonoBehaviour
             Debug.Log($"Buff index: {index}");
             buffImage.sprite = buffSprites[index];
         }
+
+        if (GlobalManager.Instance.isDemoEnd)
+            EndDemoPanel.SetActive(true);
     }
 
     void FishNShopSwitch()
