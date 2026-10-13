@@ -17,6 +17,11 @@ public class FishingSceneUI : MonoBehaviour
 
     bool isPause = false;
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
+    }
+
     private void Update()
     {
         Time.timeScale = isPause ? 0 : 1;

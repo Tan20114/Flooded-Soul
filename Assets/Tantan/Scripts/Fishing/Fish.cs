@@ -74,8 +74,9 @@ public class Fish : MonoBehaviour, IBoundArea
     float swimDir = -1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
+        isClicked = false;
         currentSpeed = swimSpeed;
         currentResistance = resistanceForce;
         resistTreshold = resistanceForce * .25f;
