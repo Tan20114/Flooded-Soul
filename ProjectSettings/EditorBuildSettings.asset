@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tantan/Scene/Collection.unity
     guid: 772c12000ee3dc846b69de822f803755
+  - enabled: 1
+    path: Assets/Tantan/Scene/Credits.unity
+    guid: 2091a100fb635334a9ca0cac96c48b0a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
